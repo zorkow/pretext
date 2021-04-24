@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:59:36+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>We will prove this lemma using mathematical induction on \(n\text{.}\) We can use the binomial formula (see <a href="integers.html" class="internal" title="Chapter 2: The Integers">Chapter 2</a>, <a class="xref" data-knowl="./knowl/example-integers-binomial-theorem.html" title="Example 2.4">Example 2.4</a>) to verify the case for \(n = 1\text{;}\) that is,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(a + b)^p = \sum_{k = 0}^{p} \binom{p}{k} a^k b^{p - k}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">If \(0 \lt k \lt p\text{,}\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\binom{p}{k} = \frac{p!}{k!(p - k)!}
+\end{equation*}
+</div>
+<p class="continuation">must be divisible by \(p\text{,}\) since \(p\) cannot divide \(k!(p - k)!\text{.}\) Note that \(D\) is an integral domain of characteristic \(p\text{,}\) so all but the first and last terms in the sum must be zero. Therefore, \((a + b)^p = a^p + b^p\text{.}\)</p>
+<p>Now suppose that the result holds for all \(k\text{,}\) where \(1 \leq k \leq n\text{.}\) By the induction hypothesis,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(a + b)^{p^{n + 1}} = ((a + b)^p)^{p^{n}} = (a^p + b^p)^{p^{n}} = (a^p)^{p^{n}} + (b^p)^{p^{n}} = a^{p^{n + 1}} + b^{p^{n + 1}}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Therefore, the lemma is true for \(n + 1\) and the proof is complete.</p></article></body>
+</html>

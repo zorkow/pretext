@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:58:30+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2<span class="period">.</span></span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">The four homomorphisms created by the direct product construction are each an example of a more general construction of homomorphisms involving groups \(G\text{,}\) \(H\) and \(G\times H\text{.}\) By using the same groups as in the example in the previous subsection, see if you can discover and describe these constructions with exact definitions of the four homomorphisms in general.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Your tools for investigating a Sage group homomorphism are limited, you might take each generator of the domain and see what its image is. Here is an example of the type of computation you might do repeatedly. We'll investigate the second homomorphism. The domain is the dihedral group, and we will compute the image of the first generator.</p>
+<div class="sagecell-sage" id="abC"><script type="text/x-sage">G = CyclicPermutationGroup(3)
+H = DihedralGroup(4)
+results = G.direct_product(H)
+phi = results[2]
+H.gens()
+</script></div>
+<div class="sagecell-sage" id="GiL"><script type="text/x-sage">a = H.gen(0); a
+</script></div>
+<div class="sagecell-sage" id="mpU"><script type="text/x-sage">phi(a)
+</script></div></article><span class="incontext"><a href="homomorph-sage-exercises.html#bFL">in-context</a></span>
+</body>
+</html>

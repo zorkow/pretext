@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:57:21+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Sage</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: ['base', 'extpfeil', 'amscd']
+  },
+  options: {
+    ignoreHtmlClass: ".*",
+    processHtmlClass: "has_am"
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd']
+  }
+};
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=002637997310187229905:qj2oy0jlpyu"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="galois-references.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="galois.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="galois-sage-exercises.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="galois-references.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="galois.html" title="Up">Up</a><a class="next-button button toolbar-item" href="galois-sage-exercises.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="Cpq">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-equivalence-relations.html" data-scroll="eYQ">Sets and Equivalence Relations</a></li>
+<li><a href="reading-questions-1.html" data-scroll="ibN">Reading Questions</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+<li><a href="sets-sage.html" data-scroll="LfZ">Sage</a></li>
+<li><a href="sets-sage-exercises.html" data-scroll="SKy">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="integers.html" data-scroll="mtY"><span class="codenumber">2</span> <span class="title">The Integers</span></a><ul>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Division Algorithm</a></li>
+<li><a href="reading-questions-2.html" data-scroll="kWt">Reading Questions</a></li>
+<li><a href="exercises-integers.html" data-scroll="Dsj">Exercises</a></li>
+<li><a href="integers-exercises-programming.html" data-scroll="jzs">Programming Exercises</a></li>
+<li><a href="integers-references.html" data-scroll="Dta">References and Suggested Readings</a></li>
+<li><a href="integers-sage.html" data-scroll="ojl">Sage</a></li>
+<li><a href="integers-sage-exercises.html" data-scroll="PGB">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">3</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="reading-questions-3.html" data-scroll="VNv">Reading Questions</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+<li><a href="groups-sage.html" data-scroll="fAT">Sage</a></li>
+<li><a href="groups-sage-exercises.html" data-scroll="aRa">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cyclic.html" data-scroll="KKE"><span class="codenumber">4</span> <span class="title">Cyclic Groups</span></a><ul>
+<li><a href="section-cyclic-subgroups.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-mult-group-c.html" data-scroll="sHa">Multiplicative Group of Complex Numbers</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="reading-questions-4.html" data-scroll="CZX">Reading Questions</a></li>
+<li><a href="exercises-cyclic.html" data-scroll="nXh">Exercises</a></li>
+<li><a href="cyclic-exercises-programming.html" data-scroll="Ueq">Programming Exercises</a></li>
+<li><a href="cyclic-references.html" data-scroll="KnF">References and Suggested Readings</a></li>
+<li><a href="cyclic-sage.html" data-scroll="EVs">Sage</a></li>
+<li><a href="cyclic-sage-exercises.html" data-scroll="Alz">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="permute.html" data-scroll="AQc"><span class="codenumber">5</span> <span class="title">Permutation Groups</span></a><ul>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Definitions and Notation</a></li>
+<li><a href="section-dihedral-groups.html" data-scroll="CFp">Dihedral Groups</a></li>
+<li><a href="reading-questions-5.html" data-scroll="HJQ">Reading Questions</a></li>
+<li><a href="exercises-permute.html" data-scroll="ecF">Exercises</a></li>
+<li><a href="permute-sage.html" data-scroll="iMy">Sage</a></li>
+<li><a href="permute-sage-exercises.html" data-scroll="KjO">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">6</span> <span class="title">Cosets and Lagrange's Theorem</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-lagranges-theorem.html" data-scroll="dTk">Lagrange's Theorem</a></li>
+<li><a href="section-fermat-euler.html" data-scroll="Kat">Fermat's and Euler's Theorems</a></li>
+<li><a href="reading-questions-6.html" data-scroll="BUE">Reading Questions</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+<li><a href="cosets-sage.html" data-scroll="qhC">Sage</a></li>
+<li><a href="cosets-sage-exercises.html" data-scroll="lxJ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">7</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="reading-questions-7.html" data-scroll="Jzd">Reading Questions</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="hbc">References and Suggested Readings</a></li>
+<li><a href="crypt-sage.html" data-scroll="cyJ">Sage</a></li>
+<li><a href="crypt-sage-exercises.html" data-scroll="DVZ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">8</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-8.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+<li><a href="algcodes-sage.html" data-scroll="Klo">Sage</a></li>
+<li><a href="algcodes-sage-exercises.html" data-scroll="Zum">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">9</span> <span class="title">Isomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="reading-questions-9.html" data-scroll="TYi">Reading Questions</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="LZO">Exercises</a></li>
+<li><a href="isomorph-sage.html" data-scroll="QJH">Sage</a></li>
+<li><a href="isomorph-sage-exercises.html" data-scroll="sgX">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="normal.html" data-scroll="xiL"><span class="codenumber">10</span> <span class="title">Normal Subgroups and Factor Groups</span></a><ul>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="reading-questions-10.html" data-scroll="pGm">Reading Questions</a></li>
+<li><a href="exercises-normal.html" data-scroll="hZN">Exercises</a></li>
+<li><a href="normal-sage.html" data-scroll="mJG">Sage</a></li>
+<li><a href="normal-sage-exercises.html" data-scroll="OgW">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="homomorph.html" data-scroll="JXG"><span class="codenumber">11</span> <span class="title">Homomorphisms</span></a><ul>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="reading-questions-11.html" data-scroll="sAS">Reading Questions</a></li>
+<li><a href="exercises-homomorph.html" data-scroll="WlY">Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Cth">Additional Exercises: Automorphisms</a></li>
+<li><a href="homomorph-sage.html" data-scroll="Hda">Sage</a></li>
+<li><a href="homomorph-sage-exercises.html" data-scroll="iAq">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">12</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-12.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+<li><a href="matrix-sage.html" data-scroll="stf">Sage</a></li>
+<li><a href="matrix-sage-exercises.html" data-scroll="TQv">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct.html" data-scroll="YWA"><span class="codenumber">13</span> <span class="title">The Structure of  Groups</span></a><ul>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="reading-questions-13.html" data-scroll="vvy">Reading Questions</a></li>
+<li><a href="exercises-struct.html" data-scroll="Rsb">Exercises</a></li>
+<li><a href="struct-exercises-programming.html" data-scroll="xzk">Programming Exercises</a></li>
+<li><a href="struct-references.html" data-scroll="tDP">References and Suggested Readings</a></li>
+<li><a href="struct-sage.html" data-scroll="Cjd">Sage</a></li>
+<li><a href="struct-sage-exercises.html" data-scroll="dGt">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">14</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="reading-questions-14.html" data-scroll="MtJ">Reading Questions</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="JDL">References and Suggested Reading</a></li>
+<li><a href="actions-sage.html" data-scroll="gaW">Sage</a></li>
+<li><a href="actions-sage-exercises.html" data-scroll="brd">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">15</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-15.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+<li><a href="sylow-sage.html" data-scroll="Vab">Sage</a></li>
+<li><a href="sylow-sage-exercises.html" data-scroll="wxr">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">16</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="reading-questions-16.html" data-scroll="bCH">Reading Questions</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+<li><a href="rings-sage.html" data-scroll="ple">Sage</a></li>
+<li><a href="rings-sage-exercises.html" data-scroll="YmT">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">17</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="reading-questions-17.html" data-scroll="Afr">Reading Questions</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Exercises</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+<li><a href="poly-sage.html" data-scroll="vEG">Sage</a></li>
+<li><a href="poly-sage-exercises.html" data-scroll="qUN">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">18</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-18.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+<li><a href="domains-sage.html" data-scroll="pin">Sage</a></li>
+<li><a href="domains-sage-exercises.html" data-scroll="QFD">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">19</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-19.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+<li><a href="boolean-sage.html" data-scroll="LwL">Sage</a></li>
+<li><a href="boolean-sage-exercises.html" data-scroll="GMS">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vect.html" data-scroll="kTG"><span class="codenumber">20</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section-vect-definitions-and-examples.html" data-scroll="Ogj">Definitions and Examples</a></li>
+<li><a href="section-subspaces.html" data-scroll="uns">Subspaces</a></li>
+<li><a href="section-linear-independence.html" data-scroll="auB">Linear Independence</a></li>
+<li><a href="reading-questions-20.html" data-scroll="xkL">Reading Questions</a></li>
+<li><a href="exercises-vect.html" data-scroll="VKI">Exercises</a></li>
+<li><a href="vect-references.html" data-scroll="jeK">References and Suggested Readings</a></li>
+<li><a href="vect-sage.html" data-scroll="GBK">Sage</a></li>
+<li><a href="vect-sage-exercises.html" data-scroll="BRR">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">21</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-extension-fields.html" data-scroll="Qfe">Extension Fields</a></li>
+<li><a href="section-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="reading-questions-21.html" data-scroll="Pop">Reading Questions</a></li>
+<li><a href="exercises-fields.html" data-scroll="Lvl">Exercises</a></li>
+<li><a href="fields-references.html" data-scroll="veH">References and Suggested Readings</a></li>
+<li><a href="fields-sage.html" data-scroll="IAF">Sage</a></li>
+<li><a href="fields-sage-exercises.html" data-scroll="rCu">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">22</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-22.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+<li><a href="finite-sage.html" data-scroll="vNX">Sage</a></li>
+<li><a href="finite-sage-exercises.html" data-scroll="Xln">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">23</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="YIb">Reading Questions</a></li>
+<li><a href="exercises-galois.html" data-scroll="qAB">Exercises</a></li>
+<li><a href="galois-references.html" data-scroll="ppv">References and Suggested Readings</a></li>
+<li><a href="galois-sage.html" data-scroll="brD" class="active">Sage</a></li>
+<li><a href="galois-sage-exercises.html" data-scroll="WHK">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="brD"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">23.7</span> <span class="title">Sage</span>
+</h2>
+<section class="introduction" id="rUp"><p id="ufo">Again, our competence at examining fields with Sage will allow us to study the main concepts of Galois Theory easily. We will thoroughly examine Example 7 carefully using our computational tools.</p></section><section class="subsection" id="RXR"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Galois Groups</span>
+</h3>
+<p id="FYh">We will repeat <a class="xref" data-knowl="./knowl/example-galois-x4-2.html" title="Example 23.25">Example 23.25</a> and analyze carefully the splitting field of the polynomial \(p(x)=x^4-2\text{.}\) We begin with an initial field extension containing at least one root.</p>
+<div class="sagecell-sage" id="yEm"><script type="text/x-sage">x = polygen(QQ, 'x')
+N.<a> = NumberField(x^4 - 2); N
+</script></div>
+<p id="mfq">The <code class="code-inline tex2jax_ignore">.galois_closure()</code> method will create an extension containing all of the roots of the defining polynomial of a number field.</p>
+<div class="sagecell-sage" id="eLv"><script type="text/x-sage">L.<b> = N.galois_closure(); L
+</script></div>
+<div class="sagecell-sage" id="KSE"><script type="text/x-sage">L.degree()
+</script></div>
+<div class="sagecell-sage" id="qZN"><script type="text/x-sage">y = polygen(L, 'y')
+(y^4 - 2).factor()
+</script></div>
+<p id="Smz">From the factorization, it is clear that <code class="code-inline tex2jax_ignore">L</code> is the splitting field of the polynomial, even if the factorization is not pretty. It is easy to then obtain the Galois group of this field extension.</p>
+<div class="sagecell-sage" id="XgW"><script type="text/x-sage">G = L.galois_group(); G
+</script></div>
+<p id="ytI">We can examine this group, and identify it. Notice that since the field is a degree \(8\) extension, the group is described as a permutation group on \(8\) symbols. (It is just a coincidence that the group has \(8\) elements.) With a paucity of nonabelian groups of order \(8\text{,}\) it is not hard to guess the nature of the group.</p>
+<div class="sagecell-sage" id="Dof"><script type="text/x-sage">G.is_abelian()
+</script></div>
+<div class="sagecell-sage" id="jvo"><script type="text/x-sage">G.order()
+</script></div>
+<div class="sagecell-sage" id="PCx"><script type="text/x-sage">G.list()
+</script></div>
+<div class="sagecell-sage" id="vJG"><script type="text/x-sage">G.is_isomorphic(DihedralGroup(4))
+</script></div>
+<p id="eAR">That's it. But maybe not very satisfying. Let us dig deeper for more understanding. We will start over and create the splitting field of \(p(x)=x^4-2\) again, but the primary difference is that we will make the roots extremely obvious so we can work more carefully with the Galois group and the fixed fields. Along the way, we will see another example of linear algebra enabling certain computations. The following construction should be familiar by now.</p>
+<div class="sagecell-sage" id="bQP"><script type="text/x-sage">x = polygen(QQ, 'x')
+p = x^4 - 2
+N.<a> = NumberField(p); N
+</script></div>
+<div class="sagecell-sage" id="HXY"><script type="text/x-sage">y = polygen(N, 'y')
+p = p.subs(x=y)
+p.factor()
+</script></div>
+<div class="sagecell-sage" id="ofh"><script type="text/x-sage">M.<b> = NumberField(y^2 + a^2); M
+</script></div>
+<div class="sagecell-sage" id="Umq"><script type="text/x-sage">z = polygen(M, 'z')
+(z^4 - 2).factor()
+</script></div>
+<p id="KIa">The important thing to notice here is that we have arranged the splitting field so that the four roots, <code class="code-inline tex2jax_ignore">a, -a, b, -b</code>, are very simple functions of the generators. In more traditional notation, <code class="code-inline tex2jax_ignore">a</code> is \(2^{\frac{1}{4}}=\sqrt[4]{2}\text{,}\) and <code class="code-inline tex2jax_ignore">b</code> is \(2^{\frac{1}{4}}i=\sqrt[4]{2}i\) (or their negatives).</p>
+<p id="qPj">We will find it easier to compute in the flattened tower, a now familiar construction.</p>
+<div class="sagecell-sage" id="Atz"><script type="text/x-sage">L.<c> = M.absolute_field(); L
+</script></div>
+<div class="sagecell-sage" id="gAI"><script type="text/x-sage">fromL, toL = L.structure()
+</script></div>
+<p id="WWs">We can return to our original polynomial (over the rationals), and ask for its roots in the flattened tower, custom-designed to contain these roots.</p>
+<div class="sagecell-sage" id="MHR"><script type="text/x-sage">roots = p.roots(ring=L, multiplicities=False); roots
+</script></div>
+<p id="DdB">Hmmm. Do those look right? If you look back at the factorization obtained in the field constructed with the <code class="code-inline tex2jax_ignore">.galois_closure()</code> method, then they look right. But we can do better.</p>
+<div class="sagecell-sage" id="sPa"><script type="text/x-sage">[fromL(r) for r in roots]
+</script></div>
+<p id="jkK">Yes, those are the roots.</p>
+<p id="PrT">The <code class="code-inline tex2jax_ignore">End()</code> command will create the group of automorphisms of the field <code class="code-inline tex2jax_ignore">L</code>.</p>
+<div class="sagecell-sage" id="YWj"><script type="text/x-sage">G = End(L); G
+</script></div>
+<p id="vzc">We can check that each of these automorphisms fixes the rational numbers elementwise. If a field homomorphism fixes 1, then it will fix the integers, and thus fix all fractions of integers.</p>
+<div class="sagecell-sage" id="Fds"><script type="text/x-sage">[tau(1) for tau in G]
+</script></div>
+<p id="bGl">So each element of <code class="code-inline tex2jax_ignore">G</code> fixes the rationals elementwise and thus <code class="code-inline tex2jax_ignore">G</code> is the Galois group of the splitting field <code class="code-inline tex2jax_ignore">L</code> over the rationals.</p>
+<p id="HNu"><a class="xref" data-knowl="./knowl/proposition-roots-permute.html" title="Proposition 23.5">Proposition 23.5</a> is fundamental. It says every automorphism in the Galois group of a field extension creates a permutation of the roots of a polynomial with coefficients in the base field. We have all of those ingredients here. So we will evaluate each automorphism of the Galois group at each of the four roots of our polynomial, which in each case should be another root. (We use the <code class="code-inline tex2jax_ignore">Sequence()</code> constructor just to get nicely-aligned output.)</p>
+<div class="sagecell-sage" id="lkB"><script type="text/x-sage">Sequence([[fromL(tau(r)) for r in roots] for tau in G], cr=True)
+</script></div>
+<p id="nUD">Each row of the output is a list of the roots, but permuted, and so corresponds to a permutation of four objects (the roots). For example, the second row shows the second automorphism interchanging <code class="code-inline tex2jax_ignore">a</code> with <code class="code-inline tex2jax_ignore">-a</code>, and <code class="code-inline tex2jax_ignore">b</code> with <code class="code-inline tex2jax_ignore">-b</code>. (Notice that the first row is the result of the identity automorphism, so we can mentally comine the first row with any other row to imagine a “two-row” form of a permutation.) We can number the roots, 1 through 4, and create each permutation as an element of \(S_4\text{.}\) It is overkill, but we can then build the permutation group by letting <em class="emphasis">all</em> of these elements generate a group.</p>
+<div class="sagecell-sage" id="RrK"><script type="text/x-sage">S4 = SymmetricGroup(4)
+elements = [S4([1, 2, 3, 4]),
+            S4([4, 3, 2, 1]),
+            S4([2, 4, 1, 3]),
+            S4([1, 3, 2, 4]),
+            S4([3, 4, 1, 2]),
+            S4([2, 1, 4, 3]),
+            S4([4, 2, 3, 1]),
+            S4([3, 1, 4, 2])]
+elements
+</script></div>
+<div class="sagecell-sage" id="xyT"><script type="text/x-sage">P = S4.subgroup(elements)
+P.is_isomorphic(DihedralGroup(4))
+</script></div>
+<p id="UbM">Notice that we now have built an isomorphism from the Galois group to a group of permutations <em class="emphasis">using just four symbols</em>, rather than the eight used previously.</p></section><section class="subsection" id="yfa"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Fixed Fields</span>
+</h3>
+<p id="AiV">In a previous Sage exercise, we computed the fixed fields of single field automorphisms for finite fields. This was “easy” in the sense that we could just test every element of the field to see if it was fixed, since the field was finite. Now we have an infinite field extension. How are we going to determine which elements are fixed by individual automorphisms, or subgroups of automorphisms?</p>
+<p id="gqe">The answer is to use the vector space structure of the flattened tower. As a degree \(8\) extension of the rationals, the first \(8\) powers of the primitive element <code class="code-inline tex2jax_ignore">c</code> form a basis when the field is viewed as a vector space with the rationals as the scalars. It is sufficient to know how each field automorphism behaves on this basis to fully specify the definition of the automorphism. To wit,</p>
+<div class="displaymath">
+\begin{align*}
+\tau(x)&amp;=\tau\left(\sum_{i=0}^7\,q_ic^i\right)&amp;&amp;q_i\in{\mathbb Q}\\
+&amp;=\sum_{i=0}^7\,\tau(q_i)\tau(c^i)&amp;&amp;\tau\text{ is a field automorphism}\\
+&amp;=\sum_{i=0}^7\,q_i\tau(c^i)&amp;&amp;\text{rationals are fixed}
+\end{align*}
+</div>
+<p class="continuation">So we can compute the value of a field automorphism at any linear combination of powers of the primitive element as a linear combination of the values of the field automorphism at just the powers of the primitive element. This is known as the “power basis”, which we can obtain simply with the <code class="code-inline tex2jax_ignore">.power_basis()</code> method. We will begin with an example of how we can use this basis. We will illustrate with the fourth automorphism of the Galois group. Notice that the <code class="code-inline tex2jax_ignore">.vector()</code> method is a convenience that strips a linear combination of the powers of <code class="code-inline tex2jax_ignore">c</code> into a vector of just the coefficients.  (Notice too that \(\tau\) is totally defined by the value of \(\tau(c)\text{,}\) since as a field automorphism \(\tau(c^k)=(\tau(c))^k\text{.}\) However, we still need to work with the entire power basis to exploit the vector space structure.)</p>
+<div class="sagecell-sage" id="dGc"><script type="text/x-sage">basis = L.power_basis(); basis
+</script></div>
+<div class="sagecell-sage" id="JNl"><script type="text/x-sage">tau = G[3]
+z = 4 + 5*c+ 6*c^3-7*c^6
+tz = tau(4 + 5*c+ 6*c^3-7*c^6); tz
+</script></div>
+<div class="sagecell-sage" id="pUu"><script type="text/x-sage">tz.vector()
+</script></div>
+<div class="sagecell-sage" id="WbD"><script type="text/x-sage">tau_matrix = column_matrix([tau(be).vector() for be in basis])
+tau_matrix
+</script></div>
+<div class="sagecell-sage" id="CiM"><script type="text/x-sage">tau_matrix*z.vector()
+</script></div>
+<div class="sagecell-sage" id="ipV"><script type="text/x-sage">tau_matrix*(z.vector()) == (tau(z)).vector()
+</script></div>
+<p id="Mxn">The last line expresses the fact that <code class="code-inline tex2jax_ignore">tau_matrix</code> is a matrix representation of the field automorphism, viewed as a linear transformation of the vector space structure. As a representation of an invertible field homomorphism, the matrix is invertible. As an order \(2\) permutation of the roots, the inverse of the matrix is itself. But these facts are just verifications that we have the right thing, we are interested in other properties.</p>
+<p id="sEw">To construct fixed fields, we want to find elements fixed by automorphisms. Continuing with <code class="code-inline tex2jax_ignore">tau</code> from above, we seek elements <code class="code-inline tex2jax_ignore">z</code> (written as vectors) such that <code class="code-inline tex2jax_ignore">tau_matrix*z=z</code>. These are eigenvectors for the eigenvalue \(1\text{,}\) or elements of the null space of <code class="code-inline tex2jax_ignore">(tau_matrix - I)</code>(null spaces are obtained with <code class="code-inline tex2jax_ignore">.right_kernel()</code> in Sage).</p>
+<div class="sagecell-sage" id="Oxe"><script type="text/x-sage">K = (tau_matrix-identity_matrix(8)).right_kernel(); K
+</script></div>
+<p id="YLF">Each row of the basis matrix is a vector representing an element of the field, specifically <code class="code-inline tex2jax_ignore">1</code>, <code class="code-inline tex2jax_ignore">c + (1/38)*c^5</code>, <code class="code-inline tex2jax_ignore">c^2 - (1/22)*c^6</code>, <code class="code-inline tex2jax_ignore">c^3 + (1/278)*c^7</code>. Let's take a closer look at these fixed elements, in terms we recognize.</p>
+<div class="sagecell-sage" id="uEn"><script type="text/x-sage">fromL(1)
+</script></div>
+<div class="sagecell-sage" id="aLw"><script type="text/x-sage">fromL(c + (1/38)*c^5)
+</script></div>
+<div class="sagecell-sage" id="GSF"><script type="text/x-sage">fromL(c^2 - (1/22)*c^6)
+</script></div>
+<div class="sagecell-sage" id="mZO"><script type="text/x-sage">fromL(c^3 + (1/278)*c^7)
+</script></div>
+<p id="ESO">Any element fixed by <code class="code-inline tex2jax_ignore">tau</code> will be a linear combination of these four elements. We can ignore any rational multiples present, the first element is just saying the rationals are fixed, and the last element is just a product of the middle two. So fundamentally <code class="code-inline tex2jax_ignore">tau</code> is fixing rationals, <code class="code-inline tex2jax_ignore">b</code> (which is \(\sqrt[4]{2}i\)) and <code class="code-inline tex2jax_ignore">a^2</code> (which is \(\sqrt{2}\)). Furthermore, <code class="code-inline tex2jax_ignore">b^2 = -a^2</code> (the check follows), so we can create any fixed element of <code class="code-inline tex2jax_ignore">tau</code> by just adjoining <code class="code-inline tex2jax_ignore">b</code>=\(\sqrt[4]{2}i\) to the rationals. So the elements fixed by <code class="code-inline tex2jax_ignore">tau</code> are \({\mathbb Q}(\sqrt[4]{2}i)\text{.}\)</p>
+<div class="sagecell-sage" id="TgX"><script type="text/x-sage">a^2 + b^2
+</script></div></section><section class="subsection" id="emj"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Galois Correspondence</span>
+</h3>
+<p id="kZX">The entire subfield structure of our splitting field is determined by the subgroup structure of the Galois group (<a class="xref" data-knowl="./knowl/theorem-fundamental-galois.html" title="Theorem 23.23: Fundamental Theorem of Galois Theory">Theorem 23.23</a>), which is isomorphic to a group we know well. What are the subgroups of our Galois group, expressed as permutation groups? (For brevity, we just list the <em class="emphasis">generators</em> of each subgroup.)</p>
+<div class="sagecell-sage" id="zog"><script type="text/x-sage">sg = P.subgroups();
+[H.gens() for H in sg]
+</script></div>
+<div class="sagecell-sage" id="fvp"><script type="text/x-sage">[H.order() for H in sg]
+</script></div>
+<p id="Rhg"><code class="code-inline tex2jax_ignore">tau</code> above is the fourth element of the automorphism group, and the fourth permutation in <code class="code-inline tex2jax_ignore">elements</code> is the permutation <code class="code-inline tex2jax_ignore">(2,3)</code>, the generator (of order 2) for the second subgroup. So as the only nontrivial element of this subgroup, we know that the corresponding fixed field is \({\mathbb Q}(\sqrt[4]{2}i)\text{.}\)</p>
+<p id="xop">Let us analyze another subgroup of order 2, without all the explanation, and starting with the subgroup. The sixth subgroup is generated by the fifth automorphism, so let us determine the elements that are fixed.</p>
+<div class="sagecell-sage" id="LCy"><script type="text/x-sage">tau = G[4]
+tau_matrix = column_matrix([tau(be).vector() for be in basis])
+(tau_matrix-identity_matrix(8)).right_kernel()
+</script></div>
+<div class="sagecell-sage" id="rJH"><script type="text/x-sage">fromL(tau(1))
+</script></div>
+<div class="sagecell-sage" id="XQQ"><script type="text/x-sage">fromL(tau(c+(1/158)*c^5))
+</script></div>
+<div class="sagecell-sage" id="DXZ"><script type="text/x-sage">fromL(tau(c^2+(1/78)*c^6))
+</script></div>
+<div class="sagecell-sage" id="kfi"><script type="text/x-sage">fromL(tau(c^3+(13/614)*c^7))
+</script></div>
+<p id="dvy">The first element indicates that the rationals are fixed (we knew that). Scaling the second element gives <code class="code-inline tex2jax_ignore">b - a</code> as a fixed element. Scaling the third and fourth fixed elements, we recognize that they can be obtained from powers of <code class="code-inline tex2jax_ignore">b - a</code>.</p>
+<div class="sagecell-sage" id="Qmr"><script type="text/x-sage">(b-a)^2
+</script></div>
+<div class="sagecell-sage" id="wtA"><script type="text/x-sage">(b-a)^3
+</script></div>
+<p id="JCH">So the fixed field of this subgroup can be formed by adjoining <code class="code-inline tex2jax_ignore">b - a</code> to the rationals, which in mathematical notation is \(\sqrt[4]{2}i - \sqrt[4]{2} = (1-i)\sqrt[4]{2}\text{,}\) so the fixed field is \({\mathbb Q}(\sqrt[4]{2}i - \sqrt[4]{2}) = {\mathbb Q}((1-i)\sqrt[4]{2})\text{.}\)</p>
+<p id="pJQ">We can create this fixed field, though as created here it is not strictly a subfield of <code class="code-inline tex2jax_ignore">L</code>. We will use an expression for <code class="code-inline tex2jax_ignore">b - a</code> that is a linear combination of powers of <code class="code-inline tex2jax_ignore">c</code>.</p>
+<div class="sagecell-sage" id="cAJ"><script type="text/x-sage">subinfo = L.subfield((79/120)*(c+(1/158)*c^5)); subinfo
+</script></div>
+<p id="VQZ">The <code class="code-inline tex2jax_ignore">.subfield()</code> method returns a pair. The first item is a new number field, isomorphic to a subfield of <code class="code-inline tex2jax_ignore">L</code>. The second item is an injective mapping from the new number field into <code class="code-inline tex2jax_ignore">L</code>. In this case, the image of the primitive element <code class="code-inline tex2jax_ignore">c0</code> is the element we have specified as the generator of the subfield. The primitive element of the new field will satisfy the defining polynomial \(x^4+8\) — you can check that \((1-i)\sqrt[4]{2}\) is indeed a root of the polynomial \(x^4 + 8\text{.}\)</p>
+<p id="BYi">There are five subgroups of order \(2\text{,}\) we have found fixed fields for two of them. The other three are similar, so it would be a good exercise to work through them. Our automorphism group has three subgroups of order 4, and at least one of each possible type (cyclic versus non-cyclic). Fixed fields of larger subgroups require that we find elements fixed by all of the automorphisms in the subgroup. (We were conveniently ignoring the identity automorphism above.) This will require more computation, but will restrict the possibilities (smaller fields) to where it will be easier to deduce a primitive element for each field.</p>
+<p id="ifr">The seventh subgroup is generated by two elements of order \(2\) and is composed entirely of elements of order \(2\) (except the identity), so is isomorphic to \({\mathbb Z}_2\times{\mathbb Z}_2\text{.}\) The permutations correspond to automorphisms number 0, 1, 3, and 6. To determine the elements fixed by <em class="emphasis">all four</em> automorphisms, we will build the kernel for each one and as we go, we form the <em class="emphasis">intersection</em> of all four kernels. We will work via a loop over the four automorphisms.</p>
+<div class="sagecell-sage" id="IHS"><script type="text/x-sage">V = QQ^8
+for tau in [G[0], G[1], G[3], G[6]]:
+  tau_matrix = column_matrix([tau(be).vector() for be in basis])
+  K = (tau_matrix-identity_matrix(8)).right_kernel()
+  V = V.intersection(K)
+V
+</script></div>
+<p id="OmA">Outside of the rationals, there is a single fixed element.</p>
+<div class="sagecell-sage" id="oPb"><script type="text/x-sage">fromL(tau(c^2 - (1/22)*c^6))
+</script></div>
+<p id="utJ">Removing a scalar multiple, our primitive element is <code class="code-inline tex2jax_ignore">a^2</code>, which mathematically is \(\sqrt{2}\text{,}\) so the fixed field is \({\mathbb Q}(\sqrt{2})\text{.}\) Again, we can build this fixed field, but ignore the mapping.</p>
+<div class="sagecell-sage" id="UWk"><script type="text/x-sage">F, mapping = L.subfield((11/150)*(c^2 - (1/22)*c^6))
+F
+</script></div>
+<p id="aAS">One more subgroup. The penultimate subgroup has a permutation of order 4 as a generator, so is a cyclic group of order 4. The individual permutations of the subgroup correspond to automorphisms 0, 1, 2, 7.</p>
+<div class="sagecell-sage" id="Bdt"><script type="text/x-sage">V = QQ^8
+for tau in [G[0], G[1], G[2], G[7]]:
+  tau_matrix = column_matrix([tau(be).vector() for be in basis])
+  K = (tau_matrix-identity_matrix(8)).right_kernel()
+  V = V.intersection(K)
+V
+</script></div>
+<p id="GIb">So we compute the primitive element.</p>
+<div class="sagecell-sage" id="hkC"><script type="text/x-sage">fromL(tau(c^4))
+</script></div>
+<p id="mPk">Since rationals are fixed, we can remove the \(-14\) and the multiple and take <code class="code-inline tex2jax_ignore">a^3*b</code> as the primitive element. Mathematically, this is \(2i\text{,}\) so we might as well use just \(i\) as the primitive element and the fixed field is \({\mathbb Q}(i)\text{.}\) We can then build the fixed field (and ignore the mapping also returned).</p>
+<div class="sagecell-sage" id="NrL"><script type="text/x-sage">F, mapping = L.subfield((c^4+14)/-48)
+F
+</script></div>
+<p id="SWt">There is one more subgroup of order \(4\text{,}\) which we will leave as an exercise to analyze. There are also two trivial subgroups (the identity and the full group) which are not very interesting or surprising.</p>
+<p id="zdC">If the above seems like too much work, you can always just have Sage do it all with the <code class="code-inline tex2jax_ignore">.subfields()</code> method.</p>
+<div class="sagecell-sage" id="tyU"><script type="text/x-sage">L.subfields()
+</script></div>
+<p id="fkL">Ten subfields are described, which is what we would expect, given the 10 subgroups of the Galois group. Each begins with a new number field that is a subfield. Technically, each is not a subset of <code class="code-inline tex2jax_ignore">L</code>, but the second item returned for each subfield is an injective homomorphism, also known generally as an “embedding.” Each embedding describes how a primitive element of the subfield translates to an element of <code class="code-inline tex2jax_ignore">L</code>. Some of these primitive elements could be manipulated (as we have done above) to yield slightly simpler minimal polynomials, but the results are quite impressive nonetheless. Each item in the list has a third component, which is almost always <code class="code-inline tex2jax_ignore">None</code>, except when the subfield is the whole field, and then the third component is an injective homomorphism “in the other direction.”</p></section><section class="subsection" id="Kts"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Normal Extensions</span>
+</h3>
+<p id="LrU">Consider the third subgroup in the list above, generated by the permutation <code class="code-inline tex2jax_ignore">(1,4)</code>. As a subgroup of order \(2\text{,}\) it only has one nontrivial element, which here corresponds to the seventh automorphism. We determine the fixed elements as before.</p>
+<div class="sagecell-sage" id="ZGd"><script type="text/x-sage">tau = G[6]
+tau_matrix = column_matrix([tau(be).vector() for be in basis])
+(tau_matrix-identity_matrix(8)).right_kernel()
+</script></div>
+<div class="sagecell-sage" id="FNm"><script type="text/x-sage">fromL(tau(1))
+</script></div>
+<div class="sagecell-sage" id="lUv"><script type="text/x-sage">fromL(tau(c+(-1/82)*c^5))
+</script></div>
+<div class="sagecell-sage" id="SbE"><script type="text/x-sage">fromL(tau(c^2+(-1/22)*c^6))
+</script></div>
+<div class="sagecell-sage" id="yiN"><script type="text/x-sage">fromL(tau(c^3+(11/58)*c^7))
+</script></div>
+<p id="rzd">As usual, ignoring rational multiples, we see powers of <code class="code-inline tex2jax_ignore">a</code> and recognize that <code class="code-inline tex2jax_ignore">a</code> alone will be a primitive element for the fixed field, which is thus \({\mathbb Q}(\sqrt[4]{2})\text{.}\) Recognize that <code class="code-inline tex2jax_ignore">a</code> was our first root of \(x^4-2\text{,}\) and was used to create the first part of original tower, <code class="code-inline tex2jax_ignore">N</code>. So <code class="code-inline tex2jax_ignore">N</code> is both \({\mathbb Q}(\sqrt[4]{2})\) and the fixed field of \(H=\langle(1,4)\rangle\text{.}\)</p>
+<p id="XGm">\({\mathbb Q}(\sqrt[4]{2})\) contains at least one root of the irreducible \(x^4-2\text{,}\) but not all of the roots (witness the factorization above) and therefore does not qualify as a normal extension. By part (4) of <a class="xref" data-knowl="./knowl/theorem-fundamental-galois.html" title="Theorem 23.23: Fundamental Theorem of Galois Theory">Theorem 23.23</a> the automorphism group of the extension is not normal in the full Galois group.</p>
+<div class="sagecell-sage" id="epW"><script type="text/x-sage">sg[2].is_normal(P)
+</script></div>
+<p id="DNv">As expected.</p></section></section></div></main>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=10568106;
+var sc_invisible=1;
+var sc_security="510ba080";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/10568106/0/510ba080/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

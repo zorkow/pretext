@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:56:16+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Matrix Groups</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: ['base', 'extpfeil', 'amscd']
+  },
+  options: {
+    ignoreHtmlClass: ".*",
+    processHtmlClass: "has_am"
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd']
+  }
+};
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=002637997310187229905:qj2oy0jlpyu"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="matrix.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="matrix.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-symmetry.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="matrix.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="matrix.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-symmetry.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="Cpq">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-equivalence-relations.html" data-scroll="eYQ">Sets and Equivalence Relations</a></li>
+<li><a href="reading-questions-1.html" data-scroll="ibN">Reading Questions</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+<li><a href="sets-sage.html" data-scroll="LfZ">Sage</a></li>
+<li><a href="sets-sage-exercises.html" data-scroll="SKy">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="integers.html" data-scroll="mtY"><span class="codenumber">2</span> <span class="title">The Integers</span></a><ul>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Division Algorithm</a></li>
+<li><a href="reading-questions-2.html" data-scroll="kWt">Reading Questions</a></li>
+<li><a href="exercises-integers.html" data-scroll="Dsj">Exercises</a></li>
+<li><a href="integers-exercises-programming.html" data-scroll="jzs">Programming Exercises</a></li>
+<li><a href="integers-references.html" data-scroll="Dta">References and Suggested Readings</a></li>
+<li><a href="integers-sage.html" data-scroll="ojl">Sage</a></li>
+<li><a href="integers-sage-exercises.html" data-scroll="PGB">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">3</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="reading-questions-3.html" data-scroll="VNv">Reading Questions</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+<li><a href="groups-sage.html" data-scroll="fAT">Sage</a></li>
+<li><a href="groups-sage-exercises.html" data-scroll="aRa">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cyclic.html" data-scroll="KKE"><span class="codenumber">4</span> <span class="title">Cyclic Groups</span></a><ul>
+<li><a href="section-cyclic-subgroups.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-mult-group-c.html" data-scroll="sHa">Multiplicative Group of Complex Numbers</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="reading-questions-4.html" data-scroll="CZX">Reading Questions</a></li>
+<li><a href="exercises-cyclic.html" data-scroll="nXh">Exercises</a></li>
+<li><a href="cyclic-exercises-programming.html" data-scroll="Ueq">Programming Exercises</a></li>
+<li><a href="cyclic-references.html" data-scroll="KnF">References and Suggested Readings</a></li>
+<li><a href="cyclic-sage.html" data-scroll="EVs">Sage</a></li>
+<li><a href="cyclic-sage-exercises.html" data-scroll="Alz">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="permute.html" data-scroll="AQc"><span class="codenumber">5</span> <span class="title">Permutation Groups</span></a><ul>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Definitions and Notation</a></li>
+<li><a href="section-dihedral-groups.html" data-scroll="CFp">Dihedral Groups</a></li>
+<li><a href="reading-questions-5.html" data-scroll="HJQ">Reading Questions</a></li>
+<li><a href="exercises-permute.html" data-scroll="ecF">Exercises</a></li>
+<li><a href="permute-sage.html" data-scroll="iMy">Sage</a></li>
+<li><a href="permute-sage-exercises.html" data-scroll="KjO">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">6</span> <span class="title">Cosets and Lagrange's Theorem</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-lagranges-theorem.html" data-scroll="dTk">Lagrange's Theorem</a></li>
+<li><a href="section-fermat-euler.html" data-scroll="Kat">Fermat's and Euler's Theorems</a></li>
+<li><a href="reading-questions-6.html" data-scroll="BUE">Reading Questions</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+<li><a href="cosets-sage.html" data-scroll="qhC">Sage</a></li>
+<li><a href="cosets-sage-exercises.html" data-scroll="lxJ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">7</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="reading-questions-7.html" data-scroll="Jzd">Reading Questions</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="hbc">References and Suggested Readings</a></li>
+<li><a href="crypt-sage.html" data-scroll="cyJ">Sage</a></li>
+<li><a href="crypt-sage-exercises.html" data-scroll="DVZ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">8</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-8.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+<li><a href="algcodes-sage.html" data-scroll="Klo">Sage</a></li>
+<li><a href="algcodes-sage-exercises.html" data-scroll="Zum">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">9</span> <span class="title">Isomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="reading-questions-9.html" data-scroll="TYi">Reading Questions</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="LZO">Exercises</a></li>
+<li><a href="isomorph-sage.html" data-scroll="QJH">Sage</a></li>
+<li><a href="isomorph-sage-exercises.html" data-scroll="sgX">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="normal.html" data-scroll="xiL"><span class="codenumber">10</span> <span class="title">Normal Subgroups and Factor Groups</span></a><ul>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="reading-questions-10.html" data-scroll="pGm">Reading Questions</a></li>
+<li><a href="exercises-normal.html" data-scroll="hZN">Exercises</a></li>
+<li><a href="normal-sage.html" data-scroll="mJG">Sage</a></li>
+<li><a href="normal-sage-exercises.html" data-scroll="OgW">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="homomorph.html" data-scroll="JXG"><span class="codenumber">11</span> <span class="title">Homomorphisms</span></a><ul>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="reading-questions-11.html" data-scroll="sAS">Reading Questions</a></li>
+<li><a href="exercises-homomorph.html" data-scroll="WlY">Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Cth">Additional Exercises: Automorphisms</a></li>
+<li><a href="homomorph-sage.html" data-scroll="Hda">Sage</a></li>
+<li><a href="homomorph-sage-exercises.html" data-scroll="iAq">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">12</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN" class="active">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-12.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+<li><a href="matrix-sage.html" data-scroll="stf">Sage</a></li>
+<li><a href="matrix-sage-exercises.html" data-scroll="TQv">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct.html" data-scroll="YWA"><span class="codenumber">13</span> <span class="title">The Structure of  Groups</span></a><ul>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="reading-questions-13.html" data-scroll="vvy">Reading Questions</a></li>
+<li><a href="exercises-struct.html" data-scroll="Rsb">Exercises</a></li>
+<li><a href="struct-exercises-programming.html" data-scroll="xzk">Programming Exercises</a></li>
+<li><a href="struct-references.html" data-scroll="tDP">References and Suggested Readings</a></li>
+<li><a href="struct-sage.html" data-scroll="Cjd">Sage</a></li>
+<li><a href="struct-sage-exercises.html" data-scroll="dGt">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">14</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="reading-questions-14.html" data-scroll="MtJ">Reading Questions</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="JDL">References and Suggested Reading</a></li>
+<li><a href="actions-sage.html" data-scroll="gaW">Sage</a></li>
+<li><a href="actions-sage-exercises.html" data-scroll="brd">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">15</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-15.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+<li><a href="sylow-sage.html" data-scroll="Vab">Sage</a></li>
+<li><a href="sylow-sage-exercises.html" data-scroll="wxr">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">16</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="reading-questions-16.html" data-scroll="bCH">Reading Questions</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+<li><a href="rings-sage.html" data-scroll="ple">Sage</a></li>
+<li><a href="rings-sage-exercises.html" data-scroll="YmT">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">17</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="reading-questions-17.html" data-scroll="Afr">Reading Questions</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Exercises</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+<li><a href="poly-sage.html" data-scroll="vEG">Sage</a></li>
+<li><a href="poly-sage-exercises.html" data-scroll="qUN">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">18</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-18.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+<li><a href="domains-sage.html" data-scroll="pin">Sage</a></li>
+<li><a href="domains-sage-exercises.html" data-scroll="QFD">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">19</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-19.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+<li><a href="boolean-sage.html" data-scroll="LwL">Sage</a></li>
+<li><a href="boolean-sage-exercises.html" data-scroll="GMS">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vect.html" data-scroll="kTG"><span class="codenumber">20</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section-vect-definitions-and-examples.html" data-scroll="Ogj">Definitions and Examples</a></li>
+<li><a href="section-subspaces.html" data-scroll="uns">Subspaces</a></li>
+<li><a href="section-linear-independence.html" data-scroll="auB">Linear Independence</a></li>
+<li><a href="reading-questions-20.html" data-scroll="xkL">Reading Questions</a></li>
+<li><a href="exercises-vect.html" data-scroll="VKI">Exercises</a></li>
+<li><a href="vect-references.html" data-scroll="jeK">References and Suggested Readings</a></li>
+<li><a href="vect-sage.html" data-scroll="GBK">Sage</a></li>
+<li><a href="vect-sage-exercises.html" data-scroll="BRR">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">21</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-extension-fields.html" data-scroll="Qfe">Extension Fields</a></li>
+<li><a href="section-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="reading-questions-21.html" data-scroll="Pop">Reading Questions</a></li>
+<li><a href="exercises-fields.html" data-scroll="Lvl">Exercises</a></li>
+<li><a href="fields-references.html" data-scroll="veH">References and Suggested Readings</a></li>
+<li><a href="fields-sage.html" data-scroll="IAF">Sage</a></li>
+<li><a href="fields-sage-exercises.html" data-scroll="rCu">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">22</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-22.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+<li><a href="finite-sage.html" data-scroll="vNX">Sage</a></li>
+<li><a href="finite-sage-exercises.html" data-scroll="Xln">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">23</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="YIb">Reading Questions</a></li>
+<li><a href="exercises-galois.html" data-scroll="qAB">Exercises</a></li>
+<li><a href="galois-references.html" data-scroll="ppv">References and Suggested Readings</a></li>
+<li><a href="galois-sage.html" data-scroll="brD">Sage</a></li>
+<li><a href="galois-sage-exercises.html" data-scroll="WHK">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="geN"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">12.1</span> <span class="title">Matrix Groups</span>
+</h2>
+<section class="subsection" id="iZt"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Some Facts from Linear Algebra</span>
+</h3>
+<p id="Mtn">Before we study matrix groups, we must recall some basic facts from linear algebra. One of the most fundamental ideas of linear algebra is that of a linear transformation. A <dfn class="terminology">linear transformation</dfn> or <dfn class="terminology">linear map</dfn>  \(T : {\mathbb R}^n \rightarrow {\mathbb R}^m\) is a map that preserves vector addition and scalar multiplication; that is, for vectors \({\mathbf x}\) and \({\mathbf y}\) in \({\mathbb R}^n\) and a scalar \(\alpha \in {\mathbb R}\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+T({\mathbf x}+{\mathbf y}) &amp; = T({\mathbf x}) + T({\mathbf y})\\
+T(\alpha {\mathbf y}) &amp; = \alpha T({\mathbf y})\text{.}
+\end{align*}
+</div>
+<p class="continuation">An \(m \times n\) matrix with entries in \({\mathbb R}\) represents a linear transformation from \({\mathbb R}^n\) to \({\mathbb R}^m\text{.}\) If we write vectors \({\mathbf x} = (x_1, \ldots,
+x_n)^\transpose\) and \({\mathbf y} = (y_1, \ldots,
+y_n)^\transpose\) in \({\mathbb R}^n\) as column matrices, then an \(m \times n\) matrix</p>
+<div class="displaymath">
+\begin{equation*}
+A
+=
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{pmatrix}
+\end{equation*}
+</div>
+<p class="continuation">maps the vectors to \({\mathbb R}^m\) linearly by matrix multiplication. Observe that if \(\alpha\) is a real number,</p>
+<div class="displaymath">
+\begin{equation*}
+A({\mathbf x} + {\mathbf y} ) 
+= 
+A {\mathbf x }+ A {\mathbf y} 
+\qquad \text{and} \qquad
+\alpha A {\mathbf x} 
+= 
+A ( \alpha {\mathbf x})\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathbf x}
+=
+\begin{pmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We will often abbreviate the matrix \(A\) by writing \((a_{ij})\text{.}\) </p>
+<p id="sAw">Conversely, if \(T : {\mathbb R}^n \rightarrow {\mathbb R}^m\) is a linear map, we can associate a matrix \(A\) with \(T\) by considering what \(T\) does to the vectors</p>
+<div class="displaymath">
+\begin{align*}
+{\mathbf e}_1 &amp; = (1, 0, \ldots, 0)^\transpose\\
+{\mathbf e}_2 &amp; = (0, 1, \ldots, 0)^\transpose\\
+&amp;  \vdots &amp;\\
+{\mathbf e}_n &amp; = (0, 0, \ldots, 1)^\transpose\text{.}
+\end{align*}
+</div>
+<p class="continuation">We can write any vector \({\mathbf x} = (x_1, \ldots,
+x_n)^\transpose\) as</p>
+<div class="displaymath">
+\begin{equation*}
+x_1 {\mathbf e}_1 + x_2 {\mathbf e}_2 + \cdots + x_n {\mathbf e}_n\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Consequently, if</p>
+<div class="displaymath">
+\begin{align*}
+T({\mathbf e}_1) &amp; = (a_{11}, a_{21}, \ldots, a_{m1})^\transpose,\\
+T({\mathbf e}_2) &amp; = (a_{12}, a_{22}, \ldots, a_{m2})^\transpose,\\
+&amp;  \vdots &amp;\\
+T({\mathbf e}_n) &amp; = (a_{1n}, a_{2n}, \ldots, a_{mn})^\transpose\text{,}
+\end{align*}
+</div>
+<p class="continuation">then</p>
+<div class="displaymath">
+\begin{align*}
+T({\mathbf x} ) &amp; = T(x_1 {\mathbf e}_1 + x_2 {\mathbf e}_2 + \cdots + x_n {\mathbf e}_n)\\
+&amp; = x_1 T({\mathbf e}_1) + x_2 T({\mathbf e}_2) + \cdots + x_n T({\mathbf e}_n)\\
+&amp; = \left( \sum_{k=1}^{n} a_{1k} x_k, \ldots,  \sum_{k=1}^{n} a_{mk} x_k \right)^\transpose\\
+&amp; = A {\mathbf x}\text{.}
+\end{align*}
+</div>
+<article class="example example-like" id="YAo"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.1</span><span class="period">.</span>
+</h6>
+<p id="rQC">If we let \(T : {\mathbb R}^2 \rightarrow {\mathbb R}^2\) be the map given by</p>
+<div class="displaymath">
+\begin{equation*}
+T(x_1, x_2) = (2 x_1 + 5 x_2, - 4 x_1 + 3 x_2)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">the axioms that \(T\) must satisfy to be a linear transformation are easily verified. The column vectors \(T {\mathbf e}_1 = (2, -4)^\transpose\) and \(T {\mathbf e}_2 = (5,3)^\transpose\) tell us that \(T\) is given by the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+A =
+\begin{pmatrix}
+2 &amp; 5 \\
+-4 &amp; 3
+\end{pmatrix}\text{.}
+\end{equation*}
+</div></article><p id="YHF">Since we are interested in groups of matrices, we need to know which matrices have multiplicative inverses. Recall that an \(n \times n\) matrix \(A\) is <dfn class="terminology">invertible</dfn>  exactly when there exists another matrix \(A^{-1}\) such that \(A A^{-1} = A^{-1} A = I\text{,}\) where</p>
+<div class="displaymath">
+\begin{equation*}
+I =
+\begin{pmatrix}
+1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 1
+\end{pmatrix}
+\end{equation*}
+</div>
+<p class="continuation">is the \(n \times n\) identity matrix. From linear algebra we know that \(A\) is invertible if and only if the determinant of \(A\) is nonzero. Sometimes an invertible matrix is said to be <dfn class="terminology">nonsingular</dfn>. </p>
+<article class="example example-like" id="EHx"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.2</span><span class="period">.</span>
+</h6>
+<p id="XXL">If \(A\) is the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}
+2 &amp; 1 \\
+5 &amp; 3
+\end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">then the inverse of \(A\) is</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1} =
+\begin{pmatrix}
+3 &amp; -1 \\
+-5 &amp; 2
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We are guaranteed  that \(A^{-1}\) exists, since \(\det(A) = 2 \cdot 3 - 5 \cdot 1 = 1\) is nonzero.</p></article><p id="EOO">Some other facts about determinants will also prove useful in the course of this chapter. Let \(A\) and \(B\) be \(n \times n\) matrices. From linear algebra we have the following properties of determinants.</p>
+<ul class="disc">
+<li id="KLe"><p id="wma">The determinant is a homomorphism into the multiplicative group of real numbers; that is, \(\det( A B) = (\det A )(\det B)\text{.}\)</p></li>
+<li id="qSn"><p id="ctj">If \(A\) is an invertible matrix, then \(\det(A^{-1}) = 1 / \det A\text{.}\)</p></li>
+<li id="WZw"><p id="IAs">If we define the transpose of a matrix \(A = (a_{ij})\) to be \(A^\transpose = (a_{ji})\text{,}\) then \(\det(A^\transpose) = \det A\text{.}\)</p></li>
+<li id="DgF"><p id="oHB">Let \(T\) be the linear transformation associated with an \(n \times n\) matrix \(A\text{.}\) Then \(T\) multiplies volumes by a factor of \(|\det A|\text{.}\) In the case of \({\mathbb R}^2\text{,}\) this means that \(T\) multiplies areas by \(|\det A|\text{.}\)</p></li>
+</ul>
+<p id="kVX">Linear maps, matrices, and determinants are covered in any elementary linear algebra text; however, if you have not had a course in linear algebra, it is a straightforward process to verify these properties directly for \(2 \times 2\) matrices, the case with which we are most concerned.</p></section><section class="subsection" id="PgC"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The General and Special Linear Groups</span>
+</h3>
+<p id="Rdg">The set of all \(n \times n\) invertible matrices forms a group called the <dfn class="terminology">general linear group</dfn>.  We will denote this group by \(GL_n({\mathbb R})\text{.}\) The general linear group has several important subgroups. The multiplicative properties of the determinant imply that the set of matrices with determinant one is a subgroup of the general linear group. Stated another way, suppose that \(\det(A) =1\) and \(\det(B) = 1\text{.}\) Then \(\det(AB) = \det(A) \det (B) = 1\) and \(\det(A^{-1}) = 1 / \det A = 1\text{.}\) This subgroup is called the <dfn class="terminology">special linear group</dfn> and is denoted by \(SL_n({\mathbb R})\text{.}\)</p>
+<article class="example example-like" id="kOG"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.3</span><span class="period">.</span>
+</h6>
+<p id="EeU">Given a \(2 \times 2\) matrix</p>
+<div class="displaymath">
+\begin{equation*}
+A =
+\begin{pmatrix}
+a &amp; b \\
+c &amp; d
+\end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">the determinant of \(A\) is \(ad-bc\text{.}\) The group \(GL_2({\mathbb R})\) consists of those matrices in which \(ad-bc \neq 0\text{.}\) The inverse of \(A\) is</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1} =
+\frac{1}{ad-bc}
+\begin{pmatrix}
+d &amp; -b \\
+-c &amp; a
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">If \(A\) is in \(SL_2({\mathbb R})\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+A^{-1} =
+\begin{pmatrix}
+d &amp; -b \\
+-c &amp; a
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Geometrically, \(SL_2({\mathbb R})\) is the group that preserves the areas of parallelograms. Let</p>
+<div class="displaymath">
+\begin{equation*}
+A =
+\begin{pmatrix}
+1 &amp; 1 \\
+0 &amp; 1
+\end{pmatrix}
+\end{equation*}
+</div>
+<p class="continuation">be in \(SL_2({\mathbb R})\text{.}\) In <a class="xref" data-knowl="./knowl/figure-sl2.html" title="Figure 12.4">Figure 12.4</a>, the unit square corresponding to the vectors \({\mathbf x} = (1,0)^\transpose\) and \({\mathbf y} = (0,1)^\transpose\) is taken  by \(A\) to the parallelogram with sides \((1,0)^\transpose\) and \((1, 1)^\transpose\text{;}\) that is, \(A {\mathbf x} = (1,0)^\transpose\) and \(A {\mathbf y} = (1, 1)^\transpose\text{.}\) Notice that these two parallelograms have the same area.</p></article><figure class="figure figure-like" id="xkp"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/matrix-sl2r.svg" role="img" class="contained" alt="Two side-by figures. The figure on the left is a square on set of axes with the left edge a vector from the origin to (0,1) and bottom edge a vector from the origin to (1,0). The figure on the right is a parallelogram on set of axes with the left edge a vector from the origin to (1,1) and bottom edge a vector from the origin to (1,0)."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.4<span class="period">.</span></span><span class="space"> </span>\(SL_2(\mathbb R)\) acting on the unit square</figcaption></figure></section><section class="subsection" id="vnL"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Orthogonal Group \(O(n)\)</span>
+</h3>
+<p id="dry">Another subgroup of \(GL_n({\mathbb R})\) is the orthogonal group. A matrix \(A\) is <dfn class="terminology">orthogonal</dfn>  if \(A^{-1} = A^\transpose\text{.}\) The <dfn class="terminology">orthogonal group</dfn>  consists of the set of all orthogonal matrices. We write \(O(n)\) for the \(n \times n\) orthogonal group.  We leave as an exercise the proof that \(O(n)\) is a subgroup of \(GL_n( {\mathbb R})\text{.}\)</p>
+<article class="example example-like" id="dkh"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.5</span><span class="period">.</span>
+</h6>
+<p id="kmd">The following matrices are orthogonal:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}
+3/5 &amp; -4/5 \\
+4/5 &amp; 3/5
+\end{pmatrix}, 
+\quad
+\begin{pmatrix}
+1/2 &amp; -\sqrt{3}/2 \\
+\sqrt{3}/2 &amp; 1/2
+\end{pmatrix}, 
+\quad
+\begin{pmatrix}
+-1/\sqrt{2} &amp; 0 &amp; 1/ \sqrt{2} \\
+1/\sqrt{6} &amp; -2/\sqrt{6} &amp; 1/\sqrt{6} \\
+1/ \sqrt{3} &amp; 1/ \sqrt{3} &amp; 1/ \sqrt{3} 
+\end{pmatrix}\text{.}
+\end{equation*}
+</div></article><p id="JyH">There is a more geometric way of viewing the group \(O(n)\text{.}\) The orthogonal matrices are exactly those matrices that preserve the length of vectors. We can define the length of a vector using the <dfn class="terminology">Euclidean inner product</dfn>,  or <dfn class="terminology">dot product</dfn>, of two vectors. The Euclidean inner product of two vectors \({\mathbf x}=(x_1, \ldots,
+x_n)^\transpose\) and \({\mathbf y}=(y_1, \ldots, y_n)^\transpose\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\langle  {\mathbf x}, {\mathbf y} \rangle
+=
+{\mathbf x}^\transpose {\mathbf y}
+=
+(x_1, x_2, \ldots, x_n)
+\begin{pmatrix}
+y_1 \\ y_2 \\ \vdots \\ y_n
+\end{pmatrix}
+=
+x_1 y_1 + \cdots + x_n y_n\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We define the length of a vector \({\mathbf x}=(x_1, \ldots,
+x_n)^\transpose\) to be </p>
+<div class="displaymath">
+\begin{equation*}
+\| {\mathbf x} \| = \sqrt{\langle  {\mathbf x}, {\mathbf x} \rangle}  = \sqrt{x_1^2 + \cdots + x_n^2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Associated with the notion of the length of a vector is the idea of the distance between two vectors. We define the <dfn class="terminology">distance</dfn> between two vectors \({\mathbf x}\) and \({\mathbf y}\) to be \(\| {\mathbf x}-{\mathbf y} \|\text{.}\) We leave as an exercise the proof of the following proposition about the properties of Euclidean inner products.</p>
+<article class="proposition theorem-like" id="xcY"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">12.6</span><span class="period">.</span>
+</h6>
+<p id="fCk">Let \({\mathbf x}\text{,}\) \({\mathbf y}\text{,}\) and \({\mathbf w}\) be vectors in \({\mathbb R}^n\) and \(\alpha \in {\mathbb R}\text{.}\) Then</p>
+<ol class="decimal">
+<li id="vCg"><p id="UOK">\(\langle {\mathbf x}, {\mathbf y} \rangle = \langle {\mathbf y}, {\mathbf x} \rangle\text{.}\)</p></li>
+<li id="bJp"><p id="AVT">\(\langle {\mathbf x}, {\mathbf y} + {\mathbf w} \rangle = \langle {\mathbf x}, {\mathbf y} \rangle + \langle {\mathbf x}, {\mathbf w} \rangle\text{.}\)</p></li>
+<li id="HQy"><p id="hdc">\(\langle \alpha {\mathbf x}, {\mathbf y} \rangle = \langle {\mathbf x}, \alpha {\mathbf y} \rangle = \alpha \langle {\mathbf x}, {\mathbf y} \rangle\text{.}\)</p></li>
+<li id="nXH"><p id="Nkl">\(\langle {\mathbf x}, {\mathbf x} \rangle \geq 0\) with equality exactly when \({\mathbf x} = 0\text{.}\)</p></li>
+<li id="UeQ"><p id="tru">If \(\langle {\mathbf x}, {\mathbf y} \rangle = 0\) for all \({\mathbf x}\) in \({\mathbb R}^n\text{,}\) then \({\mathbf y} = 0\text{.}\)</p></li>
+</ol></article><article class="example example-like" id="Jrq"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.7</span><span class="period">.</span>
+</h6>
+<p id="Qtm">The vector \({\mathbf x} =(3,4)^\transpose\) has length \(\sqrt{3^2 + 4^2} = 5\text{.}\) We can also see that the orthogonal matrix</p>
+<div class="displaymath">
+\begin{equation*}
+A=
+\begin{pmatrix}
+3/5 &amp; -4/5 \\
+4/5 &amp; 3/5
+\end{pmatrix}
+\end{equation*}
+</div>
+<p class="continuation">preserves the length of this vector. The vector \(A{\mathbf x} = (-7/5,24/5)^\transpose\) also has length 5.</p></article><p id="pFQ">Since \(\det(A A^\transpose) = \det(I) = 1\) and \(\det(A) = \det( A^\transpose )\text{,}\) the determinant of any orthogonal matrix is either \(1\) or \(-1\text{.}\) Consider the column vectors</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathbf a}_j =
+\begin{pmatrix}
+a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
+\end{pmatrix}
+\end{equation*}
+</div>
+<p class="continuation">of the orthogonal matrix \(A= (a_{ij})\text{.}\) Since \(AA^\transpose = I\text{,}\) \(\langle {\mathbf a}_r, {\mathbf a}_s \rangle = \delta_{rs}\text{,}\) where</p>
+<div class="displaymath">
+\begin{equation*}
+\delta_{rs}
+=
+\begin{cases}
+1 &amp; r = s \\
+0 &amp; r \neq s
+\end{cases}
+\end{equation*}
+</div>
+<p class="continuation">is the Kronecker delta.  Accordingly, column vectors of an orthogonal matrix all have length 1; and the Euclidean inner product of distinct column vectors is zero. Any set of vectors satisfying these properties is called an <dfn class="terminology">orthonormal set</dfn>.  Conversely, given an \(n \times n\) matrix \(A\) whose columns form an orthonormal set, it follows that \(A^{-1} = A^\transpose\text{.}\)</p>
+<p id="VMZ">We say that a matrix \(A\) is <dfn class="terminology">distance-preserving</dfn>,  <dfn class="terminology">length-preserving</dfn>,  or <dfn class="terminology">inner product-preserving</dfn> when \(\| A{\mathbf x}- A{\mathbf y} \| =\| {\mathbf x}- {\mathbf y} \|\text{,}\) \(\| A{\mathbf x} \| =\| {\mathbf x} \|\text{,}\) or \(\langle A{\mathbf x}, A{\mathbf y} \rangle = \langle {\mathbf x},{\mathbf y} \rangle\text{,}\) respectively. The following theorem, which characterizes the orthogonal group, says that these notions are the same.</p>
+<article class="theorem theorem-like" id="QVP"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.8</span><span class="period">.</span>
+</h6>
+<p id="uLi">Let \(A\) be an \(n \times n\) matrix. The following statements are equivalent.</p>
+<ol class="decimal">
+<li id="AlZ"><p id="ZyD">The columns of the matrix \(A\) form an orthonormal set.</p></li>
+<li id="gti"><p id="FFM">\(A^{-1} = A^\transpose\text{.}\)</p></li>
+<li id="MAr"><p id="lMV">For vectors \({\mathbf x}\) and \({\mathbf y}\text{,}\) \(\langle A{\mathbf x}, A {\mathbf y} \rangle = \langle {\mathbf x}, {\mathbf y} \rangle\text{.}\)</p></li>
+<li id="sHA"><p id="RUe">For vectors \({\mathbf x}\) and \({\mathbf y}\text{,}\) \(\| A{\mathbf x}- A{\mathbf y} \| = \| {\mathbf x}- {\mathbf y} \|\text{.}\)</p></li>
+<li id="YOJ"><p id="ybn">For any vector \({\mathbf x}\text{,}\) \(\| A{\mathbf x} \| = \| {\mathbf x}\|\text{.}\)</p></li>
+</ol></article><article class="hiddenproof" id="lyA"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-lyA"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-lyA"><article class="hiddenproof"><p id="Fkn">We have already shown (1) and (2) to be equivalent.</p>
+<p id="lrw">\((2) \Rightarrow (3)\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\langle A{\mathbf x}, A{\mathbf y} \rangle &amp; = (A {\mathbf x})^\transpose A {\mathbf y}\\
+&amp; = {\mathbf x}^\transpose A^\transpose A {\mathbf y}\\
+&amp; = {\mathbf x}^\transpose {\mathbf y}\\
+&amp; = \langle {\mathbf x}, {\mathbf y} \rangle\text{.}
+\end{align*}
+</div>
+<p id="RyF">\((3) \Rightarrow (2)\text{.}\) Since</p>
+<div class="displaymath">
+\begin{align*}
+\langle {\mathbf x}, {\mathbf x} \rangle &amp; = \langle A{\mathbf x}, A{\mathbf x} \rangle\\
+&amp; = {\mathbf x}^\transpose A^\transpose A {\mathbf x}\\
+&amp; = \langle {\mathbf x}, A^\transpose A{\mathbf x} \rangle\text{,}
+\end{align*}
+</div>
+<p class="continuation">we know that \(\langle {\mathbf x}, (A^\transpose A - I){\mathbf x} \rangle = 0\) for all \({\mathbf x}\text{.}\) Therefore, \(A^\transpose A -I = 0\) or \(A^{-1} = A^\transpose\text{.}\)</p>
+<p id="xFO">\((3) \Rightarrow (4)\text{.}\) If \(A\) is inner product-preserving, then \(A\) is distance-preserving, since</p>
+<div class="displaymath">
+\begin{align*}
+\| A{\mathbf x} - A{\mathbf y} \|^2 &amp; = \| A({\mathbf x} - {\mathbf y}) \|^2\\
+&amp; = \langle A({\mathbf x} - {\mathbf y}), A({\mathbf x} - {\mathbf y}) \rangle\\
+&amp; = \langle {\mathbf x} - {\mathbf y}, {\mathbf x} - {\mathbf y} \rangle\\
+&amp; = \| {\mathbf x} - {\mathbf y} \|^2\text{.}
+\end{align*}
+</div>
+<p id="dMX">\((4) \Rightarrow (5)\text{.}\) If \(A\) is distance-preserving, then \(A\) is length-preserving. Letting \({\mathbf y} = 0\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\| A{\mathbf x}\| = \| A{\mathbf x}- A{\mathbf y} \| = \| {\mathbf x}- {\mathbf y} \| = \| {\mathbf x} \|\text{.}
+\end{equation*}
+</div>
+<p id="JUg">\((5) \Rightarrow (3)\text{.}\) We use the following identity to show that length-preserving implies inner product-preserving:</p>
+<div class="displaymath">
+\begin{equation*}
+\langle {\mathbf x}, {\mathbf y} \rangle = \frac{1}{2} \left[ \|{\mathbf x} +{\mathbf y}\|^2 - \|{\mathbf x}\|^2 - \|{\mathbf y}\|^2 \right]\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Observe that</p>
+<div class="displaymath">
+\begin{align*}
+\langle A {\mathbf x}, A {\mathbf y} \rangle &amp; = \frac{1}{2} \left[ \|A {\mathbf x} + A {\mathbf y} \|^2 - \|A {\mathbf x} \|^2 -  \|A {\mathbf y} \|^2 \right]\\
+&amp; = \frac{1}{2} \left[ \|A ( {\mathbf x} + {\mathbf y} ) \|^2 - \|A {\mathbf x} \|^2 -  \|A {\mathbf y} \|^2 \right]\\
+&amp; = \frac{1}{2} \left[ \|{\mathbf x} + {\mathbf y}\|^2 - \|{\mathbf x}\|^2 - \|{\mathbf y}\|^2 \right]\\
+&amp; = \langle {\mathbf x}, {\mathbf y} \rangle\text{.}
+\end{align*}
+</div></article></div>
+<figure class="figure figure-like" id="ibr"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/matrix-o2.svg" role="img" class="contained" alt="Two side-by figures. The figure on the left is a set of axes with an arrow pointing up and right from the origin to (a,b) and the second arrow pointing down and right from the origin to a point (a, -b). The figure on the right is a set of axes with an arrow pointed up and right from the origin to (cosine theta, sine theta) and an arrow point up and left at a right angle to the first vector from the origin to (sine theta, minus cosine theta)."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.9<span class="period">.</span></span><span class="space"> </span>\(O(2)\) acting on \(\mathbb R^2\)</figcaption></figure><article class="example example-like" id="pyz"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.10</span><span class="period">.</span>
+</h6>
+<p id="wAv">Let us examine the orthogonal group on \({\mathbb R}^2\) a bit more closely. An element \(A \in O(2)\) is determined by its action on \({\mathbf e}_1 = (1, 0)^\transpose\) and \({\mathbf e}_2 = (0, 1)^\transpose\text{.}\) If \(A{\mathbf e}_1 = (a,b)^\transpose\text{,}\) then \(a^2 + b^2 = 1\text{,}\) since the length of a vector must be preserved when it is multiplied by \(A\text{.}\) Since multiplication of an element of \(O(2)\) preserves length and orthogonality, \(A{\mathbf e}_2 = \pm(-b, a)^\transpose\text{.}\) If we choose \(A{\mathbf e}_2 = (-b, a)^\transpose\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+A
+=
+\begin{pmatrix}
+a &amp; -b \\
+b &amp; a
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos \theta &amp; - \sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{pmatrix},
+\end{equation*}
+</div>
+<p class="continuation">where \(0 \leq \theta \lt 2 \pi\text{.}\) The matrix \(A\) rotates a vector in \(\mathbb R^2\) counterclockwise about the origin by an angle of \(\theta\) (<a class="xref" data-knowl="./knowl/figure-o2.html" title="Figure 12.9">Figure 12.9</a>).</p>
+<p id="p-1907">If we choose \(A{\mathbf e}_2 = (b, -a)^\transpose\text{,}\) then we obtain the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+B
+=
+\begin{pmatrix}
+a &amp; b \\
+b &amp; -a
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos \theta &amp; \sin \theta \\
+\sin \theta &amp; -\cos \theta
+\end{pmatrix}.
+\end{equation*}
+</div>
+<p class="continuation">Here, \(\det B = -1\) and</p>
+<div class="displaymath">
+\begin{equation*}
+B^2
+=
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix}.
+\end{equation*}
+</div>
+<p class="continuation">A reflection about the horizontal axis is given by the matrix</p>
+<div class="displaymath">
+\begin{equation*}
+C
+=
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix},
+\end{equation*}
+</div>
+<p class="continuation">and \(B = AC\) (see <a class="xref" data-knowl="./knowl/figure-o2.html" title="Figure 12.9">Figure 12.9</a>). Thus, a reflection about a line \(\ell\) is simply a reflection about the horizontal axis followed by a rotation.</p></article><p id="BUi">Two of the other matrix or matrix-related groups that we will consider are the special orthogonal group  and the group of Euclidean motions. The <dfn class="terminology">special orthogonal group</dfn>,  \(SO(n)\text{,}\) is just the intersection of \(O(n)\) and \(SL_n({\mathbb R})\text{;}\) that is, those elements in \(O(n)\) with determinant one.  The <dfn class="terminology">Euclidean group</dfn>,  \(E(n)\text{,}\) can be written as ordered pairs \((A, {\mathbf x})\text{,}\) where \(A\) is in \(O(n)\) and \({\mathbf x}\) is in \({\mathbb R}^n\text{.}\) We define multiplication by </p>
+<div class="displaymath">
+\begin{equation*}
+(A, {\mathbf x}) (B, {\mathbf y}) = (AB, A {\mathbf y} +{\mathbf x})\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The identity of the group is \((I,{\mathbf 0})\text{;}\) the inverse of \((A, {\mathbf x})\) is \((A^{-1}, -A^{-1} {\mathbf x})\text{.}\) In <a class="xref" data-knowl="./knowl/matrix-exercise-en-group.html" title="Exercise 12.4.6">Exercise 12.4.6</a>, you are asked to check that \(E(n)\) is indeed a group under this operation.</p>
+<figure class="figure figure-like" id="OiA"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/matrix-r2-translations.svg" role="img" class="contained" alt="Two side-by figures. The figure on the left is a set of axes with an arrow pointing up and right from the origin to a point x. The figure on the right is a set of axes with an arrow of the same length and same direction from a point to the right and above the origin to a point x + y."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.11<span class="period">.</span></span><span class="space"> </span>Translations in \(\mathbb R^2\)</figcaption></figure></section></section></div></main>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=10568106;
+var sc_invisible=1;
+var sc_security="510ba080";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/10568106/0/510ba080/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

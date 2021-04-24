@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:56:57+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Sage</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: ['base', 'extpfeil', 'amscd']
+  },
+  options: {
+    ignoreHtmlClass: ".*",
+    processHtmlClass: "has_am"
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd']
+  }
+};
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=002637997310187229905:qj2oy0jlpyu"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="boolean-references.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="boolean.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="boolean-sage-exercises.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="boolean-references.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="boolean.html" title="Up">Up</a><a class="next-button button toolbar-item" href="boolean-sage-exercises.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="Cpq">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-equivalence-relations.html" data-scroll="eYQ">Sets and Equivalence Relations</a></li>
+<li><a href="reading-questions-1.html" data-scroll="ibN">Reading Questions</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+<li><a href="sets-sage.html" data-scroll="LfZ">Sage</a></li>
+<li><a href="sets-sage-exercises.html" data-scroll="SKy">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="integers.html" data-scroll="mtY"><span class="codenumber">2</span> <span class="title">The Integers</span></a><ul>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Division Algorithm</a></li>
+<li><a href="reading-questions-2.html" data-scroll="kWt">Reading Questions</a></li>
+<li><a href="exercises-integers.html" data-scroll="Dsj">Exercises</a></li>
+<li><a href="integers-exercises-programming.html" data-scroll="jzs">Programming Exercises</a></li>
+<li><a href="integers-references.html" data-scroll="Dta">References and Suggested Readings</a></li>
+<li><a href="integers-sage.html" data-scroll="ojl">Sage</a></li>
+<li><a href="integers-sage-exercises.html" data-scroll="PGB">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">3</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="reading-questions-3.html" data-scroll="VNv">Reading Questions</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+<li><a href="groups-sage.html" data-scroll="fAT">Sage</a></li>
+<li><a href="groups-sage-exercises.html" data-scroll="aRa">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cyclic.html" data-scroll="KKE"><span class="codenumber">4</span> <span class="title">Cyclic Groups</span></a><ul>
+<li><a href="section-cyclic-subgroups.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-mult-group-c.html" data-scroll="sHa">Multiplicative Group of Complex Numbers</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="reading-questions-4.html" data-scroll="CZX">Reading Questions</a></li>
+<li><a href="exercises-cyclic.html" data-scroll="nXh">Exercises</a></li>
+<li><a href="cyclic-exercises-programming.html" data-scroll="Ueq">Programming Exercises</a></li>
+<li><a href="cyclic-references.html" data-scroll="KnF">References and Suggested Readings</a></li>
+<li><a href="cyclic-sage.html" data-scroll="EVs">Sage</a></li>
+<li><a href="cyclic-sage-exercises.html" data-scroll="Alz">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="permute.html" data-scroll="AQc"><span class="codenumber">5</span> <span class="title">Permutation Groups</span></a><ul>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Definitions and Notation</a></li>
+<li><a href="section-dihedral-groups.html" data-scroll="CFp">Dihedral Groups</a></li>
+<li><a href="reading-questions-5.html" data-scroll="HJQ">Reading Questions</a></li>
+<li><a href="exercises-permute.html" data-scroll="ecF">Exercises</a></li>
+<li><a href="permute-sage.html" data-scroll="iMy">Sage</a></li>
+<li><a href="permute-sage-exercises.html" data-scroll="KjO">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">6</span> <span class="title">Cosets and Lagrange's Theorem</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-lagranges-theorem.html" data-scroll="dTk">Lagrange's Theorem</a></li>
+<li><a href="section-fermat-euler.html" data-scroll="Kat">Fermat's and Euler's Theorems</a></li>
+<li><a href="reading-questions-6.html" data-scroll="BUE">Reading Questions</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+<li><a href="cosets-sage.html" data-scroll="qhC">Sage</a></li>
+<li><a href="cosets-sage-exercises.html" data-scroll="lxJ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">7</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="reading-questions-7.html" data-scroll="Jzd">Reading Questions</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="hbc">References and Suggested Readings</a></li>
+<li><a href="crypt-sage.html" data-scroll="cyJ">Sage</a></li>
+<li><a href="crypt-sage-exercises.html" data-scroll="DVZ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">8</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-8.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+<li><a href="algcodes-sage.html" data-scroll="Klo">Sage</a></li>
+<li><a href="algcodes-sage-exercises.html" data-scroll="Zum">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">9</span> <span class="title">Isomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="reading-questions-9.html" data-scroll="TYi">Reading Questions</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="LZO">Exercises</a></li>
+<li><a href="isomorph-sage.html" data-scroll="QJH">Sage</a></li>
+<li><a href="isomorph-sage-exercises.html" data-scroll="sgX">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="normal.html" data-scroll="xiL"><span class="codenumber">10</span> <span class="title">Normal Subgroups and Factor Groups</span></a><ul>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="reading-questions-10.html" data-scroll="pGm">Reading Questions</a></li>
+<li><a href="exercises-normal.html" data-scroll="hZN">Exercises</a></li>
+<li><a href="normal-sage.html" data-scroll="mJG">Sage</a></li>
+<li><a href="normal-sage-exercises.html" data-scroll="OgW">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="homomorph.html" data-scroll="JXG"><span class="codenumber">11</span> <span class="title">Homomorphisms</span></a><ul>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="reading-questions-11.html" data-scroll="sAS">Reading Questions</a></li>
+<li><a href="exercises-homomorph.html" data-scroll="WlY">Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Cth">Additional Exercises: Automorphisms</a></li>
+<li><a href="homomorph-sage.html" data-scroll="Hda">Sage</a></li>
+<li><a href="homomorph-sage-exercises.html" data-scroll="iAq">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">12</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-12.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+<li><a href="matrix-sage.html" data-scroll="stf">Sage</a></li>
+<li><a href="matrix-sage-exercises.html" data-scroll="TQv">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct.html" data-scroll="YWA"><span class="codenumber">13</span> <span class="title">The Structure of  Groups</span></a><ul>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="reading-questions-13.html" data-scroll="vvy">Reading Questions</a></li>
+<li><a href="exercises-struct.html" data-scroll="Rsb">Exercises</a></li>
+<li><a href="struct-exercises-programming.html" data-scroll="xzk">Programming Exercises</a></li>
+<li><a href="struct-references.html" data-scroll="tDP">References and Suggested Readings</a></li>
+<li><a href="struct-sage.html" data-scroll="Cjd">Sage</a></li>
+<li><a href="struct-sage-exercises.html" data-scroll="dGt">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">14</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="reading-questions-14.html" data-scroll="MtJ">Reading Questions</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="JDL">References and Suggested Reading</a></li>
+<li><a href="actions-sage.html" data-scroll="gaW">Sage</a></li>
+<li><a href="actions-sage-exercises.html" data-scroll="brd">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">15</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-15.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+<li><a href="sylow-sage.html" data-scroll="Vab">Sage</a></li>
+<li><a href="sylow-sage-exercises.html" data-scroll="wxr">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">16</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="reading-questions-16.html" data-scroll="bCH">Reading Questions</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+<li><a href="rings-sage.html" data-scroll="ple">Sage</a></li>
+<li><a href="rings-sage-exercises.html" data-scroll="YmT">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">17</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="reading-questions-17.html" data-scroll="Afr">Reading Questions</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Exercises</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+<li><a href="poly-sage.html" data-scroll="vEG">Sage</a></li>
+<li><a href="poly-sage-exercises.html" data-scroll="qUN">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">18</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-18.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+<li><a href="domains-sage.html" data-scroll="pin">Sage</a></li>
+<li><a href="domains-sage-exercises.html" data-scroll="QFD">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">19</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-19.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+<li><a href="boolean-sage.html" data-scroll="LwL" class="active">Sage</a></li>
+<li><a href="boolean-sage-exercises.html" data-scroll="GMS">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vect.html" data-scroll="kTG"><span class="codenumber">20</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section-vect-definitions-and-examples.html" data-scroll="Ogj">Definitions and Examples</a></li>
+<li><a href="section-subspaces.html" data-scroll="uns">Subspaces</a></li>
+<li><a href="section-linear-independence.html" data-scroll="auB">Linear Independence</a></li>
+<li><a href="reading-questions-20.html" data-scroll="xkL">Reading Questions</a></li>
+<li><a href="exercises-vect.html" data-scroll="VKI">Exercises</a></li>
+<li><a href="vect-references.html" data-scroll="jeK">References and Suggested Readings</a></li>
+<li><a href="vect-sage.html" data-scroll="GBK">Sage</a></li>
+<li><a href="vect-sage-exercises.html" data-scroll="BRR">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">21</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-extension-fields.html" data-scroll="Qfe">Extension Fields</a></li>
+<li><a href="section-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="reading-questions-21.html" data-scroll="Pop">Reading Questions</a></li>
+<li><a href="exercises-fields.html" data-scroll="Lvl">Exercises</a></li>
+<li><a href="fields-references.html" data-scroll="veH">References and Suggested Readings</a></li>
+<li><a href="fields-sage.html" data-scroll="IAF">Sage</a></li>
+<li><a href="fields-sage-exercises.html" data-scroll="rCu">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">22</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-22.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+<li><a href="finite-sage.html" data-scroll="vNX">Sage</a></li>
+<li><a href="finite-sage-exercises.html" data-scroll="Xln">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">23</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="YIb">Reading Questions</a></li>
+<li><a href="exercises-galois.html" data-scroll="qAB">Exercises</a></li>
+<li><a href="galois-references.html" data-scroll="ppv">References and Suggested Readings</a></li>
+<li><a href="galois-sage.html" data-scroll="brD">Sage</a></li>
+<li><a href="galois-sage-exercises.html" data-scroll="WHK">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="LwL"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">19.8</span> <span class="title">Sage</span>
+</h2>
+<section class="introduction" id="UuY"><p id="kvh">Sage has support for both partially ordered sets (“posets”) and lattices, and does an excellent job of providing visual depictions of both.</p></section><section class="subsection" id="CcZ"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Creating Partially Ordered Sets</span>
+</h3>
+<p id="mUo"><a class="xref" data-knowl="./knowl/example-boolean-poset-divisors-24.html" title="Example 19.6">Example 19.6</a> in the text is a good example to replicate as a demonstration of Sage commands. We first define the elements of the set \(X\text{.}\)</p>
+<div class="sagecell-sage" id="QOU"><script type="text/x-sage">X = (24).divisors()
+X
+</script></div>
+<p id="Tbx">One approach to creating the relation is to specify <em class="emphasis">every</em> instance where one element is comparable to the another. So we build a list of pairs, where each pair contains comparable elements, with the lesser one first. This is the set of relations.</p>
+<div class="sagecell-sage" id="wWd"><script type="text/x-sage">R = [(a,b) for a in X for b in X if a.divides(b)]; R
+</script></div>
+<p id="ziG">We construct the poset by giving the the <code class="code-inline tex2jax_ignore">Poset</code> constructor a list containing the elements and the relations. We can then easily get a “plot” of the poset. Notice the plot just shows the “cover relations” — a minimal set of comparisons which the assumption of transitivity would expand into the set of all the relations.</p>
+<div class="sagecell-sage" id="bnZ"><script type="text/x-sage">D = Poset([X, R])
+D.plot()
+</script></div>
+<p id="fpP">Another approach to creating a <code class="code-inline tex2jax_ignore">Poset</code> is to let the poset constructor run over all the pairs of elements, and all we do is give the constructor a way to test if two elements are comparable. Our comparison function should expect two elements and then return <code class="code-inline tex2jax_ignore">True</code> or <code class="code-inline tex2jax_ignore">False</code>. A “lambda” function is one way to quickly build such a function. This may be a new idea for you, but mastering lambda functions can be a great convenience. Notice that “lambda” is a word reserved for just this purpose (so, for example, <code class="code-inline tex2jax_ignore">lambda</code> is a bad choice for the name of an eigenvalue of a matrix). There are other ways to make functions in Sage, but a lambda function is quickest when the function is simple.</p>
+<div class="sagecell-sage" id="ddm"><script type="text/x-sage">divisible = lambda x, y: x.divides(y)
+L = Poset([X, divisible])
+L == D
+</script></div>
+<div class="sagecell-sage" id="Hvi"><script type="text/x-sage">L.plot()
+</script></div>
+<p id="LwY">Sage also has a collection of stock posets. Some are one-shot constructions, while others are members of parameterized families. Use tab-completion on <code class="code-inline tex2jax_ignore">Posets.</code> to see the full list. Here are some examples.</p>
+<p id="rEh">A one-shot construction. Perhaps what you would expect, though there might be other, equally plausible, alternatives.</p>
+<div class="sagecell-sage" id="nCr"><script type="text/x-sage">Q = Posets.PentagonPoset()
+Q.plot()
+</script></div>
+<p id="XLq">A parameterized family. This is the classic example where the elements are subsets of a set with \(n\) elements and the relation is “subset of.”</p>
+<div class="sagecell-sage" id="TJA"><script type="text/x-sage">S = Posets.BooleanLattice(4)
+S.plot()
+</script></div>
+<p id="DSz">And random posets. These can be useful for testing and experimenting, but are unlikely to exhibit special cases that may be important. You might run the following command many times and vary the second argument, which is a rough upper bound on the probability any two elements are comparable. Remember that the plot only shows the cover relations. The more elements that are comparable, the more “vertically stretched” the plot will be.</p>
+<div class="sagecell-sage" id="zQJ"><script type="text/x-sage">T = Posets.RandomPoset(20,0.05)
+T.plot()
+</script></div></section><section class="subsection" id="iki"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Properties of a Poset</span>
+</h3>
+<p id="jZI">Once you have a poset, what can you do with it? Let's return to our first example, <code class="code-inline tex2jax_ignore">D</code>. We can of course determine if one element is less than another, which is the fundamental structure of a poset.</p>
+<div class="sagecell-sage" id="Jkv"><script type="text/x-sage">D.is_lequal(4, 8)
+</script></div>
+<div class="sagecell-sage" id="prE"><script type="text/x-sage">D.is_lequal(4, 4)
+</script></div>
+<div class="sagecell-sage" id="VyN"><script type="text/x-sage">D.is_less_than(4, 8)
+</script></div>
+<div class="sagecell-sage" id="BFW"><script type="text/x-sage">D.is_less_than(4, 4)
+</script></div>
+<div class="sagecell-sage" id="hNf"><script type="text/x-sage">D.is_lequal(6, 8)
+</script></div>
+<div class="sagecell-sage" id="NUo"><script type="text/x-sage">D.is_lequal(8, 6)
+</script></div>
+<p id="QgR">Notice that <code class="code-inline tex2jax_ignore">6</code> and <code class="code-inline tex2jax_ignore">8</code> are not comparable in this poset (it is a <em class="emphasis">partial</em> order). The methods <code class="code-inline tex2jax_ignore">.is_gequal()</code> and <code class="code-inline tex2jax_ignore">.is_greater_than()</code> work similarly, but returns <code class="code-inline tex2jax_ignore">True</code> if the first element is greater (or equal).</p>
+<div class="sagecell-sage" id="ubx"><script type="text/x-sage">D.is_gequal(8, 4)
+</script></div>
+<div class="sagecell-sage" id="aiG"><script type="text/x-sage">D.is_greater_than(4, 8)
+</script></div>
+<p id="woa">We can find the largest and smallest elements of a poset. This is a random poset built with a 10%probability, but copied here to be repeatable.</p>
+<div class="sagecell-sage" id="fXS"><script type="text/x-sage">X = range(20)
+C = [[18, 7],  [9, 11], [9, 10], [11, 8], [6, 10],
+     [10, 2],   [0, 2],  [2, 1],  [1, 8], [8, 12],
+     [8, 3],  [3, 15], [15, 7], [7, 16],  [7, 4],
+     [16, 17], [16, 13], [4, 19], [4, 14], [14, 5]]
+P = Poset([X, C])
+P.plot()
+</script></div>
+<div class="sagecell-sage" id="GpP"><script type="text/x-sage">P.minimal_elements()
+</script></div>
+<div class="sagecell-sage" id="mwY"><script type="text/x-sage">P.maximal_elements()
+</script></div>
+<p id="cvj">Elements of a poset can be partioned into level sets. In plots of posets, elements at the same level are plotted vertically at the same height. Each level set is obtained by removing all of the previous level sets and then taking the minimal elements of the result.</p>
+<div class="sagecell-sage" id="SEh"><script type="text/x-sage">P.level_sets()
+</script></div>
+<p id="ICs">If we make two elements in <code class="code-inline tex2jax_ignore">R</code> comparable when they had not previously been, this is an extension of <code class="code-inline tex2jax_ignore">R</code>. Consider all possible extensions of one poset — we can make a poset from all of these, where set inclusion is the relation. A linear extension is a maximal element in this poset of posets. Informally, we are adding as many new relations as possible, consistent with the original poset and so that the result is a total order. In other words, there is an ordering of the elements that is consistent with the order in the poset. We can build such a thing, but the output is just a list of the elements in the linear order. A computer scientist would be inclined to call this a “topological sort.”</p>
+<div class="sagecell-sage" id="yLq"><script type="text/x-sage">linear = P.linear_extension(); linear
+</script></div>
+<p id="oJB">We can construct subposets by giving a set of elements to induce the new poset. Here we take roughly the “bottom half” of the random poset <code class="code-inline tex2jax_ignore">P</code> by inducing the subposet on a union of some of the level sets.</p>
+<div class="sagecell-sage" id="Mfb"><script type="text/x-sage">level = P.level_sets()
+bottomhalf = sum([level[i] for i in range(5)], [])
+B = P.subposet(bottomhalf)
+B.plot()
+</script></div>
+<p id="UQK">The dual of a poset retains the same set of elements, but reverses any comparisons.</p>
+<div class="sagecell-sage" id="smk"><script type="text/x-sage">Pdual = P.dual()
+Pdual.plot()
+</script></div>
+<p id="AXT">Taking the dual of the divisibility poset from <a class="xref" data-knowl="./knowl/example-boolean-poset-divisors-24.html" title="Example 19.6">Example 19.6</a> would be like changing the relation to “is a multiple of.”</p>
+<div class="sagecell-sage" id="Ytt"><script type="text/x-sage">Ddual = D.dual()
+Ddual.plot()
+</script></div></section><section class="subsection" id="Orr"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Lattices</span>
+</h3>
+<p id="hfc">Every lattice is a poset, so all the commands above will perform equally well for a lattice. But how do you create a lattice? Simple — first create a poset and then feed it into the <code class="code-inline tex2jax_ignore">LatticePoset()</code> constructor. But realize that just because you give this constructor a poset, it does not mean a lattice will always come back out. Only if the poset is <em class="emphasis">already</em> a lattice will it get upgraded from a poset to a lattice for Sage's purposes, and you will get a <code class="code-inline tex2jax_ignore">ValueError</code> if the upgrade is not possible. Finally, notice that some of the posets Sage constructs are already recognized as lattices, such as the prototypical <code class="code-inline tex2jax_ignore">BooleanLattice</code>.</p>
+<div class="sagecell-sage" id="eSz"><script type="text/x-sage">P = Posets.AntichainPoset(8)
+P.is_lattice()
+</script></div>
+<div class="sagecell-sage" id="KZI"><script type="text/x-sage">LatticePoset(P)
+</script></div>
+<p id="Nml">An integer composition of \(n\) is a list of positive integers that sum to \(n\text{.}\) A composition \(C_1\) covers a composition \(C_2\) if \(C_2\) can be formed from \(C_1\) by adding consecutive parts. For example, \(C_1 = [2, 1, 2] \succeq [3, 2] = C_2\text{.}\) With this relation, the set of all integer compositions of a fixed integer \(n\) is a poset that is also a lattice.</p>
+<div class="sagecell-sage" id="EAC"><script type="text/x-sage">CP = Posets.IntegerCompositions(5)
+C = LatticePoset(CP)
+C.plot()
+</script></div>
+<p id="ttu">A meet or a join is a fundamental operation in a lattice.</p>
+<div class="sagecell-sage" id="rgR"><script type="text/x-sage">par = C.an_element().parent()
+a = par([1, 1, 1, 2])
+b = par([2, 1, 1, 1])
+a, b
+</script></div>
+<div class="sagecell-sage" id="Xoa"><script type="text/x-sage">C.meet(a, b)
+</script></div>
+<div class="sagecell-sage" id="Dvj"><script type="text/x-sage">c = par([1, 4])
+d = par([2, 3])
+c, d
+</script></div>
+<div class="sagecell-sage" id="jCs"><script type="text/x-sage">C.join(c, d)
+</script></div>
+<p id="ZAD">Once a poset is upgraded to lattice status, then additional commands become available, or the character of their results changes.</p>
+<p id="FHM">An example of the former is the <code class="code-inline tex2jax_ignore">.is_distributive()</code> method.</p>
+<div class="sagecell-sage" id="PJB"><script type="text/x-sage">C.is_distributive()
+</script></div>
+<p id="lOV">An example of the latter is the <code class="code-inline tex2jax_ignore">.top()</code> method. What your text calls a largest element and a smallest element of a lattice, Sage calls a top and a bottom. For a poset, <code class="code-inline tex2jax_ignore">.top()</code> and <code class="code-inline tex2jax_ignore">.bottom()</code> may return an element or may not (returning <code class="code-inline tex2jax_ignore">None</code>), but for a lattice it is guaranteed to return exactly one element.</p>
+<div class="sagecell-sage" id="vQK"><script type="text/x-sage">C.top()
+</script></div>
+<div class="sagecell-sage" id="bXT"><script type="text/x-sage">C.bottom()
+</script></div>
+<p id="RWe">Notice that the returned values are all elements of the lattice, in this case ordered lists of integers summing to \(5\text{.}\)</p>
+<p id="ydn">Complements now make sense in a lattice. The result of the <code class="code-inline tex2jax_ignore">.complements()</code> method is a dictionary that uses elements of the lattice as the keys. We say the dictionary is “indexed” by the elements of the lattice. The result is a list of the complements of the element. We call this the “value” of the key-value pair. (You may know dictionaries as “associative arrays”, but they are really just fancy functions.)</p>
+<div class="sagecell-sage" id="Ifc"><script type="text/x-sage">comp = C.complements()
+comp[par([1, 1, 1, 2])]
+</script></div>
+<p id="ekw">The lattice of integer compositions is a complemented lattice, as we can see by the result that each element has a single (unique) complement, evidenced by the lists of length \(1\) in the values of the dictionary. Or we can just ask Sage via <code class="code-inline tex2jax_ignore">.is_complemented()</code>. Dictionaries have no inherent order, so you may get different output each time you inspect the dictionary.</p>
+<div class="sagecell-sage" id="kHL"><script type="text/x-sage">comp
+</script></div>
+<div class="sagecell-sage" id="oml"><script type="text/x-sage">[len(e[1]) for e in comp.items()]
+</script></div>
+<div class="sagecell-sage" id="Utu"><script type="text/x-sage">C.is_complemented()
+</script></div>
+<p id="KrF">There are many more commands which apply to posets and lattices, so build a few and use tab-completion liberally to explore. There is more to discover than we can cover in just a single chapter, but you now have the basic tools to profitably study posets and lattices in Sage.</p></section></section></div></main>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=10568106;
+var sc_invisible=1;
+var sc_security="510ba080";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/10568106/0/510ba080/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

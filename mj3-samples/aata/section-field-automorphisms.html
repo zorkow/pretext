@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:57:17+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Field Automorphisms</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: ['base', 'extpfeil', 'amscd']
+  },
+  options: {
+    ignoreHtmlClass: ".*",
+    processHtmlClass: "has_am"
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd']
+  }
+};
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=002637997310187229905:qj2oy0jlpyu"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="galois.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="galois.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-fund-theorem-galois-theory.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="galois.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="galois.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-fund-theorem-galois-theory.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="Cpq">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-equivalence-relations.html" data-scroll="eYQ">Sets and Equivalence Relations</a></li>
+<li><a href="reading-questions-1.html" data-scroll="ibN">Reading Questions</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+<li><a href="sets-sage.html" data-scroll="LfZ">Sage</a></li>
+<li><a href="sets-sage-exercises.html" data-scroll="SKy">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="integers.html" data-scroll="mtY"><span class="codenumber">2</span> <span class="title">The Integers</span></a><ul>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Division Algorithm</a></li>
+<li><a href="reading-questions-2.html" data-scroll="kWt">Reading Questions</a></li>
+<li><a href="exercises-integers.html" data-scroll="Dsj">Exercises</a></li>
+<li><a href="integers-exercises-programming.html" data-scroll="jzs">Programming Exercises</a></li>
+<li><a href="integers-references.html" data-scroll="Dta">References and Suggested Readings</a></li>
+<li><a href="integers-sage.html" data-scroll="ojl">Sage</a></li>
+<li><a href="integers-sage-exercises.html" data-scroll="PGB">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">3</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="reading-questions-3.html" data-scroll="VNv">Reading Questions</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+<li><a href="groups-sage.html" data-scroll="fAT">Sage</a></li>
+<li><a href="groups-sage-exercises.html" data-scroll="aRa">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cyclic.html" data-scroll="KKE"><span class="codenumber">4</span> <span class="title">Cyclic Groups</span></a><ul>
+<li><a href="section-cyclic-subgroups.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-mult-group-c.html" data-scroll="sHa">Multiplicative Group of Complex Numbers</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="reading-questions-4.html" data-scroll="CZX">Reading Questions</a></li>
+<li><a href="exercises-cyclic.html" data-scroll="nXh">Exercises</a></li>
+<li><a href="cyclic-exercises-programming.html" data-scroll="Ueq">Programming Exercises</a></li>
+<li><a href="cyclic-references.html" data-scroll="KnF">References and Suggested Readings</a></li>
+<li><a href="cyclic-sage.html" data-scroll="EVs">Sage</a></li>
+<li><a href="cyclic-sage-exercises.html" data-scroll="Alz">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="permute.html" data-scroll="AQc"><span class="codenumber">5</span> <span class="title">Permutation Groups</span></a><ul>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Definitions and Notation</a></li>
+<li><a href="section-dihedral-groups.html" data-scroll="CFp">Dihedral Groups</a></li>
+<li><a href="reading-questions-5.html" data-scroll="HJQ">Reading Questions</a></li>
+<li><a href="exercises-permute.html" data-scroll="ecF">Exercises</a></li>
+<li><a href="permute-sage.html" data-scroll="iMy">Sage</a></li>
+<li><a href="permute-sage-exercises.html" data-scroll="KjO">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">6</span> <span class="title">Cosets and Lagrange's Theorem</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-lagranges-theorem.html" data-scroll="dTk">Lagrange's Theorem</a></li>
+<li><a href="section-fermat-euler.html" data-scroll="Kat">Fermat's and Euler's Theorems</a></li>
+<li><a href="reading-questions-6.html" data-scroll="BUE">Reading Questions</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+<li><a href="cosets-sage.html" data-scroll="qhC">Sage</a></li>
+<li><a href="cosets-sage-exercises.html" data-scroll="lxJ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">7</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="reading-questions-7.html" data-scroll="Jzd">Reading Questions</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="hbc">References and Suggested Readings</a></li>
+<li><a href="crypt-sage.html" data-scroll="cyJ">Sage</a></li>
+<li><a href="crypt-sage-exercises.html" data-scroll="DVZ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">8</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-8.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+<li><a href="algcodes-sage.html" data-scroll="Klo">Sage</a></li>
+<li><a href="algcodes-sage-exercises.html" data-scroll="Zum">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">9</span> <span class="title">Isomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="reading-questions-9.html" data-scroll="TYi">Reading Questions</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="LZO">Exercises</a></li>
+<li><a href="isomorph-sage.html" data-scroll="QJH">Sage</a></li>
+<li><a href="isomorph-sage-exercises.html" data-scroll="sgX">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="normal.html" data-scroll="xiL"><span class="codenumber">10</span> <span class="title">Normal Subgroups and Factor Groups</span></a><ul>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="reading-questions-10.html" data-scroll="pGm">Reading Questions</a></li>
+<li><a href="exercises-normal.html" data-scroll="hZN">Exercises</a></li>
+<li><a href="normal-sage.html" data-scroll="mJG">Sage</a></li>
+<li><a href="normal-sage-exercises.html" data-scroll="OgW">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="homomorph.html" data-scroll="JXG"><span class="codenumber">11</span> <span class="title">Homomorphisms</span></a><ul>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="reading-questions-11.html" data-scroll="sAS">Reading Questions</a></li>
+<li><a href="exercises-homomorph.html" data-scroll="WlY">Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Cth">Additional Exercises: Automorphisms</a></li>
+<li><a href="homomorph-sage.html" data-scroll="Hda">Sage</a></li>
+<li><a href="homomorph-sage-exercises.html" data-scroll="iAq">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">12</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-12.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+<li><a href="matrix-sage.html" data-scroll="stf">Sage</a></li>
+<li><a href="matrix-sage-exercises.html" data-scroll="TQv">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct.html" data-scroll="YWA"><span class="codenumber">13</span> <span class="title">The Structure of  Groups</span></a><ul>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="reading-questions-13.html" data-scroll="vvy">Reading Questions</a></li>
+<li><a href="exercises-struct.html" data-scroll="Rsb">Exercises</a></li>
+<li><a href="struct-exercises-programming.html" data-scroll="xzk">Programming Exercises</a></li>
+<li><a href="struct-references.html" data-scroll="tDP">References and Suggested Readings</a></li>
+<li><a href="struct-sage.html" data-scroll="Cjd">Sage</a></li>
+<li><a href="struct-sage-exercises.html" data-scroll="dGt">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">14</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="reading-questions-14.html" data-scroll="MtJ">Reading Questions</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="JDL">References and Suggested Reading</a></li>
+<li><a href="actions-sage.html" data-scroll="gaW">Sage</a></li>
+<li><a href="actions-sage-exercises.html" data-scroll="brd">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">15</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-15.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+<li><a href="sylow-sage.html" data-scroll="Vab">Sage</a></li>
+<li><a href="sylow-sage-exercises.html" data-scroll="wxr">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">16</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="reading-questions-16.html" data-scroll="bCH">Reading Questions</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+<li><a href="rings-sage.html" data-scroll="ple">Sage</a></li>
+<li><a href="rings-sage-exercises.html" data-scroll="YmT">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">17</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="reading-questions-17.html" data-scroll="Afr">Reading Questions</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Exercises</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+<li><a href="poly-sage.html" data-scroll="vEG">Sage</a></li>
+<li><a href="poly-sage-exercises.html" data-scroll="qUN">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">18</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-18.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+<li><a href="domains-sage.html" data-scroll="pin">Sage</a></li>
+<li><a href="domains-sage-exercises.html" data-scroll="QFD">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">19</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-19.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+<li><a href="boolean-sage.html" data-scroll="LwL">Sage</a></li>
+<li><a href="boolean-sage-exercises.html" data-scroll="GMS">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vect.html" data-scroll="kTG"><span class="codenumber">20</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section-vect-definitions-and-examples.html" data-scroll="Ogj">Definitions and Examples</a></li>
+<li><a href="section-subspaces.html" data-scroll="uns">Subspaces</a></li>
+<li><a href="section-linear-independence.html" data-scroll="auB">Linear Independence</a></li>
+<li><a href="reading-questions-20.html" data-scroll="xkL">Reading Questions</a></li>
+<li><a href="exercises-vect.html" data-scroll="VKI">Exercises</a></li>
+<li><a href="vect-references.html" data-scroll="jeK">References and Suggested Readings</a></li>
+<li><a href="vect-sage.html" data-scroll="GBK">Sage</a></li>
+<li><a href="vect-sage-exercises.html" data-scroll="BRR">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">21</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-extension-fields.html" data-scroll="Qfe">Extension Fields</a></li>
+<li><a href="section-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="reading-questions-21.html" data-scroll="Pop">Reading Questions</a></li>
+<li><a href="exercises-fields.html" data-scroll="Lvl">Exercises</a></li>
+<li><a href="fields-references.html" data-scroll="veH">References and Suggested Readings</a></li>
+<li><a href="fields-sage.html" data-scroll="IAF">Sage</a></li>
+<li><a href="fields-sage-exercises.html" data-scroll="rCu">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">22</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-22.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+<li><a href="finite-sage.html" data-scroll="vNX">Sage</a></li>
+<li><a href="finite-sage-exercises.html" data-scroll="Xln">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">23</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-field-automorphisms.html" data-scroll="iWc" class="active">Field Automorphisms</a></li>
+<li><a href="section-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="YIb">Reading Questions</a></li>
+<li><a href="exercises-galois.html" data-scroll="qAB">Exercises</a></li>
+<li><a href="galois-references.html" data-scroll="ppv">References and Suggested Readings</a></li>
+<li><a href="galois-sage.html" data-scroll="brD">Sage</a></li>
+<li><a href="galois-sage-exercises.html" data-scroll="WHK">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="iWc"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">23.1</span> <span class="title">Field Automorphisms</span>
+</h2>
+<section class="introduction" id="fFX"><p id="sqb">Our first task is to establish a link between group theory and field theory by examining automorphisms of fields.</p>
+<article class="proposition theorem-like" id="ZgR"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">23.1</span><span class="period">.</span>
+</h6>
+<p id="IEs">The set of all automorphisms of a field \(F\) is a group under composition of functions.</p></article><article class="hiddenproof" id="ISA"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-ISA"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ISA"><article class="hiddenproof"><p id="vGg">If \(\sigma\) and \(\tau\) are automorphisms of \(F\text{,}\) then so are \(\sigma \tau\) and \(\sigma^{-1}\text{.}\) The identity is certainly an automorphism; hence, the set of all automorphisms of a field \(F\) is indeed a group.</p></article></div>
+<article class="proposition theorem-like" id="Foa"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">23.2</span><span class="period">.</span>
+</h6>
+<p id="oLB">Let \(E\) be a field extension of \(F\text{.}\) Then the set of all automorphisms of \(E\) that fix \(F\) elementwise is a group; that is, the set of all automorphisms \(\sigma : E \rightarrow E\) such that \(\sigma( \alpha ) = \alpha\) for all \(\alpha \in F\) is a group.</p></article><article class="hiddenproof" id="oZJ"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-oZJ"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-oZJ"><article class="hiddenproof"><p id="bNp">We need only show that the set of automorphisms of \(E\) that fix \(F\) elementwise is a subgroup of the group of all automorphisms of \(E\text{.}\) Let \(\sigma\) and \(\tau\) be two automorphisms of \(E\) such that \(\sigma( \alpha ) = \alpha\) and \(\tau( \alpha ) = \alpha\) for all \(\alpha \in F\text{.}\) Then \(\sigma \tau( \alpha ) = \sigma( \alpha) = \alpha\) and \(\sigma^{-1}( \alpha ) = \alpha\text{.}\) Since the identity fixes every element of \(E\text{,}\) the set of automorphisms of \(E\) that leave elements of \(F\) fixed is a subgroup of the entire group of automorphisms of \(E\text{.}\)</p></article></div>
+<p id="Yxk">Let \(E\) be a field extension of \(F\text{.}\) We will denote the full group of automorphisms of \(E\) by \(\aut(E)\text{.}\) We define the <dfn class="terminology">Galois group</dfn>  of \(E\) over \(F\) to be the group of automorphisms of \(E\) that fix \(F\) elementwise; that is,</p>
+<div class="displaymath">
+\begin{equation*}
+G(E/F) = \{ \sigma \in \aut(E) : \sigma(\alpha) = \alpha \text{ for all } \alpha \in F \}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">If \(f(x)\) is a polynomial in \(F[x]\) and \(E\) is the splitting field of \(f(x)\) over \(F\text{,}\) then we define the Galois group of \(f(x)\) to be \(G(E/F)\text{.}\) </p>
+<article class="example example-like" id="iAD"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">23.3</span><span class="period">.</span>
+</h6>
+<p id="qAO">Complex conjugation, defined by \(\sigma : a + bi \mapsto a - bi\text{,}\) is an automorphism of the complex numbers. Since</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma(a) = \sigma(a + 0i) = a - 0i = a\text{,}
+\end{equation*}
+</div>
+<p class="continuation">the automorphism defined by complex conjugation must be in \(G( {\mathbb C} / {\mathbb R} )\text{.}\)</p></article><article class="example example-like" id="OHM"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">23.4</span><span class="period">.</span>
+</h6>
+<p id="WHX">Consider the fields \({\mathbb Q} \subset {\mathbb Q}(\sqrt{5}\, ) \subset {\mathbb Q}( \sqrt{3}, \sqrt{5}\, )\text{.}\) Then for \(a, b \in {\mathbb Q}( \sqrt{5}\, )\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma( a + b \sqrt{3}\, ) = a - b \sqrt{3}
+\end{equation*}
+</div>
+<p class="continuation">is an automorphism of \({\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) leaving \({\mathbb Q}( \sqrt{5}\, )\) fixed. Similarly,</p>
+<div class="displaymath">
+\begin{equation*}
+\tau( a + b \sqrt{5}\, ) = a - b \sqrt{5}
+\end{equation*}
+</div>
+<p class="continuation">is an automorphism of \({\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) leaving \({\mathbb Q}( \sqrt{3}\, )\) fixed. The automorphism \(\mu = \sigma \tau\) moves both \(\sqrt{3}\) and \(\sqrt{5}\text{.}\) It will soon be clear that \(\{ \identity, \sigma, \tau, \mu \}\) is the Galois group of \({\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) over \({\mathbb Q}\text{.}\) The following table shows that this group is isomorphic to \({\mathbb Z}_2 \times {\mathbb Z}_2\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|cccc}
+&amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\
+\hline
+\identity  &amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\
+\sigma &amp; \sigma &amp; \identity &amp; \mu &amp; \tau \\
+\tau &amp; \tau &amp; \mu &amp; \identity &amp; \sigma \\
+\mu &amp; \mu &amp; \tau &amp; \sigma &amp; \identity
+\end{array}
+\end{equation*}
+</div>
+<p class="continuation">We may also regard the field \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )\) as a vector space over \({\mathbb Q}\) that has basis \(\{ 1, \sqrt{3}, \sqrt{5}, \sqrt{15}\, \}\text{.}\) It is no coincidence that \(|G( {\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) /{\mathbb Q})| = [{\mathbb Q}(\sqrt{3}, \sqrt{5}\, ):{\mathbb Q})] = 4\text{.}\)</p></article><article class="proposition theorem-like" id="lvj"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">23.5</span><span class="period">.</span>
+</h6>
+<p id="USK">Let \(E\) be a field extension of \(F\) and \(f(x)\) be a polynomial in \(F[x]\text{.}\) Then any automorphism in \(G(E/F)\) defines a permutation of the roots of \(f(x)\) that lie in \(E\text{.}\)</p></article><article class="hiddenproof" id="VgS"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-VgS"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-VgS"><article class="hiddenproof"><p id="HUy">Let</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n
+\end{equation*}
+</div>
+<p class="continuation">and suppose that \(\alpha \in E\) is a zero of \(f(x)\text{.}\) Then for \(\sigma \in G(E/F)\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+0 &amp; = \sigma( 0 )\\
+&amp; = \sigma( f( \alpha ))\\
+&amp; = \sigma(a_0 + a_1\alpha + a_2 \alpha^2 + \cdots + a_n \alpha^n)\\
+&amp; = a_0 + a_1 \sigma(\alpha) + a_2 [\sigma(\alpha)]^2 + \cdots + a_n [\sigma(\alpha)]^n;
+\end{align*}
+</div>
+<p class="continuation">therefore, \(\sigma( \alpha )\) is also a zero of \(f(x)\text{.}\)</p></article></div>
+<p id="EEt">Let \(E\) be an algebraic extension of a field \(F\text{.}\) Two elements \(\alpha, \beta \in E\) are <dfn class="terminology">conjugate</dfn>  over \(F\) if they have the same minimal polynomial. For example, in the field \({\mathbb Q}( \sqrt{2}\, )\) the elements \(\sqrt{2}\) and \(-\sqrt{2}\) are conjugate over \({\mathbb Q}\) since they are both roots of the irreducible polynomial \(x^2 - 2\text{.}\)</p>
+<p id="kLC">A converse of the last proposition exists. The proof follows directly from <a class="xref" data-knowl="./knowl/lemma-field-isomorphism.html" title="Lemma 21.32">Lemma 21.32</a>.</p>
+<article class="proposition theorem-like" id="RCs"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">23.6</span><span class="period">.</span>
+</h6>
+<p id="AZT">If \(\alpha\) and \(\beta\) are conjugate over \(F\text{,}\) there exists an isomorphism \(\sigma : F( \alpha ) \rightarrow F( \beta )\) such that \(\sigma\) is the identity when restricted to \(F\text{.}\)</p></article><article class="theorem theorem-like" id="gLq"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">23.7</span><span class="period">.</span>
+</h6>
+<p id="XNq">Let \(f(x)\) be a polynomial in \(F[x]\) and suppose that \(E\) is the splitting field for \(f(x)\) over \(F\text{.}\) If \(f(x)\) has no repeated roots, then</p>
+<div class="displaymath">
+\begin{equation*}
+|G(E/F)| = [E:F]\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-193"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-193"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-193"><article class="hiddenproof"><p id="p-3712">We will use mathematical induction on \([E:F]\text{.}\) If \([E:F] = 1\text{,}\) then \(E = F\) and there is nothing to show. If \([E:F] \gt 1\text{,}\) let \(f(x) = p(x)q(x)\text{,}\) where \(p(x)\) is irreducible of degree \(d\text{.}\) We may assume that \(d \gt 1\text{;}\) otherwise, \(f(x)\) splits over \(F\) and  \([E:F] = 1\text{.}\) Let \(\alpha\) be a root of \(p(x)\text{.}\) If \(\phi: F(\alpha) \to  E\) is any injective homomorphism, then \(\phi( \alpha) = \beta\) is a root of \(p(x)\text{,}\) and \(\phi: F(\alpha) \to F(\beta)\) is a field automorphism. Since \(f(x)\) has no repeated roots, \(p(x)\) has exactly \(d\) roots \(\beta \in E\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-roots-permute.html" title="Proposition 23.5">Proposition 23.5</a>, there are exactly \(d\) isomorphisms \(\phi: F(\alpha) \to F(\beta_i)\) that fix \(F\text{,}\) one for each root \(\beta_1, \ldots, \beta_d\) of \(p(x)\) (see <a class="xref" data-knowl="./knowl/figure-galois-group-order.html" title="Figure 23.8">Figure 23.8</a>).</p>
+<figure class="figure figure-like" id="figure-galois-group-order"><div class="displaymath" id="p-3713">
+\begin{equation*}
+\begin{CD}
+E  @&gt;\psi&gt;&gt;  E  \\
+@VVV        @VVV\\
+F(\alpha)     @&gt;\phi&gt;&gt;  F(\beta) \\
+@VVV        @VVV\\
+F     @&gt;\text{identity}&gt;&gt;  F
+\end{CD}
+\end{equation*}
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">23.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-3714">Since \(E\) is a splitting field of \(f(x)\) over \(F\text{,}\) it is also a splitting field over \(F(\alpha)\text{.}\) Similarly, \(E\) is a splitting field of \(f(x)\) over \(F(\beta)\text{.}\)  Since \([E: F(\alpha)] = [E:F]/d\text{,}\) induction shows that each of the \(d\) isomorphisms \(\phi\) has exactly \([E:F]/d\) extensions, \(\psi : E \to E\text{,}\) and we have constructed \([E:F]\) isomorphisms that fix \(F\text{.}\) Finally, suppose that \(\sigma\) is any automorphism fixing \(F\text{.}\)  Then \(\sigma\) restricted to \(F(\alpha)\) is \(\phi\) for some \(\phi: F(\alpha) \to F(\beta)\text{.}\)</p></article></div>
+<article class="corollary theorem-like" id="qfc"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">23.9</span><span class="period">.</span>
+</h6>
+<p id="yfn">Let \(F\) be a finite field with a finite extension \(E\) such that \([E:F]=k\text{.}\) Then \(G(E/F)\) is cyclic of order \(k\text{.}\)</p></article><article class="hiddenproof" id="Smm"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-Smm"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Smm"><article class="hiddenproof"><p id="UiQ">Let \(p\) be the characteristic of \(E\) and \(F\) and assume that the orders of \(E\) and \(F\) are \(p^m\) and \(p^n\text{,}\) respectively. Then \(nk = m\text{.}\) We can also assume that \(E\) is the splitting field of \(x^{p^m} - x\) over a subfield of order \(p\text{.}\) Therefore, \(E\) must also be the splitting field of \(x^{p^m} - x\) over \(F\text{.}\) Applying <a class="xref" data-knowl="./knowl/theorem-extension-order.html" title="Theorem 23.7">Theorem 23.7</a>, we find that \(|G(E/F)| = k\text{.}\)</p>
+<p id="ApZ">To prove that \(G(E/F)\) is cyclic, we must find a generator for \(G(E/F)\text{.}\) Let \(\sigma : E \rightarrow E\) be defined by \(\sigma(\alpha) = \alpha^{p^n}\text{.}\) We claim that \(\sigma\) is the element in \(G(E/F)\) that we are seeking. We first need to show that \(\sigma\) is in \(\aut(E)\text{.}\) If \(\alpha\) and \(\beta\) are in \(E\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma(\alpha + \beta) = (\alpha + \beta)^{p^n} = \alpha^{p^n} + \beta^{p^n} = \sigma(\alpha) + \sigma(\beta)
+\end{equation*}
+</div>
+<p class="continuation">by <a class="xref" data-knowl="./knowl/lemma-freshmans-dream.html" title="Lemma 22.3: Freshman's Dream">Lemma 22.3</a>. Also, it is easy to show that \(\sigma(\alpha \beta) = \sigma( \alpha ) \sigma( \beta )\text{.}\) Since \(\sigma\) is a nonzero homomorphism of fields, it must be injective. It must also be onto, since \(E\) is a finite field. We know that \(\sigma\) must be in \(G(E/F)\text{,}\) since \(F\) is the splitting field of \(x^{p^n} - x\) over the base field of order \(p\text{.}\) This means that \(\sigma\) leaves every element in \(F\) fixed. Finally, we must show that the order of \(\sigma\) is \(k\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-extension-order.html" title="Theorem 23.7">Theorem 23.7</a>, we know that</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma^k( \alpha ) = \alpha^{p^{nk}} = \alpha^{p^m} = \alpha
+\end{equation*}
+</div>
+<p class="continuation">is the identity of \(G( E/F)\text{.}\) However, \(\sigma^r\) cannot be the identity for \(1 \leq r \lt k\text{;}\) otherwise, \(x^{p^{nr}} - x\) would have \(p^m\) roots, which is impossible.</p></article></div>
+<article class="example example-like" id="uOV"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">23.10</span><span class="period">.</span>
+</h6>
+<p id="CPg">We can now confirm that the Galois group of \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )\) over \({\mathbb Q}\) in <a class="xref" data-knowl="./knowl/example-galois-q-sqrt5.html" title="Example 23.4">Example 23.4</a> is indeed isomorphic to \({\mathbb Z}_2 \times {\mathbb Z}_2\text{.}\) Certainly the group \(H = \{ \identity, \sigma, \tau, \mu \}\) is a subgroup of \(G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})\text{;}\) however, \(H\) must be all of \(G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})\text{,}\) since</p>
+<div class="displaymath">
+\begin{equation*}
+|H| = [{\mathbb Q}( \sqrt{3}, \sqrt{5}\, ):{\mathbb Q}] = |G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})| = 4\text{.}
+\end{equation*}
+</div></article><article class="example example-like" id="aWe"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">23.11</span><span class="period">.</span>
+</h6>
+<p id="iWp">Let us compute the Galois group of</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = x^4 + x^3 + x^2 + x + 1
+\end{equation*}
+</div>
+<p class="continuation">over \({\mathbb Q}\text{.}\) We know that \(f(x)\) is irreducible by <a class="xref" data-knowl="./knowl/poly-exercise-cyclotomic-polynomials.html" title="Exercise 17.5.20: Cyclotomic Polynomials">Exercise 17.5.20</a> in <a href="poly.html" class="internal" title="Chapter 17: Polynomials">Chapter 17</a>. Furthermore, since \((x -1)f(x) = x^5 - 1\text{,}\) we can use DeMoivre's Theorem to determine that the roots of \(f(x)\) are \(\omega^i\text{,}\) where  \(i = 1, \ldots, 4\) and</p>
+<div class="displaymath">
+\begin{equation*}
+\omega = \cos(2 \pi / 5 ) + i \sin(2 \pi / 5 )\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Hence, the splitting field of \(f(x)\) must be \({\mathbb Q}(\omega)\text{.}\) We can define automorphisms \(\sigma_i\) of \({\mathbb Q}(\omega )\) by \(\sigma_i( \omega ) = \omega^i\) for \(i = 1, \ldots, 4\text{.}\) It is easy to check that these are indeed distinct automorphisms in \(G( {\mathbb Q}( \omega) / {\mathbb Q} )\text{.}\) Since</p>
+<div class="displaymath">
+\begin{equation*}
+[{\mathbb Q}( \omega) : {\mathbb Q}] = | G( {\mathbb Q}( \omega) / {\mathbb Q})| = 4\text{,}
+\end{equation*}
+</div>
+<p class="continuation">the \(\sigma_i\)'s must be all of \(G( {\mathbb Q}( \omega) / {\mathbb Q} )\text{.}\) Therefore, \(G({\mathbb Q}( \omega) / {\mathbb Q})\cong {\mathbb Z}_4\) since \(\omega\) is a generator for the Galois group.</p></article></section><section class="subsection" id="NnY"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Separable Extensions</span>
+</h3>
+<p id="fGk">Many of the results that we have just proven depend on the fact that a polynomial \(f(x)\) in \(F[x]\) has no repeated roots in its splitting field. It is evident that we need to know exactly when a polynomial factors into distinct linear factors in its splitting field. Let \(E\) be the splitting field of a polynomial \(f(x)\) in \(F[x]\text{.}\) Suppose that \(f(x)\) factors over \(E\) as</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = (x - \alpha_1)^{n_1} (x - \alpha_2)^{n_2} \cdots (x - \alpha_r)^{n_r} = \prod_{i = 1}^{r} (x - \alpha_i)^{n_i}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We define the <dfn class="terminology">multiplicity</dfn>  of a root \(\alpha_i\) of \(f(x)\) to be \(n_i\text{.}\) A root with multiplicity 1 is called a <dfn class="terminology">simple root</dfn>.  Recall that a polynomial \(f(x) \in F[x]\) of degree \(n\) is <dfn class="terminology">separable</dfn> if it has \(n\) distinct roots in its splitting field \(E\text{.}\) Equivalently, \(f(x)\) is separable if it factors into distinct linear factors over \(E[x]\text{.}\) An extension \(E\) of \(F\) is a <dfn class="terminology">separable extension</dfn> of \(F\) if every element in \(E\) is the root of a separable polynomial in \(F[x]\text{.}\) Also recall that \(f(x)\) is separable if and only if \(\gcd( f(x),
+f'(x)) = 1\) (<a class="xref" data-knowl="./knowl/lemma-separable-derivative.html" title="Lemma 22.5">Lemma 22.5</a>).</p>
+<article class="proposition theorem-like" id="nFV"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">23.12</span><span class="period">.</span>
+</h6>
+<p id="hhc">Let \(f(x)\) be an irreducible polynomial over \(F\text{.}\) If the characteristic of \(F\) is \(0\text{,}\) then \(f(x)\) is separable. If the characteristic of \(F\) is \(p\) and \(f(x) \neq g(x^p)\) for some \(g(x)\) in \(F[x]\text{,}\) then \(f(x)\) is also separable.</p></article><article class="hiddenproof" id="Bob"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-Bob"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Bob"><article class="hiddenproof"><p id="gxi">First assume that \(\chr F = 0\text{.}\) Since \(\deg f'(x) \lt \deg f(x)\) and \(f(x)\) is irreducible, the only way \(\gcd( f(x),
+f'(x)) \neq 1\) is if \(f'(x)\) is the zero polynomial; however, this is impossible in a field of characteristic zero. If \(\chr F = p\text{,}\) then \(f'(x)\) can be the zero polynomial if every coefficient of \(f'(x)\) is a multiple of \(p\text{.}\) This can happen only if we have a polynomial of the form \(f(x) = a_0 + a_1 x^p + a_2 x^{2p} + \cdots + a_n x^{np}\text{.}\)</p></article></div>
+<p id="LNt">Certainly extensions of a field \(F\) of the form \(F(\alpha)\) are some of the easiest to study and understand. Given a field extension \(E\) of \(F\text{,}\) the obvious question to ask is when it is possible to find an element \(\alpha \in E\) such that \(E = F( \alpha )\text{.}\) In this case, \(\alpha\) is called a <dfn class="terminology">primitive element</dfn>.  We already know that primitive elements exist for certain extensions. For example,</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = {\mathbb Q}( \sqrt{3} + \sqrt{5}\, )
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i ) = {\mathbb Q}( \sqrt[6]{5}\, i )\text{.}
+\end{equation*}
+</div>
+<p class="continuation"><a class="xref" data-knowl="./knowl/corollary-finite-extension-finite-field.html" title="Corollary 22.12">Corollary 22.12</a> tells us that there exists a primitive element for any finite extension of a finite field. The next theorem tells us that we can often find a primitive element.</p>
+<article class="theorem theorem-like" id="HyM"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">23.13</span><span class="period">.</span><span class="space"> </span><span class="title">Primitive Element Theorem.</span>
+</h6>
+<p id="DUz">Let \(E\) be a finite separable extension of a field \(F\text{.}\) Then there exists an \(\alpha \in E\) such that \(E=F( \alpha )\text{.}\)</p></article><article class="hiddenproof" id="EiH"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-EiH"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-EiH"><article class="hiddenproof"><p id="MEr">We already know that there is no problem if \(F\) is a finite field. Suppose that \(E\) is a finite extension of an infinite field. We will prove the result for \(F(\alpha, \beta)\text{.}\) The general case easily follows when we use mathematical induction. Let \(f(x)\) and \(g(x)\) be  the minimal polynomials of \(\alpha\) and \(\beta\text{,}\) respectively. Let \(K\) be the field in which both \(f(x)\) and \(g(x)\) split. Suppose that \(f(x)\) has zeros \(\alpha = \alpha_1, \ldots, \alpha_n\) in \(K\) and \(g(x)\) has zeros \(\beta = \beta_1, \ldots, \beta_m\) in \(K\text{.}\) All of these zeros have multiplicity \(1\text{,}\) since \(E\) is separable over \(F\text{.}\) Since \(F\) is infinite, we can find an \(a\) in \(F\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+a \neq \frac{\alpha_i - \alpha}{\beta - \beta_j}
+\end{equation*}
+</div>
+<p class="continuation">for all \(i\) and \(j\) with \(j \neq 1\text{.}\) Therefore, \(a( \beta - \beta_j ) \neq \alpha_i - \alpha\text{.}\) Let \(\gamma = \alpha + a \beta\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+\gamma = \alpha + a \beta \neq \alpha_i + a \beta_j;
+\end{equation*}
+</div>
+<p class="continuation">hence, \(\gamma - a \beta_j \neq \alpha_i\) for all \(i,
+j\) with \(j \neq 1\text{.}\) Define \(h(x) \in F( \gamma )[x]\) by \(h(x) = f( \gamma - ax)\text{.}\) Then \(h( \beta ) = f( \alpha ) = 0\text{.}\) However, \(h( \beta_j ) \neq 0\) for \(j \neq 1\text{.}\) Hence, \(h(x)\) and \(g(x)\) have a single common factor in \(F( \gamma )[x]\text{;}\) that is, the minimal polynomial of \(\beta\) over \(F( \gamma )\) must be linear, since \(\beta\) is the only zero common to both \(g(x)\) and \(h(x)\text{.}\) So \(\beta \in F( \gamma )\) and \(\alpha = \gamma - a \beta\) is in \(F( \gamma )\text{.}\) Hence, \(F( \alpha, \beta ) = F( \gamma )\text{.}\)</p></article></div></section></section></div></main>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=10568106;
+var sc_invisible=1;
+var sc_security="510ba080";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/10568106/0/510ba080/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

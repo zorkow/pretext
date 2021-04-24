@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:59:30+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p xmlns:svg="http://www.w3.org/2000/svg">We will use mathematical induction on the degree of \(p(x)\text{.}\) We can assume that \(p(x)\) is irreducible over \(E\text{.}\) Therefore, \(q(x)\) is also irreducible over \(F\text{.}\) If \(\deg p(x) = 1\text{,}\) then by the definition of a splitting field, \(K = E\) and \(L = F\) and there is nothing to prove.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Assume that the theorem holds for all polynomials of degree less than \(n\text{.}\) Since \(K\) is a splitting field of \(p(x)\text{,}\) all of the roots of \(p(x)\) are in \(K\text{.}\) Choose one of these roots, say \(\alpha\text{,}\) such that \(E \subset E( \alpha ) \subset K\text{.}\) Similarly, we can find a root \(\beta\) of \(q(x)\) in \(L\) such that \(F \subset F( \beta) \subset L\text{.}\) By <a class="xref" data-knowl="./knowl/lemma-field-isomorphism.html" title="Lemma 21.32">Lemma 21.32</a>, there exists an isomorphism \(\overline{\phi} : E(\alpha ) \rightarrow F( \beta)\) such that \(\overline{\phi}( \alpha ) = \beta\) and \(\overline{\phi}\) agrees with \(\phi\) on \(E\)  (see <a class="xref" data-knowl="./knowl/figure-splitting-fields-2.html" title="Figure 21.35">Figure 21.35</a>).</p>
+<figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{CD}
+K  @&gt;\psi&gt;&gt;  L  \\
+@VV{\sigma}V        @VV{\tau}V\\
+E(\alpha)     @&gt;\overline{\phi}&gt;&gt;  F(\beta) \\
+@VVV        @VVV\\
+E     @&gt;\phi&gt;&gt;  F
+\end{CD}
+\end{equation*}
+</div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">21.35<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p xmlns:svg="http://www.w3.org/2000/svg">Now write \(p(x) = (x - \alpha ) f(x)\) and \(q(x) = ( x - \beta) g(x)\text{,}\) where the degrees of \(f(x)\) and \(g(x)\) are less than the degrees of \(p(x)\) and \(q(x)\text{,}\) respectively. The field extension \(K\) is a splitting field for \(f(x)\) over \(E( \alpha)\text{,}\) and \(L\) is a splitting field for \(g(x)\) over \(F( \beta )\text{.}\) By our induction hypothesis there exists an isomorphism \(\psi : K \rightarrow L\) such that \(\psi\) agrees with \(\overline{\phi}\) on \(E( \alpha)\text{.}\) Hence, there exists an isomorphism \(\psi : K \rightarrow L\) such that \(\psi\) agrees with \(\phi\) on \(E\text{.}\)</p></article></body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:59:30+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>If \(p(x)\) has degree \(n\text{,}\) then by <a class="xref" data-knowl="./knowl/theorem-simple_extension.html" title="Theorem 21.13">Theorem 21.13</a> we can write any element in \(E( \alpha )\) as a linear combination of \(1, \alpha, \ldots, \alpha^{n - 1}\text{.}\) Therefore, the isomorphism that we are seeking must be</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\overline{\phi}( a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}) = \phi(a_0) + \phi(a_1) \beta + \cdots + \phi(a_{n - 1}) \beta^{n - 1}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}
+\end{equation*}
+</div>
+<p class="continuation">is an element in \(E(\alpha)\text{.}\) The fact that \(\overline{\phi}\) is an isomorphism could be checked by direct computation; however, it is easier to observe that \(\overline{\phi}\) is a composition of maps that we already know to be isomorphisms.</p>
+<p>We can extend \(\phi\) to be an isomorphism from \(E[x]\) to \(F[x]\text{,}\) which we will also denote by \(\phi\text{,}\) by letting</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\phi( a_0 + a_1 x + \cdots + a_n x^n ) =  \phi( a_0 ) + \phi(a_1) x + \cdots + \phi(a_n) x^n\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This extension agrees with the original isomorphism \(\phi : E \rightarrow F\text{,}\) since constant polynomials get mapped to constant polynomials. By assumption, \(\phi(p(x)) = q(x)\text{;}\) hence, \(\phi\) maps \(\langle p(x) \rangle\) onto \(\langle q(x) \rangle\text{.}\) Consequently, we have an isomorphism \(\psi : E[x] / \langle p(x) \rangle \rightarrow F[x]/\langle q(x) \rangle\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-minimal-poly.html" title="Proposition 21.12">Proposition 21.12</a>, we have isomorphisms \(\sigma: E[x]/\langle p(x) \rangle \rightarrow E(\alpha)\) and \(\tau : F[x]/\langle q(x) \rangle \rightarrow F( \beta )\text{,}\) defined by evaluation at \(\alpha\) and \(\beta\text{,}\) respectively. Therefore, \(\overline{\phi} = \tau \psi \sigma^{-1}\) is the required isomorphism (see <a class="xref" data-knowl="./knowl/figure-splitting-fields-1.html" title="Figure 21.33">Figure 21.33</a>).</p>
+<figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{CD}
+E[x]/\langle p(x) \rangle    @&gt;\psi&gt;&gt;  F[x]/\langle q(x) \rangle  \\
+@VV{\sigma}V        @VV{\tau}V\\
+E(\alpha)     @&gt;\overline{\phi}&gt;&gt;  F(\beta) \\
+@VVV        @VVV\\
+E     @&gt;\phi&gt;&gt;  F
+\end{CD}
+\end{equation*}
+</div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">21.33<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p xmlns:svg="http://www.w3.org/2000/svg">We leave the proof of uniqueness as a exercise.</p></article></body>
+</html>

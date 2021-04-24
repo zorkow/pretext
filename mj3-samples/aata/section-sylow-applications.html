@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:56:31+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Examples and Applications</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: ['base', 'extpfeil', 'amscd']
+  },
+  options: {
+    ignoreHtmlClass: ".*",
+    processHtmlClass: "has_am"
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd']
+  }
+};
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=002637997310187229905:qj2oy0jlpyu"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-sylow-theorems.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sylow.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="reading-questions-15.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-sylow-theorems.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sylow.html" title="Up">Up</a><a class="next-button button toolbar-item" href="reading-questions-15.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="Cpq">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-equivalence-relations.html" data-scroll="eYQ">Sets and Equivalence Relations</a></li>
+<li><a href="reading-questions-1.html" data-scroll="ibN">Reading Questions</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+<li><a href="sets-sage.html" data-scroll="LfZ">Sage</a></li>
+<li><a href="sets-sage-exercises.html" data-scroll="SKy">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="integers.html" data-scroll="mtY"><span class="codenumber">2</span> <span class="title">The Integers</span></a><ul>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Division Algorithm</a></li>
+<li><a href="reading-questions-2.html" data-scroll="kWt">Reading Questions</a></li>
+<li><a href="exercises-integers.html" data-scroll="Dsj">Exercises</a></li>
+<li><a href="integers-exercises-programming.html" data-scroll="jzs">Programming Exercises</a></li>
+<li><a href="integers-references.html" data-scroll="Dta">References and Suggested Readings</a></li>
+<li><a href="integers-sage.html" data-scroll="ojl">Sage</a></li>
+<li><a href="integers-sage-exercises.html" data-scroll="PGB">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">3</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="reading-questions-3.html" data-scroll="VNv">Reading Questions</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+<li><a href="groups-sage.html" data-scroll="fAT">Sage</a></li>
+<li><a href="groups-sage-exercises.html" data-scroll="aRa">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cyclic.html" data-scroll="KKE"><span class="codenumber">4</span> <span class="title">Cyclic Groups</span></a><ul>
+<li><a href="section-cyclic-subgroups.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-mult-group-c.html" data-scroll="sHa">Multiplicative Group of Complex Numbers</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="reading-questions-4.html" data-scroll="CZX">Reading Questions</a></li>
+<li><a href="exercises-cyclic.html" data-scroll="nXh">Exercises</a></li>
+<li><a href="cyclic-exercises-programming.html" data-scroll="Ueq">Programming Exercises</a></li>
+<li><a href="cyclic-references.html" data-scroll="KnF">References and Suggested Readings</a></li>
+<li><a href="cyclic-sage.html" data-scroll="EVs">Sage</a></li>
+<li><a href="cyclic-sage-exercises.html" data-scroll="Alz">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="permute.html" data-scroll="AQc"><span class="codenumber">5</span> <span class="title">Permutation Groups</span></a><ul>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Definitions and Notation</a></li>
+<li><a href="section-dihedral-groups.html" data-scroll="CFp">Dihedral Groups</a></li>
+<li><a href="reading-questions-5.html" data-scroll="HJQ">Reading Questions</a></li>
+<li><a href="exercises-permute.html" data-scroll="ecF">Exercises</a></li>
+<li><a href="permute-sage.html" data-scroll="iMy">Sage</a></li>
+<li><a href="permute-sage-exercises.html" data-scroll="KjO">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">6</span> <span class="title">Cosets and Lagrange's Theorem</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-lagranges-theorem.html" data-scroll="dTk">Lagrange's Theorem</a></li>
+<li><a href="section-fermat-euler.html" data-scroll="Kat">Fermat's and Euler's Theorems</a></li>
+<li><a href="reading-questions-6.html" data-scroll="BUE">Reading Questions</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+<li><a href="cosets-sage.html" data-scroll="qhC">Sage</a></li>
+<li><a href="cosets-sage-exercises.html" data-scroll="lxJ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">7</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="reading-questions-7.html" data-scroll="Jzd">Reading Questions</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="hbc">References and Suggested Readings</a></li>
+<li><a href="crypt-sage.html" data-scroll="cyJ">Sage</a></li>
+<li><a href="crypt-sage-exercises.html" data-scroll="DVZ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">8</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-8.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+<li><a href="algcodes-sage.html" data-scroll="Klo">Sage</a></li>
+<li><a href="algcodes-sage-exercises.html" data-scroll="Zum">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">9</span> <span class="title">Isomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="reading-questions-9.html" data-scroll="TYi">Reading Questions</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="LZO">Exercises</a></li>
+<li><a href="isomorph-sage.html" data-scroll="QJH">Sage</a></li>
+<li><a href="isomorph-sage-exercises.html" data-scroll="sgX">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="normal.html" data-scroll="xiL"><span class="codenumber">10</span> <span class="title">Normal Subgroups and Factor Groups</span></a><ul>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="reading-questions-10.html" data-scroll="pGm">Reading Questions</a></li>
+<li><a href="exercises-normal.html" data-scroll="hZN">Exercises</a></li>
+<li><a href="normal-sage.html" data-scroll="mJG">Sage</a></li>
+<li><a href="normal-sage-exercises.html" data-scroll="OgW">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="homomorph.html" data-scroll="JXG"><span class="codenumber">11</span> <span class="title">Homomorphisms</span></a><ul>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="reading-questions-11.html" data-scroll="sAS">Reading Questions</a></li>
+<li><a href="exercises-homomorph.html" data-scroll="WlY">Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Cth">Additional Exercises: Automorphisms</a></li>
+<li><a href="homomorph-sage.html" data-scroll="Hda">Sage</a></li>
+<li><a href="homomorph-sage-exercises.html" data-scroll="iAq">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">12</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-12.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+<li><a href="matrix-sage.html" data-scroll="stf">Sage</a></li>
+<li><a href="matrix-sage-exercises.html" data-scroll="TQv">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct.html" data-scroll="YWA"><span class="codenumber">13</span> <span class="title">The Structure of  Groups</span></a><ul>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="reading-questions-13.html" data-scroll="vvy">Reading Questions</a></li>
+<li><a href="exercises-struct.html" data-scroll="Rsb">Exercises</a></li>
+<li><a href="struct-exercises-programming.html" data-scroll="xzk">Programming Exercises</a></li>
+<li><a href="struct-references.html" data-scroll="tDP">References and Suggested Readings</a></li>
+<li><a href="struct-sage.html" data-scroll="Cjd">Sage</a></li>
+<li><a href="struct-sage-exercises.html" data-scroll="dGt">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">14</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="reading-questions-14.html" data-scroll="MtJ">Reading Questions</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="JDL">References and Suggested Reading</a></li>
+<li><a href="actions-sage.html" data-scroll="gaW">Sage</a></li>
+<li><a href="actions-sage-exercises.html" data-scroll="brd">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">15</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS" class="active">Examples and Applications</a></li>
+<li><a href="reading-questions-15.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+<li><a href="sylow-sage.html" data-scroll="Vab">Sage</a></li>
+<li><a href="sylow-sage-exercises.html" data-scroll="wxr">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">16</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="reading-questions-16.html" data-scroll="bCH">Reading Questions</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+<li><a href="rings-sage.html" data-scroll="ple">Sage</a></li>
+<li><a href="rings-sage-exercises.html" data-scroll="YmT">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">17</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="reading-questions-17.html" data-scroll="Afr">Reading Questions</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Exercises</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+<li><a href="poly-sage.html" data-scroll="vEG">Sage</a></li>
+<li><a href="poly-sage-exercises.html" data-scroll="qUN">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">18</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-18.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+<li><a href="domains-sage.html" data-scroll="pin">Sage</a></li>
+<li><a href="domains-sage-exercises.html" data-scroll="QFD">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">19</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-19.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+<li><a href="boolean-sage.html" data-scroll="LwL">Sage</a></li>
+<li><a href="boolean-sage-exercises.html" data-scroll="GMS">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vect.html" data-scroll="kTG"><span class="codenumber">20</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section-vect-definitions-and-examples.html" data-scroll="Ogj">Definitions and Examples</a></li>
+<li><a href="section-subspaces.html" data-scroll="uns">Subspaces</a></li>
+<li><a href="section-linear-independence.html" data-scroll="auB">Linear Independence</a></li>
+<li><a href="reading-questions-20.html" data-scroll="xkL">Reading Questions</a></li>
+<li><a href="exercises-vect.html" data-scroll="VKI">Exercises</a></li>
+<li><a href="vect-references.html" data-scroll="jeK">References and Suggested Readings</a></li>
+<li><a href="vect-sage.html" data-scroll="GBK">Sage</a></li>
+<li><a href="vect-sage-exercises.html" data-scroll="BRR">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">21</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-extension-fields.html" data-scroll="Qfe">Extension Fields</a></li>
+<li><a href="section-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="reading-questions-21.html" data-scroll="Pop">Reading Questions</a></li>
+<li><a href="exercises-fields.html" data-scroll="Lvl">Exercises</a></li>
+<li><a href="fields-references.html" data-scroll="veH">References and Suggested Readings</a></li>
+<li><a href="fields-sage.html" data-scroll="IAF">Sage</a></li>
+<li><a href="fields-sage-exercises.html" data-scroll="rCu">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">22</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-22.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+<li><a href="finite-sage.html" data-scroll="vNX">Sage</a></li>
+<li><a href="finite-sage-exercises.html" data-scroll="Xln">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">23</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="YIb">Reading Questions</a></li>
+<li><a href="exercises-galois.html" data-scroll="qAB">Exercises</a></li>
+<li><a href="galois-references.html" data-scroll="ppv">References and Suggested Readings</a></li>
+<li><a href="galois-sage.html" data-scroll="brD">Sage</a></li>
+<li><a href="galois-sage-exercises.html" data-scroll="WHK">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="oSS"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">15.2</span> <span class="title">Examples and Applications</span>
+</h2>
+<section class="introduction" id="thm"><article class="example example-like" id="Iqk"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">15.9</span><span class="period">.</span>
+</h6>
+<p id="uPv">Using the Sylow Theorems, we can determine that \(A_5\) has subgroups of orders \(2\text{,}\) \(3\text{,}\) \(4\text{,}\) and \(5\text{.}\) The Sylow \(p\)-subgroups of \(A_5\) have orders \(3\text{,}\) \(4\text{,}\) and \(5\text{.}\) The Third Sylow Theorem tells us exactly how many Sylow \(p\)-subgroups \(A_5\) has. Since the number of Sylow \(5\)-subgroups must divide \(60\) and also be congruent to \(1 \pmod{5}\text{,}\) there are either one or six Sylow \(5\)-subgroups in \(A_5\text{.}\) All Sylow \(5\)-subgroups are conjugate. If there were only a single Sylow \(5\)-subgroup, it would be conjugate to itself; that is, it would be a normal subgroup of \(A_5\text{.}\) Since \(A_5\) has no normal subgroups, this is impossible; hence, we have determined that there are exactly six distinct Sylow \(5\)-subgroups of \(A_5\text{.}\)</p></article><p id="paj">The Sylow Theorems allow us to prove many useful results about finite groups. By using them, we can often conclude a great deal about groups of a particular order if certain hypotheses are satisfied.</p>
+<article class="theorem theorem-like" id="Xzi"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.10</span><span class="period">.</span>
+</h6>
+<p id="xKb">If \(p\) and \(q\) are distinct primes with \(p \lt q \text{,}\) then every group \(G\) of order \(pq\) has a single subgroup of order \(q\) and this subgroup is normal in \(G\text{.}\) Hence, \(G\) cannot be simple. Furthermore, if \(q \not\equiv 1 \pmod{p}\text{,}\) then \(G\) is cyclic.</p></article><article class="hiddenproof" id="xRf"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-xRf"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-xRf"><article class="hiddenproof"><p id="AEH">We know that \(G\) contains a subgroup \(H\) of order \(q\text{.}\) The number of conjugates of \(H\) divides \(pq\) and is equal to \(1 + kq\) for \(k = 0, 1, \ldots\text{.}\) However, \(1 + q\) is already too large to divide the order of the group; hence, \(H\) can only be conjugate to itself. That is, \(H\) must be normal in \(G\text{.}\)</p>
+<p id="gLQ">The group \(G\) also has a Sylow \(p\)-subgroup, say \(K\text{.}\) The number of conjugates of \(K\) must divide \(q\) and be equal to \(1 + kp\) for \(k = 0, 1, \ldots\text{.}\) Since \(q\) is prime, either \(1 + kp = q\) or \(1 + kp = 1\text{.}\) If \(1 + kp = 1\text{,}\) then \(K\) is normal in \(G\text{.}\) In this case, we can easily show that \(G\) satisfies the criteria, given in <a href="isomorph.html" class="internal" title="Chapter 9: Isomorphisms">Chapter 9</a>, for the internal direct product of \(H\) and \(K\text{.}\) Since \(H\) is isomorphic to \({\mathbb Z}_q\) and \(K\) is isomorphic to \({\mathbb Z}_p\text{,}\) \(G \cong {\mathbb Z}_p \times {\mathbb Z}_q \cong {\mathbb Z}_{pq}\) by <a class="xref" data-knowl="./knowl/theorem-z-pq.html" title="Theorem 9.21">Theorem 9.21</a>.</p></article></div>
+<article class="example example-like" id="oxt"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">15.11</span><span class="period">.</span>
+</h6>
+<p id="aWE">Every group of order \(15\) is cyclic. This is true because \(15 = 5 \cdot 3\) and \(5 \not\equiv 1 \pmod{3}\text{.}\)</p></article><article class="example example-like" id="UEC"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">15.12</span><span class="period">.</span>
+</h6>
+<p id="HdN">Let us classify all of the groups of order \(99 = 3^2 \cdot 11\) up to isomorphism. First we will show that every group \(G\) of order \(99\) is abelian. By the Third Sylow Theorem, there are \(1 + 3k\) Sylow \(3\)-subgroups, each of order \(9\text{,}\) for some \(k = 0, 1, 2, \ldots\text{.}\) Also, \(1 + 3k\) must divide \(11\text{;}\) hence, there can only be a single normal Sylow \(3\)-subgroup \(H\) in \(G\text{.}\) Similarly, there are \(1 +11k\) Sylow \(11\)-subgroups and \(1 +11k\) must divide \(9\text{.}\) Consequently, there is only one Sylow \(11\)-subgroup \(K\) in \(G\text{.}\) By <a class="xref" data-knowl="./knowl/corollary-p2abelian.html" title="Corollary 14.16">Corollary 14.16</a>, any group of order \(p^2\) is abelian for \(p\) prime; hence, \(H\) is isomorphic either to \({\mathbb Z}_3 \times {\mathbb Z}_3\) or to \({\mathbb Z}_9\text{.}\) Since \(K\) has order \(11\text{,}\) it must be isomorphic to \({\mathbb Z}_{11}\text{.}\) Therefore, the only possible groups of order \(99\) are \({\mathbb Z}_3 \times {\mathbb Z}_3 \times {\mathbb Z}_{11}\) or \({\mathbb Z}_9 \times {\mathbb Z}_{11}\) up to isomorphism.</p></article><p id="Vhs">To determine all of the groups of order \(5 \cdot 7 \cdot 47 = 1645\text{,}\) we need the following theorem.</p>
+<article class="theorem theorem-like" id="DGr"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.13</span><span class="period">.</span>
+</h6>
+<p id="dRk">Let \(G' = \langle a b a^{-1} b^{-1} : a, b \in G \rangle\) be the subgroup consisting of all finite products of elements of the form \(aba^{-1}b^{-1}\) in a group \(G\text{.}\) Then \(G'\) is a normal subgroup of \(G\) and \(G/G'\) is abelian.</p></article><p id="BoB">The subgroup \(G'\) of \(G\) is called the <dfn class="terminology">commutator subgroup</dfn> of \(G\text{.}\) We leave the proof of this theorem as an exercise (<a class="xref" data-knowl="./knowl/normal-exercise-commutator.html" title="Exercise 10.4.14">Exercise 10.4.14</a> in <a href="normal.html" class="internal" title="Chapter 10: Normal Subgroups and Factor Groups">Chapter 10</a>).</p>
+<article class="example example-like" id="ALL"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">15.14</span><span class="period">.</span>
+</h6>
+<p id="nkW">We will now show that every group of order \(5 \cdot 7 \cdot 47 = 1645\) is abelian, and cyclic by <a class="xref" data-knowl="./knowl/theorem-z-pq.html" title="Theorem 9.21">Theorem 9.21</a>. By the Third Sylow Theorem, \(G\) has only one subgroup \(H_1\) of order \(47\text{.}\) So \(G/H_1\) has order 35 and must be abelian by <a class="xref" data-knowl="./knowl/theorem-pq-cyclic.html" title="Theorem 15.10">Theorem 15.10</a>. Hence, the commutator subgroup of \(G\) is contained in \(H\) which tells us that \(|G'|\) is either \(1\) or \(47\text{.}\) If \(|G'|=1\text{,}\) we are done. Suppose that \(|G'|=47\text{.}\) The Third Sylow Theorem tells us that \(G\) has only one subgroup of order \(5\) and one subgroup of order \(7\text{.}\) So there exist normal subgroups \(H_2\) and \(H_3\) in \(G\text{,}\) where \(|H_2| = 5\) and \(|H_3| = 7\text{.}\) In either case the quotient group is abelian; hence, \(G'\) must be a subgroup of \(H_i\text{,}\) \(i= 1, 2\text{.}\) Therefore, the order of \(G'\) is \(1\text{,}\) \(5\text{,}\) or \(7\text{.}\) However, we already have determined that \(|G'| =1\) or \(47\text{.}\) So the commutator subgroup of \(G\) is trivial, and consequently \(G\) is abelian.</p></article></section><section class="subsection" id="fzg"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Finite Simple Groups</span>
+</h3>
+<p id="fkY">Given a finite group, one can ask whether or not that group has any normal subgroups. Recall that a simple group is one with no proper nontrivial normal subgroups. As in the case of \(A_5\text{,}\) proving a group to be simple can be a very difficult task; however, the Sylow Theorems are useful tools for proving that a group is not simple. Usually, some sort of counting argument is involved.</p>
+<article class="example example-like" id="NvC"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">15.15</span><span class="period">.</span>
+</h6>
+<p id="Tsf">Let us show that no group \(G\) of order \(20\) can be simple. By the Third Sylow Theorem, \(G\) contains one or more Sylow \(5\)-subgroups. The number of such subgroups is congruent to \(1 \pmod{5}\) and must also divide \(20\text{.}\) The only possible such number is \(1\text{.}\) Since there is only a single Sylow \(5\)-subgroup and all Sylow \(5\)-subgroups are conjugate, this subgroup must be normal.</p></article><article class="example example-like" id="tCL"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">15.16</span><span class="period">.</span>
+</h6>
+<p id="zzo">Let \(G\) be a finite group of order \(p^n\text{,}\) \(n \gt 1\) and \(p\) prime. By <a class="xref" data-knowl="./knowl/theorem-pn.html" title="Theorem 14.15">Theorem 14.15</a>, \(G\) has a nontrivial center. Since the center of any group \(G\) is a normal subgroup, \(G\) cannot be a simple group. Therefore, groups of orders \(4\text{,}\) \(8\text{,}\) \(9\text{,}\) \(16\text{,}\) \(25\text{,}\) \(27\text{,}\) \(32\text{,}\) \(49\text{,}\) \(64\text{,}\) and \(81\) are not simple. In fact, the groups of order \(4\text{,}\) \(9\text{,}\) \(25\text{,}\) and \(49\) are abelian by <a class="xref" data-knowl="./knowl/corollary-p2abelian.html" title="Corollary 14.16">Corollary 14.16</a>.</p></article><article class="example example-like" id="ZJU"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">15.17</span><span class="period">.</span>
+</h6>
+<p id="fGx">No group of order \(56= 2^3 \cdot 7\) is simple. We have seen that if we can show that there is only one Sylow \(p\)-subgroup for some prime \(p\) dividing 56, then this must be a normal subgroup and we are done. By the Third Sylow Theorem, there are either one or eight Sylow \(7\)-subgroups. If there is only a single Sylow \(7\)-subgroup, then it must be normal.</p>
+<p id="LNG">On the other hand, suppose that there are eight Sylow \(7\)-subgroups. Then each of these subgroups must be cyclic; hence, the intersection of any two of these subgroups contains only the identity of the group. This leaves \(8 \cdot 6 = 48\) distinct elements in the group, each of order \(7\text{.}\) Now let us count Sylow \(2\)-subgroups. There are either one or seven Sylow \(2\)-subgroups. Any element of a Sylow \(2\)-subgroup other than the identity must have as its order a power of \(2\text{;}\) and therefore cannot be one of the \(48\) elements of order \(7\) in the Sylow \(7\)-subgroups. Since a Sylow \(2\)-subgroup has order \(8\text{,}\) there is only enough room for a single Sylow \(2\)-subgroup in a group of order \(56\text{.}\) If there is only one Sylow \(2\)-subgroup, it must be normal.</p></article><p id="Lsh">For other groups \(G\text{,}\) it is more difficult to prove that \(G\) is not simple. Suppose \(G\) has order \(48\text{.}\) In this case the technique that we employed in the last example will not work. We need the following lemma to prove that no group of order \(48\) is simple.</p>
+<article class="lemma theorem-like" id="hot"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">15.18</span><span class="period">.</span>
+</h6>
+<p id="CtU">Let \(H\) and \(K\) be finite subgroups of a group \(G\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+|HK| = \frac{|H| \cdot |K|}{|H \cap K|}\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof" id="qmG"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-qmG"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-qmG"><article class="hiddenproof"><p id="MSZ">Recall that</p>
+<div class="displaymath">
+\begin{equation*}
+HK = \{ hk : h \in H, k \in K \}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Certainly, \(|HK| \leq |H| \cdot |K|\) since some element in \(HK\) could be written as the product of different elements in \(H\) and \(K\text{.}\) It is quite possible that \(h_1 k_1 = h_2 k_2\) for \(h_1, h_2 \in H\) and \(k_1, k_2 \in K\text{.}\) If this is the case, let</p>
+<div class="displaymath">
+\begin{equation*}
+a = (h_1)^{-1} h_2 = k_1 (k_2)^{-1}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Notice that \(a \in H \cap K\text{,}\) since \((h_1)^{-1} h_2\) is in \(H\) and \(k_2 (k_1)^{-1}\) is in \(K\text{;}\) consequently,</p>
+<div class="displaymath">
+\begin{align*}
+h_2 &amp; =  h_1 a^{-1}\\
+k_2 &amp; =  a k_1\text{.}
+\end{align*}
+</div>
+<p id="tai">Conversely, let \(h = h_1 b^{-1}\) and \(k = b k_1\) for \(b \in H \cap K\text{.}\) Then \(h k = h_1 k_1\text{,}\) where \(h \in H\) and \(k \in K\text{.}\) Hence, any element \(hk \in HK\) can be written in the form \(h_i k_i\) for \(h_i \in H\) and \(k_i \in K\text{,}\) as many times as there are elements in \(H \cap K\text{;}\) that is, \(|H \cap K|\) times. Therefore, \(|HK| = (|H| \cdot |K|)/|H \cap K|\text{.}\)</p></article></div>
+<article class="example example-like" id="FRd"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">15.19</span><span class="period">.</span>
+</h6>
+<p id="rUP">To demonstrate that a group \(G\) of order \(48\) is not simple, we will show that \(G\) contains either a normal subgroup of order \(8\) or a normal subgroup of order \(16\text{.}\) By the Third Sylow Theorem, \(G\) has either one or three Sylow \(2\)-subgroups of order \(16\text{.}\) If there is only one subgroup, then it must be a normal subgroup.</p>
+<p id="YbY">Suppose that the other case is true, and two of the three Sylow \(2\)-subgroups are \(H\) and \(K\text{.}\) We claim that  \(|H \cap K| = 8\text{.}\) If \(|H \cap K| \leq 4\text{,}\) then by <a class="xref" data-knowl="./knowl/lemma-hk-subgroup.html" title="Lemma 15.18">Lemma 15.18</a>,</p>
+<div class="displaymath">
+\begin{equation*}
+|HK| \geq \frac{16 \cdot 16}{4} =64\text{,}
+\end{equation*}
+</div>
+<p class="continuation">which is impossible. Notice that \(H \cap K\) has index two in both of \(H\) and \(K\text{,}\) so is normal in both, and thus \(H\) and \(K\) are each in the normalizer of \(H \cap K\text{.}\) Because \(H\) is a subgroup of \(N(H \cap K)\) and because \(N(H \cap K)\) has strictly more than \(16\) elements, \(|N(H \cap K)|\) must be a multiple of \(16\) greater than \(1\text{,}\) as well as dividing \(48\text{.}\) The only possibility is that \(|N(H \cap K)|= 48\text{.}\) Hence, \(N(H \cap K) = G\text{.}\)</p></article><p id="rzq">The following famous conjecture of Burnside was proved in a long and difficult paper by Feit and Thompson [2].</p>
+<article class="theorem theorem-like" id="Bhk"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.20</span><span class="period">.</span><span class="space"> </span><span class="title">Odd Order Theorem.</span>
+</h6>
+<p id="JYt">Every finite simple group of nonprime order must be of even order.</p></article><p id="XGz">The proof of this theorem laid the groundwork for a program in the 1960s and 1970s that classified all finite simple groups. The success of this program is one of the outstanding achievements of modern mathematics.</p></section></section></div></main>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=10568106;
+var sc_invisible=1;
+var sc_security="510ba080";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/10568106/0/510ba080/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

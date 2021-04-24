@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:59:36+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>Let \(f(x) = x^{p^n} - x\) and let \(F\) be the splitting field of \(f(x)\text{.}\) Then by <a class="xref" data-knowl="./knowl/lemma-separable-derivative.html" title="Lemma 22.5">Lemma 22.5</a>, \(f(x)\) has \(p^n\) distinct zeros in \(F\text{,}\) since \(f'(x) = p^n x^{p^n - 1} - 1 = -1\) is relatively prime to \(f(x)\text{.}\) We claim that the roots of \(f(x)\) form a subfield of \(F\text{.}\) Certainly 0 and 1 are zeros of \(f(x)\text{.}\) If \(\alpha\) and \(\beta\) are zeros of \(f(x)\text{,}\) then \(\alpha + \beta\) and \(\alpha \beta\) are also zeros of \(f(x)\text{,}\) since \(\alpha^{p^n} + \beta^{p^n} =  (\alpha + \beta)^{p^n}\) and \(\alpha^{p^n} \beta^{p^n} = (\alpha \beta)^{p^n}\text{.}\) We also need to show that the additive inverse and the multiplicative inverse of each root of \(f(x)\) are roots of \(f(x)\text{.}\) For any zero \(\alpha\) of \(f(x)\text{,}\) we know that \(-\alpha\) is also a zero of \(f(x)\text{,}\) since</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f(-\alpha) = (-\alpha)^{p^n} - (-\alpha) = -\alpha^{p^n} + \alpha = -(\alpha^{p^n} - \alpha) = 0\text{,}
+\end{equation*}
+</div>
+<p class="continuation">provided \(p\) is odd. If \(p = 2\text{,}\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f(-\alpha) =  (-\alpha)^{2^n} - (-\alpha) = \alpha + \alpha = 0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">If \(\alpha \neq 0\text{,}\) then \((\alpha^{-1})^{p^n} = (\alpha^{p^n})^{-1} = \alpha^{-1}\text{.}\) Since the zeros of \(f(x)\) form a subfield of \(F\) and \(f(x)\) splits in this subfield, the subfield must be all of \(F\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Let \(E\) be any other field of order \(p^n\text{.}\) To show that \(E\) is isomorphic to \(F\text{,}\) we must show that every element in \(E\) is a root of \(f(x)\text{.}\) Certainly 0 is a root of \(f(x)\text{.}\) Let \(\alpha\) be a nonzero element of \(E\text{.}\) The order of the multiplicative group of nonzero elements of \(E\) is \(p^n-1\text{;}\) hence, \(\alpha^{p^n-1} =1\) or \(\alpha^{p^n} -\alpha = 0\text{.}\) Since \(E\) contains \(p^n\) elements, \(E\) must be a splitting field of \(f(x)\text{;}\) however, by <a class="xref" data-knowl="./knowl/corollary-poly-splitting-field.html" title="Corollary 21.36">Corollary 21.36</a>, the splitting field of any polynomial is unique up to isomorphism.</p></article></body>
+</html>

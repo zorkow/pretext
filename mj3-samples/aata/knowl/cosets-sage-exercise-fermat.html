@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:58:07+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2<span class="period">.</span></span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Verify the truth of Fermat's Little Theorem (either variant) using the composite number \(391=17\cdot 23\) as the choice of the base (either \(a\) or \(b\)), and for \(p\) assuming the value of every prime number between \(100\) and \(1000\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Build up a solution slowly — make a list of powers (start with just a few primes), then make a list of powers reduced by modular arithmetic, then a list of comparisons with the predicted value, then a check on all these logical values resulting from the comparisons. This is a useful strategy for many similar problems. Eventually you will write a single line that performs the verification by eventually printing out <code class="code-inline tex2jax_ignore">True</code>. Here are some more hints about useful functions.</p>
+<div class="sagecell-sage" id="zvx"><script type="text/x-sage">a = 20
+b = 6
+a.mod(b)
+</script></div>
+<div class="sagecell-sage" id="fCG"><script type="text/x-sage">prime_range(50, 100)
+</script></div>
+<div class="sagecell-sage" id="LJP"><script type="text/x-sage">all([True, True, True, True])
+</script></div>
+<div class="sagecell-sage" id="rQY"><script type="text/x-sage">all([True, True, False, True])
+</script></div></article><span class="incontext"><a href="cosets-sage-exercises.html#tMc">in-context</a></span>
+</body>
+</html>

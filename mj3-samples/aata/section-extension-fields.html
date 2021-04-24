@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:57:04+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Extension Fields</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: ['base', 'extpfeil', 'amscd']
+  },
+  options: {
+    ignoreHtmlClass: ".*",
+    processHtmlClass: "has_am"
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd']
+  }
+};
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=002637997310187229905:qj2oy0jlpyu"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="fields.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="fields.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-splitting-fields.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="fields.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="fields.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-splitting-fields.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="Cpq">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-equivalence-relations.html" data-scroll="eYQ">Sets and Equivalence Relations</a></li>
+<li><a href="reading-questions-1.html" data-scroll="ibN">Reading Questions</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+<li><a href="sets-sage.html" data-scroll="LfZ">Sage</a></li>
+<li><a href="sets-sage-exercises.html" data-scroll="SKy">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="integers.html" data-scroll="mtY"><span class="codenumber">2</span> <span class="title">The Integers</span></a><ul>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Division Algorithm</a></li>
+<li><a href="reading-questions-2.html" data-scroll="kWt">Reading Questions</a></li>
+<li><a href="exercises-integers.html" data-scroll="Dsj">Exercises</a></li>
+<li><a href="integers-exercises-programming.html" data-scroll="jzs">Programming Exercises</a></li>
+<li><a href="integers-references.html" data-scroll="Dta">References and Suggested Readings</a></li>
+<li><a href="integers-sage.html" data-scroll="ojl">Sage</a></li>
+<li><a href="integers-sage-exercises.html" data-scroll="PGB">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">3</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="reading-questions-3.html" data-scroll="VNv">Reading Questions</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+<li><a href="groups-sage.html" data-scroll="fAT">Sage</a></li>
+<li><a href="groups-sage-exercises.html" data-scroll="aRa">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cyclic.html" data-scroll="KKE"><span class="codenumber">4</span> <span class="title">Cyclic Groups</span></a><ul>
+<li><a href="section-cyclic-subgroups.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-mult-group-c.html" data-scroll="sHa">Multiplicative Group of Complex Numbers</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="reading-questions-4.html" data-scroll="CZX">Reading Questions</a></li>
+<li><a href="exercises-cyclic.html" data-scroll="nXh">Exercises</a></li>
+<li><a href="cyclic-exercises-programming.html" data-scroll="Ueq">Programming Exercises</a></li>
+<li><a href="cyclic-references.html" data-scroll="KnF">References and Suggested Readings</a></li>
+<li><a href="cyclic-sage.html" data-scroll="EVs">Sage</a></li>
+<li><a href="cyclic-sage-exercises.html" data-scroll="Alz">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="permute.html" data-scroll="AQc"><span class="codenumber">5</span> <span class="title">Permutation Groups</span></a><ul>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Definitions and Notation</a></li>
+<li><a href="section-dihedral-groups.html" data-scroll="CFp">Dihedral Groups</a></li>
+<li><a href="reading-questions-5.html" data-scroll="HJQ">Reading Questions</a></li>
+<li><a href="exercises-permute.html" data-scroll="ecF">Exercises</a></li>
+<li><a href="permute-sage.html" data-scroll="iMy">Sage</a></li>
+<li><a href="permute-sage-exercises.html" data-scroll="KjO">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">6</span> <span class="title">Cosets and Lagrange's Theorem</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-lagranges-theorem.html" data-scroll="dTk">Lagrange's Theorem</a></li>
+<li><a href="section-fermat-euler.html" data-scroll="Kat">Fermat's and Euler's Theorems</a></li>
+<li><a href="reading-questions-6.html" data-scroll="BUE">Reading Questions</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+<li><a href="cosets-sage.html" data-scroll="qhC">Sage</a></li>
+<li><a href="cosets-sage-exercises.html" data-scroll="lxJ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">7</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="reading-questions-7.html" data-scroll="Jzd">Reading Questions</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="hbc">References and Suggested Readings</a></li>
+<li><a href="crypt-sage.html" data-scroll="cyJ">Sage</a></li>
+<li><a href="crypt-sage-exercises.html" data-scroll="DVZ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">8</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-8.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+<li><a href="algcodes-sage.html" data-scroll="Klo">Sage</a></li>
+<li><a href="algcodes-sage-exercises.html" data-scroll="Zum">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">9</span> <span class="title">Isomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="reading-questions-9.html" data-scroll="TYi">Reading Questions</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="LZO">Exercises</a></li>
+<li><a href="isomorph-sage.html" data-scroll="QJH">Sage</a></li>
+<li><a href="isomorph-sage-exercises.html" data-scroll="sgX">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="normal.html" data-scroll="xiL"><span class="codenumber">10</span> <span class="title">Normal Subgroups and Factor Groups</span></a><ul>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="reading-questions-10.html" data-scroll="pGm">Reading Questions</a></li>
+<li><a href="exercises-normal.html" data-scroll="hZN">Exercises</a></li>
+<li><a href="normal-sage.html" data-scroll="mJG">Sage</a></li>
+<li><a href="normal-sage-exercises.html" data-scroll="OgW">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="homomorph.html" data-scroll="JXG"><span class="codenumber">11</span> <span class="title">Homomorphisms</span></a><ul>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="reading-questions-11.html" data-scroll="sAS">Reading Questions</a></li>
+<li><a href="exercises-homomorph.html" data-scroll="WlY">Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Cth">Additional Exercises: Automorphisms</a></li>
+<li><a href="homomorph-sage.html" data-scroll="Hda">Sage</a></li>
+<li><a href="homomorph-sage-exercises.html" data-scroll="iAq">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">12</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-12.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+<li><a href="matrix-sage.html" data-scroll="stf">Sage</a></li>
+<li><a href="matrix-sage-exercises.html" data-scroll="TQv">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct.html" data-scroll="YWA"><span class="codenumber">13</span> <span class="title">The Structure of  Groups</span></a><ul>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="reading-questions-13.html" data-scroll="vvy">Reading Questions</a></li>
+<li><a href="exercises-struct.html" data-scroll="Rsb">Exercises</a></li>
+<li><a href="struct-exercises-programming.html" data-scroll="xzk">Programming Exercises</a></li>
+<li><a href="struct-references.html" data-scroll="tDP">References and Suggested Readings</a></li>
+<li><a href="struct-sage.html" data-scroll="Cjd">Sage</a></li>
+<li><a href="struct-sage-exercises.html" data-scroll="dGt">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">14</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="reading-questions-14.html" data-scroll="MtJ">Reading Questions</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="JDL">References and Suggested Reading</a></li>
+<li><a href="actions-sage.html" data-scroll="gaW">Sage</a></li>
+<li><a href="actions-sage-exercises.html" data-scroll="brd">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">15</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-15.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+<li><a href="sylow-sage.html" data-scroll="Vab">Sage</a></li>
+<li><a href="sylow-sage-exercises.html" data-scroll="wxr">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">16</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="reading-questions-16.html" data-scroll="bCH">Reading Questions</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+<li><a href="rings-sage.html" data-scroll="ple">Sage</a></li>
+<li><a href="rings-sage-exercises.html" data-scroll="YmT">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">17</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="reading-questions-17.html" data-scroll="Afr">Reading Questions</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Exercises</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+<li><a href="poly-sage.html" data-scroll="vEG">Sage</a></li>
+<li><a href="poly-sage-exercises.html" data-scroll="qUN">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">18</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-18.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+<li><a href="domains-sage.html" data-scroll="pin">Sage</a></li>
+<li><a href="domains-sage-exercises.html" data-scroll="QFD">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">19</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-19.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+<li><a href="boolean-sage.html" data-scroll="LwL">Sage</a></li>
+<li><a href="boolean-sage-exercises.html" data-scroll="GMS">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vect.html" data-scroll="kTG"><span class="codenumber">20</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section-vect-definitions-and-examples.html" data-scroll="Ogj">Definitions and Examples</a></li>
+<li><a href="section-subspaces.html" data-scroll="uns">Subspaces</a></li>
+<li><a href="section-linear-independence.html" data-scroll="auB">Linear Independence</a></li>
+<li><a href="reading-questions-20.html" data-scroll="xkL">Reading Questions</a></li>
+<li><a href="exercises-vect.html" data-scroll="VKI">Exercises</a></li>
+<li><a href="vect-references.html" data-scroll="jeK">References and Suggested Readings</a></li>
+<li><a href="vect-sage.html" data-scroll="GBK">Sage</a></li>
+<li><a href="vect-sage-exercises.html" data-scroll="BRR">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">21</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-extension-fields.html" data-scroll="Qfe" class="active">Extension Fields</a></li>
+<li><a href="section-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="reading-questions-21.html" data-scroll="Pop">Reading Questions</a></li>
+<li><a href="exercises-fields.html" data-scroll="Lvl">Exercises</a></li>
+<li><a href="fields-references.html" data-scroll="veH">References and Suggested Readings</a></li>
+<li><a href="fields-sage.html" data-scroll="IAF">Sage</a></li>
+<li><a href="fields-sage-exercises.html" data-scroll="rCu">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">22</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-22.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+<li><a href="finite-sage.html" data-scroll="vNX">Sage</a></li>
+<li><a href="finite-sage-exercises.html" data-scroll="Xln">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">23</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="YIb">Reading Questions</a></li>
+<li><a href="exercises-galois.html" data-scroll="qAB">Exercises</a></li>
+<li><a href="galois-references.html" data-scroll="ppv">References and Suggested Readings</a></li>
+<li><a href="galois-sage.html" data-scroll="brD">Sage</a></li>
+<li><a href="galois-sage-exercises.html" data-scroll="WHK">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Qfe"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">21.1</span> <span class="title">Extension Fields</span>
+</h2>
+<section class="introduction" id="ngW"><p id="WEx">A field \(E\) is an <dfn class="terminology">extension field</dfn>  of a field \(F\) if \(F\) is a subfield of \(E\text{.}\) The field \(F\) is called the <dfn class="terminology">base field</dfn>.  We write \(F \subset E\text{.}\)</p>
+<article class="example example-like" id="qbC"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.1</span><span class="period">.</span>
+</h6>
+<p id="oIb">For example, let</p>
+<div class="displaymath">
+\begin{equation*}
+F = {\mathbb Q}( \sqrt{2}\,) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}
+\end{equation*}
+</div>
+<p class="continuation">and let \(E =  {\mathbb Q }( \sqrt{2} + \sqrt{3}\,)\) be the smallest field containing both \({\mathbb Q}\) and \(\sqrt{2} + \sqrt{3}\text{.}\) Both \(E\) and \(F\) are extension fields of the rational numbers. We claim that \(E\) is an extension field of \(F\text{.}\) To see this, we need only show that \(\sqrt{2}\) is in \(E\text{.}\) Since \(\sqrt{2} + \sqrt{3}\) is in \(E\text{,}\) \(1 / (\sqrt{2} + \sqrt{3}\,) = \sqrt{3} - \sqrt{2}\) must also be in \(E\text{.}\) Taking linear combinations of \(\sqrt{2} + \sqrt{3}\) and \(\sqrt{3} - \sqrt{2}\text{,}\) we find that \(\sqrt{2}\) and \(\sqrt{3}\) must both be in \(E\text{.}\)</p></article><article class="example example-like" id="WiL"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.2</span><span class="period">.</span>
+</h6>
+<p id="UPk">Let \(p(x) = x^2 + x + 1 \in {\mathbb Z}_2[x]\text{.}\) Since neither 0 nor 1 is a root of this polynomial, we know that \(p(x)\) is irreducible over \({\mathbb Z}_2\text{.}\) We will construct a field extension of \({\mathbb Z}_2\) containing an element \(\alpha\) such that \(p(\alpha) = 0\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-max-ideal-poly.html" title="Theorem 17.22">Theorem 17.22</a>, the ideal \(\langle p(x) \rangle\) generated by \(p(x)\) is maximal; hence, \({\mathbb Z}_2[x] / \langle p(x) \rangle\) is a field. Let \(f(x) + \langle p(x) \rangle\) be an arbitrary element of \({\mathbb Z}_2[x] / \langle p(x) \rangle\text{.}\) By the division algorithm,</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = (x^2 + x + 1) q(x) + r(x)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where the degree of \(r(x)\) is less than the degree of \(x^2 + x + 1\text{.}\) Therefore,</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) + \langle x^2 + x + 1 \rangle = r(x) + \langle x^2 + x + 1 \rangle\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The only possibilities for \(r(x)\) are then \(0\text{,}\) \(1\text{,}\) \(x\text{,}\) and \(1 + x\text{.}\) Consequently, \(E = {\mathbb Z}_2[x] / \langle x^2 + x + 1 \rangle\) is a field with four elements and must be a field extension of \({\mathbb Z}_2\text{,}\) containing a zero \(\alpha\) of \(p(x)\text{.}\) The field \({\mathbb Z}_2(  \alpha)\) consists of elements</p>
+<div class="displaymath">
+\begin{align*}
+0 + 0 \alpha &amp; = 0\\
+1 + 0 \alpha &amp; = 1\\
+0 + 1 \alpha &amp; = \alpha\\
+1 + 1 \alpha &amp; = 1 + \alpha\text{.}
+\end{align*}
+</div>
+<p class="continuation">Notice that \({\alpha}^2 + {\alpha} + 1 = 0\text{;}\) hence, if we compute \((1 + \alpha)^2\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+(1 + \alpha)(1 + \alpha)= 1 + \alpha + \alpha + (\alpha)^2 = \alpha\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Other calculations are accomplished in a similar manner. We summarize these computations in the following tables, which tell us how to add and multiply elements in \(E\text{.}\)</p></article><figure class="figure figure-like" id="UmH"><div class="displaymath" id="CLG">
+\begin{equation*}
+\begin{array}{c|cccc}
++ &amp; 0 &amp; 1 &amp; \alpha &amp; 1 + \alpha \\
+\hline
+0 &amp; 0 &amp; 1 &amp; \alpha &amp; 1 + \alpha \\
+1 &amp; 1 &amp; 0 &amp; 1 + \alpha &amp; \alpha \\
+\alpha &amp; \alpha &amp; 1 + \alpha &amp; 0 &amp; 1  \\
+1 + \alpha &amp; 1 + \alpha &amp; \alpha &amp; 1 &amp; 0
+\end{array}
+\end{equation*}
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">21.3<span class="period">.</span></span><span class="space"> </span>Addition Table for \({\mathbb Z}_2(\alpha)\)</figcaption></figure><figure class="figure figure-like" id="AtQ"><div class="displaymath" id="iSP">
+\begin{equation*}
+\begin{array}{c|cccc}
+\cdot &amp; 0 &amp; 1 &amp; \alpha &amp; 1 + \alpha \\
+\hline
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; \alpha &amp; 1 + \alpha \\
+\alpha &amp; 0 &amp; \alpha &amp; 1 + \alpha &amp; 1  \\
+1 + \alpha &amp; 0 &amp; 1 + \alpha &amp; 1 &amp; \alpha
+\end{array}
+\end{equation*}
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">21.4<span class="period">.</span></span><span class="space"> </span>Multiplication Table for \({\mathbb Z}_2(\alpha)\)</figcaption></figure><p id="OZY">The following theorem, due to Kronecker, is so important and so basic to our understanding of fields that it is often known as the Fundamental Theorem of Field Theory.</p>
+<article class="theorem theorem-like" id="lrJ"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.5</span><span class="period">.</span>
+</h6>
+<p id="ldB">Let \(F\) be a field and let \(p(x)\) be a nonconstant polynomial in \(F[x]\text{.}\) Then there exists an extension field \(E\) of \(F\) and an element \(\alpha \in E\) such that \(p(\alpha) = 0\text{.}\)</p></article><article class="hiddenproof" id="fCx"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-fCx"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-fCx"><article class="hiddenproof"><p id="wHZ">To prove this theorem, we will employ the method that we used to construct <a class="xref" data-knowl="./knowl/example-fields-finite-f4.html" title="Example 21.2">Example 21.2</a>. Clearly, we can assume that \(p(x)\) is an irreducible polynomial. We wish to find an extension field \(E\) of \(F\) containing an element \(\alpha\) such that \(p(\alpha) = 0\text{.}\) The ideal \(\langle p(x) \rangle\) generated by \(p(x)\) is a maximal ideal in \(F[x]\) by <a class="xref" data-knowl="./knowl/theorem-max-ideal-poly.html" title="Theorem 17.22">Theorem 17.22</a>; hence, \(F[x]/\langle p(x) \rangle\) is a field. We claim that \(E = F[x]/\langle p(x) \rangle\) is the desired field.</p>
+<p id="cPi">We first show that \(E\) is a field extension of \(F\text{.}\) We can define a homomorphism of commutative rings by the map \(\psi:F \rightarrow F[x]/\langle p(x) \rangle\text{,}\) where \(\psi(a) = a + \langle p(x)\rangle\) for \(a \in F\text{.}\) It is easy to check that \(\psi\) is indeed a ring homomorphism. Observe that</p>
+<div class="displaymath">
+\begin{equation*}
+\psi( a ) + \psi( b ) = (a + \langle p(x) \rangle) + (b + \langle p(x) \rangle) = (a + b) + \langle p(x) \rangle = \psi( a + b )
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+\psi( a ) \psi( b ) = (a + \langle p(x) \rangle)  (b + \langle p(x) \rangle) = ab + \langle p(x) \rangle = \psi( ab )\text{.}
+\end{equation*}
+</div>
+<p class="continuation">To prove that \(\psi\) is one-to-one, assume that</p>
+<div class="displaymath">
+\begin{equation*}
+a + \langle p(x) \rangle = \psi(a) = \psi(b) = b + \langle p(x) \rangle\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Then \(a - b\) is a multiple of \(p(x)\text{,}\) since it lives in the ideal \(\langle p(x) \rangle\text{.}\) Since \(p(x)\) is a nonconstant polynomial, the only possibility is that \(a - b = 0\text{.}\) Consequently, \(a = b\) and \(\psi\) is injective. Since \(\psi\) is one-to-one, we can identify \(F\) with the subfield \(\{ a + \langle p(x) \rangle : a \in F \}\) of \(E\) and view \(E\) as an extension field of \(F\text{.}\)</p>
+<p id="IWr">It remains for us to prove that \(p(x)\) has a zero \(\alpha \in E\text{.}\) Set \(\alpha = x + \langle p(x) \rangle\text{.}\) Then \(\alpha\) is in \(E\text{.}\) If \(p(x) = a_0 + a_1 x + \cdots + a_n x^n\text{,}\) then</p>
+<div class="displaymath">
+\begin{align*}
+p( \alpha ) &amp; =  a_0 + a_1( x + \langle p(x) \rangle) + \cdots + a_n ( x + \langle p(x) \rangle)^n\\
+&amp; = a_0 + ( a_1 x + \langle p(x) \rangle) + \cdots + (a_n  x^n + \langle p(x) \rangle)\\
+&amp; = a_0 + a_1 x + \cdots + a_n x^n + \langle p(x) \rangle\\
+&amp; = 0 + \langle p(x) \rangle\text{.}
+\end{align*}
+</div>
+<p class="continuation">Therefore, we have found an element \(\alpha \in E = F[x]/\langle p(x) \rangle\) such that \(\alpha\) is a zero of \(p(x)\text{.}\)</p></article></div>
+<article class="example example-like" id="CpU"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.6</span><span class="period">.</span>
+</h6>
+<p id="AWt">Let \(p(x) = x^5 + x^4 + 1 \in {\mathbb Z}_2[x]\text{.}\) Then \(p(x)\) has irreducible factors \(x^2 + x + 1\) and \(x^3 + x + 1\text{.}\) For a field extension \(E\) of \({\mathbb Z}_2\) such that \(p(x)\) has a root in \(E\text{,}\) we can let \(E\) be either \({\mathbb Z}_2[x] / \langle x^2 + x + 1 \rangle\) or \({\mathbb Z}_2[x] / \langle x^3 + x + 1 \rangle\text{.}\) We will leave it as an exercise to show that \({\mathbb Z}_2[x] / \langle x^3 + x + 1 \rangle\) is a field with \(2^3 = 8\) elements.</p></article></section><section class="subsection" id="VUq"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Algebraic Elements</span>
+</h3>
+<p id="lrW">An element \(\alpha\) in an extension field \(E\) over \(F\) is <dfn class="terminology">algebraic</dfn> over \(F\) if \(f(\alpha)=0\) for some nonzero polynomial \(f(x) \in F[x]\text{.}\) An element in \(E\) that is not algebraic over \(F\) is <dfn class="terminology">transcendental</dfn> over \(F\text{.}\) An extension field \(E\) of a field \(F\) is an <dfn class="terminology">algebraic extension</dfn>  of \(F\) if every element in \(E\) is algebraic over \(F\text{.}\) If \(E\) is a field extension of \(F\) and \(\alpha_1, \ldots, \alpha_n\) are contained in \(E\text{,}\) we denote the smallest field containing \(F\) and \(\alpha_1, \ldots, \alpha_n\) by \(F( \alpha_1, \ldots, \alpha_n)\text{.}\)  If \(E = F( \alpha )\) for some \(\alpha \in E\text{,}\) then \(E\) is a <dfn class="terminology">simple extension</dfn>  of \(F\text{.}\)</p>
+<article class="example example-like" id="RUr"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.7</span><span class="period">.</span>
+</h6>
+<p id="hdC">Both \(\sqrt{2}\) and \(i\) are algebraic over \({\mathbb Q}\) since they are zeros of the polynomials \(x^2 -2\) and \(x^2 + 1\text{,}\) respectively. Clearly \(\pi\) and \(e\) are algebraic over the real numbers; however, it is a nontrivial fact that they are transcendental over \({\mathbb Q}\text{.}\) Numbers in \({\mathbb R}\) that are algebraic over \({\mathbb Q}\) are in fact quite rare. Almost all real numbers are transcendental over \({\mathbb Q}\text{.}\)<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a>(In many cases we do not know whether or not a particular number is transcendental; for example, it is still not known whether \(\pi + e\) is transcendental or algebraic.)</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">The probability that a real number chosen at random from the interval \([0, 1]\) will be transcendental over the rational numbers is one.</div></div></article><p id="Rzf">A complex number that is algebraic over \({\mathbb Q}\) is an <dfn class="terminology">algebraic number</dfn>.  A <dfn class="terminology">transcendental number</dfn>  is an element of \({\mathbb C}\) that is transcendental over \({\mathbb Q}\text{.}\)</p>
+<article class="example example-like" id="ybA"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.8</span><span class="period">.</span>
+</h6>
+<p id="NkL">We will show that \(\sqrt{2 + \sqrt{3} }\) is algebraic over \({\mathbb Q}\text{.}\) If \(\alpha = \sqrt{2 + \sqrt{3} }\text{,}\) then \(\alpha^2 = 2 + \sqrt{3}\text{.}\) Hence, \(\alpha^2 - 2 = \sqrt{3}\) and \(( \alpha^2 - 2)^2 = 3\text{.}\) Since \(\alpha^4 - 4 \alpha^2 + 1 = 0\text{,}\) it must be true that \(\alpha\) is a zero of the polynomial \(x^4 - 4 x^2 + 1 \in {\mathbb Q}[x]\text{.}\)</p></article><p id="xGo">It is very easy to give an example of an extension field \(E\) over a field \(F\text{,}\) where \(E\) contains an element transcendental over \(F\text{.}\) The following theorem characterizes transcendental extensions.</p>
+<article class="theorem theorem-like" id="oHO"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.9</span><span class="period">.</span>
+</h6>
+<p id="RkK">Let \(E\) be an extension field of \(F\) and \(\alpha \in E\text{.}\) Then \(\alpha\) is transcendental over \(F\) if and only if \(F( \alpha )\) is isomorphic to \(F(x)\text{,}\) the field of fractions of \(F[x]\text{.}\)</p></article><article class="hiddenproof" id="LJG"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-LJG"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-LJG"><article class="hiddenproof"><p id="pdA">Let \(\phi_{\alpha} : F[x] \rightarrow E\) be the evaluation homomorphism for \(\alpha\text{.}\) Then \(\alpha\) is transcendental over \(F\) if and only if \(\phi_{\alpha} (p(x)) = p(\alpha) \neq 0\) for all nonconstant polynomials \(p(x) \in F[x]\text{.}\) This is true if and only if \(\ker \phi_{\alpha} = \{ 0 \}\text{;}\) that is, it is true exactly when \(\phi_{\alpha}\) is one-to-one. Hence, \(E\) must contain a copy of \(F[x]\text{.}\) The smallest field containing \(F[x]\) is the field of fractions \(F(x)\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-field-of-quotients.html" title="Theorem 18.4">Theorem 18.4</a>, \(E\) must contain a copy of this field.</p></article></div>
+<p id="dNx">We have a more interesting situation in the case of algebraic extensions.</p>
+<article class="theorem theorem-like" id="UOX"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.10</span><span class="period">.</span>
+</h6>
+<p id="xrT">Let \(E\) be an extension field of a field \(F\) and \(\alpha \in E\) with \(\alpha\) algebraic over \(F\text{.}\) Then there is a unique irreducible monic polynomial \(p(x) \in F[x]\) of smallest degree such that \(p( \alpha ) = 0\text{.}\) If \(f(x)\) is another polynomial in \(F[x]\) such that \(f(\alpha) = 0\text{,}\) then \(p(x)\) divides \(f(x)\text{.}\)</p></article><article class="hiddenproof" id="rQP"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-rQP"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-rQP"><article class="hiddenproof"><p id="VkJ">Let \(\phi_{\alpha} : F[x] \rightarrow E\) be the evaluation homomorphism. The kernel of \(\phi_{\alpha}\) is a principal ideal generated by some \(p(x) \in F[x]\) with \(\deg p(x) \geq 1\text{.}\) We know that such a polynomial exists, since \(F[x]\) is a principal ideal domain and \(\alpha\) is algebraic. The ideal \(\langle p(x) \rangle\) consists exactly of those elements of \(F[x]\) having \(\alpha\) as a zero. If \(f( \alpha ) = 0\) and \(f(x)\) is not the zero polynomial, then \(f(x) \in \langle p(x) \rangle\) and \(p(x)\) divides \(f(x)\text{.}\) So \(p(x)\) is a polynomial of minimal degree having \(\alpha\) as a zero. Any other polynomial of the same degree having \(\alpha\) as a zero must have the form \(\beta p( x)\) for some \(\beta \in F\text{.}\)</p>
+<p id="BrS">Suppose now that \(p(x) = r(x) s(x)\) is a factorization of \(p(x)\) into polynomials of lower degree. Since \(p( \alpha ) = 0\text{,}\) \(r( \alpha ) s( \alpha ) = 0\text{;}\) consequently, either \(r( \alpha )=0\) or \(s( \alpha ) = 0\text{,}\) which contradicts the fact that \(p\) is of minimal degree. Therefore, \(p(x)\) must be irreducible.</p></article></div>
+<p id="JUG">Let \(E\) be an extension field of \(F\) and \(\alpha \in E\) be algebraic over \(F\text{.}\) The unique monic polynomial \(p(x)\) of the last theorem is called the <dfn class="terminology">minimal polynomial</dfn> for \(\alpha\) over \(F\text{.}\) The degree of \(p(x)\) is the <dfn class="terminology">degree of \(\alpha\) over \(F\)</dfn>.</p>
+<article class="example example-like" id="eiJ"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.11</span><span class="period">.</span>
+</h6>
+<p id="trU">Let \(f(x) = x^2 - 2\) and \(g(x) = x^4 - 4 x^2 + 1\text{.}\) These polynomials are the minimal polynomials of \(\sqrt{2}\) and \(\sqrt{2 + \sqrt{3} }\text{,}\) respectively.</p></article><article class="proposition theorem-like" id="ZyQ"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">21.12</span><span class="period">.</span>
+</h6>
+<p id="zhg">Let \(E\) be a field extension of \(F\) and \(\alpha \in E\) be algebraic over \(F\text{.}\) Then \(F( \alpha ) \cong F[x] / \langle p(x) \rangle\text{,}\) where \(p(x)\) is the minimal polynomial of \(\alpha\) over \(F\text{.}\)</p></article><article class="hiddenproof" id="hrK"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-hrK"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-hrK"><article class="hiddenproof"><p id="hzb">Let \(\phi_{\alpha} : F[x] \rightarrow E\) be the evaluation homomorphism. The kernel of this map is \(\langle p(x) \rangle\text{,}\) where \(p(x)\) is the minimal polynomial of \(\alpha\text{.}\) By the First Isomorphism Theorem for rings, the image of \(\phi_{\alpha}\) in \(E\) is isomorphic to \(F( \alpha )\) since it contains both \(F\) and \(\alpha\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="AWg"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.13</span><span class="period">.</span>
+</h6>
+<p id="dzc">Let \(E = F( \alpha )\) be a simple extension of \(F\text{,}\) where \(\alpha \in E\) is algebraic over \(F\text{.}\) Suppose that the degree of \(\alpha\) over \(F\) is \(n\text{.}\) Then every element \(\beta \in E\) can be expressed uniquely in the form</p>
+<div class="displaymath">
+\begin{equation*}
+\beta = b_0 + b_1 \alpha + \cdots + b_{n-1} \alpha^{n - 1}
+\end{equation*}
+</div>
+<p class="continuation">for \(b_i \in F\text{.}\)</p></article><article class="hiddenproof" id="XXY"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-XXY"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-XXY"><article class="hiddenproof"><p id="NGk">Since \(\phi_{\alpha} ( F[x] ) \cong F( \alpha )\text{,}\) every element in \(E = F( \alpha )\) must be of the form \(\phi_{\alpha} ( f(x) ) = f( \alpha )\text{,}\) where \(f(\alpha)\) is a polynomial in \(\alpha\) with coefficients in \(F\text{.}\) Let</p>
+<div class="displaymath">
+\begin{equation*}
+p(x) = x^n + a_{n - 1} x^{n - 1} + \cdots + a_0
+\end{equation*}
+</div>
+<p class="continuation">be the minimal polynomial of \(\alpha\text{.}\) Then \(p( \alpha ) = 0\text{;}\) hence,</p>
+<div class="displaymath">
+\begin{equation*}
+{\alpha}^n = - a_{n - 1} {\alpha}^{n - 1} - \cdots - a_0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Similarly,</p>
+<div class="displaymath">
+\begin{align*}
+{\alpha}^{n + 1} &amp; = {\alpha} {\alpha}^n\\
+&amp; = - a_{n - 1} {\alpha}^n - a_{n - 2} {\alpha}^{n - 1} - \cdots - a_0 {\alpha}\\
+&amp; = - a_{n - 1}( - a_{n - 1} {\alpha}^{n - 1} - \cdots - a_0) - a_{n - 2} {\alpha}^{n - 1} - \cdots - a_0 {\alpha}\text{.}
+\end{align*}
+</div>
+<p class="continuation">Continuing in this manner, we can express every monomial \({\alpha}^m\text{,}\) \(m \geq n\text{,}\) as a linear combination of powers of \({\alpha}\) that are less than \(n\text{.}\) Hence, any \(\beta \in F( \alpha )\) can be written as</p>
+<div class="displaymath">
+\begin{equation*}
+\beta = b_0 + b_1 \alpha + \cdots + b_{n - 1} \alpha^{n - 1}\text{.}
+\end{equation*}
+</div>
+<p id="tNt">To show uniqueness, suppose that</p>
+<div class="displaymath">
+\begin{equation*}
+\beta = b_0 + b_1 \alpha + \cdots + b_{n-1} \alpha^{n-1} = c_0 + c_1 \alpha + \cdots + c_{n - 1} \alpha^{n - 1}
+\end{equation*}
+</div>
+<p class="continuation">for \(b_i\) and \(c_i\) in \(F\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+g(x) = (b_0 - c_0) + (b_1 - c_1) x + \cdots + (b_{n - 1} - c_{n - 1})x^{n - 1}
+\end{equation*}
+</div>
+<p class="continuation">is in \(F[x]\) and \(g( \alpha ) = 0\text{.}\) Since the degree of \(g(x)\) is less than the degree of \(p( x )\text{,}\) the irreducible polynomial of \(\alpha\text{,}\) \(g(x)\) must be the zero polynomial. Consequently,</p>
+<div class="displaymath">
+\begin{equation*}
+b_0 - c_0 = b_1 - c_1 = \cdots = b_{n - 1} - c_{n - 1} = 0\text{,}
+\end{equation*}
+</div>
+<p class="continuation">or \(b_i = c_i\) for \(i = 0, 1, \ldots, n-1\text{.}\) Therefore, we have shown uniqueness.</p></article></div>
+<article class="example example-like" id="KpS"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.14</span><span class="period">.</span>
+</h6>
+<p id="Zzd">Since \(x^2 + 1\) is irreducible over \({\mathbb R}\text{,}\) \(\langle x^2 + 1 \rangle\) is a maximal ideal in \({\mathbb R}[x]\text{.}\) So \(E = {\mathbb R}[x]/\langle x^2 + 1 \rangle\) is a field extension of \({\mathbb R}\) that contains a root of \(x^2 + 1\text{.}\) Let \(\alpha = x + \langle x^2 + 1 \rangle\text{.}\) We can identify \(E\) with the complex numbers. By <a class="xref" data-knowl="./knowl/proposition-minimal-poly.html" title="Proposition 21.12">Proposition 21.12</a>, \(E\) is isomorphic to \({\mathbb R}( \alpha ) = \{ a + b \alpha : a, b \in {\mathbb R} \}\text{.}\) We know that \(\alpha^2 = -1\) in \(E\text{,}\) since</p>
+<div class="displaymath">
+\begin{align*}
+\alpha^2 + 1 &amp; = (x + \langle x^2 + 1  \rangle)^2 + (1 + \langle x^2 + 1 \rangle)\\
+&amp; = (x^2 + 1) + \langle x^2 + 1  \rangle\\
+&amp; = 0\text{.}
+\end{align*}
+</div>
+<p class="continuation">Hence, we have an isomorphism of \({\mathbb R}( \alpha )\) with \({\mathbb C}\) defined by the map that takes \(a + b \alpha\) to \(a + bi\text{.}\)</p></article><p id="qbP">Let \(E\) be a field extension of a field \(F\text{.}\) If we regard \(E\) as a vector space over \(F\text{,}\) then we can bring the machinery of linear algebra to bear on the problems that we will encounter in our study of fields. The elements in the field \(E\) are vectors; the elements in the field \(F\) are scalars. We can think of addition in \(E\) as adding vectors. When we multiply an element in \(E\) by an element of \(F\text{,}\) we are multiplying a vector by a scalar. This view of field extensions is especially fruitful if a field extension \(E\) of \(F\) is a finite dimensional vector space over \(F\text{,}\) and <a class="xref" data-knowl="./knowl/theorem-simple_extension.html" title="Theorem 21.13">Theorem 21.13</a> states that \(E = F(\alpha )\) is finite dimensional vector space over \(F\) with basis \(\{ 1, \alpha, {\alpha}^2, \ldots, {\alpha}^{n - 1} \}\text{.}\)</p>
+<p id="WiY">If an extension field \(E\) of a field \(F\) is a finite dimensional vector space over \(F\) of dimension \(n\text{,}\) then we say that \(E\) is a <dfn class="terminology">finite extension of degree \(n\) over \(F\)</dfn>.  We write</p>
+<div class="displaymath">
+\begin{equation*}
+[E:F]= n\text{.}
+\end{equation*}
+</div>
+<p class="continuation">to indicate the dimension of \(E\) over \(F\text{.}\) </p>
+<article class="theorem theorem-like" id="hdp"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.15</span><span class="period">.</span>
+</h6>
+<p id="JGl">Every finite extension field \(E\) of a field \(F\) is an algebraic extension.</p></article><article class="hiddenproof" id="Efh"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-Efh"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Efh"><article class="hiddenproof"><p id="ZUC">Let \(\alpha \in E\text{.}\) Since \([E:F] = n\text{,}\) the elements</p>
+<div class="displaymath">
+\begin{equation*}
+1, \alpha, \ldots, {\alpha}^n
+\end{equation*}
+</div>
+<p class="continuation">cannot be linearly independent. Hence, there exist \(a_i \in F\text{,}\) not all zero, such that</p>
+<div class="displaymath">
+\begin{equation*}
+a_n {\alpha}^n + a_{n - 1} {\alpha}^{n - 1} + \cdots + a_1 \alpha + a_0 = 0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Therefore,</p>
+<div class="displaymath">
+\begin{equation*}
+p(x) = a_n x^n + \cdots + a_0 \in F[x]
+\end{equation*}
+</div>
+<p class="continuation">is a nonzero polynomial with \(p( \alpha ) = 0\text{.}\)</p></article></div>
+<article class="remark remark-like" id="CLt"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">21.16</span><span class="period">.</span>
+</h6>
+<p id="eiW"><a class="xref" data-knowl="./knowl/theorem-finite-extension.html" title="Theorem 21.15">Theorem 21.15</a> says that every finite extension of a field \(F\) is an algebraic extension. The converse is false, however. We will leave it as an exercise to show that the set of all elements in \({\mathbb R}\) that are algebraic over \({\mathbb Q}\) forms an infinite field extension of \({\mathbb Q}\text{.}\)</p></article><p id="Cqh">The next theorem is a counting theorem, similar to Lagrange's Theorem in group theory. <a class="xref" data-knowl="./knowl/theorem-tower-indices.html" title="Theorem 21.17">Theorem 21.17</a> will prove to be an extremely useful tool in our investigation of finite field extensions.</p>
+<article class="theorem theorem-like" id="Nky"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.17</span><span class="period">.</span>
+</h6>
+<p id="pNu">If \(E\) is a finite extension of \(F\) and \(K\) is a finite extension of \(E\text{,}\) then \(K\) is a finite extension of \(F\) and</p>
+<div class="displaymath">
+\begin{equation*}
+[K:F]= [K:E] [E:F]\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof" id="kmq"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-kmq"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-kmq"><article class="hiddenproof"><p id="GbL">Let \(\{ \alpha_1, \ldots, \alpha_n \}\) be a basis for \(E\) as a vector space over \(F\) and \(\{ \beta_1, \ldots, \beta_m \}\) be a basis for \(K\) as a vector space over \(E\text{.}\) We claim that \(\{ \alpha_i \beta_j \}\) is a basis for \(K\) over \(F\text{.}\) We will first show that these vectors span \(K\text{.}\) Let \(u \in K\text{.}\) Then \(u = \sum_{j = 1}^{m} b_j \beta_j\) and \(b_j = \sum_{i = 1}^{n} a_{ij} \alpha_i\text{,}\) where \(b_j \in E\) and \(a_{ij} \in F\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+u = \sum_{j = 1}^{m} \left( \sum_{i = 1}^{n} a_{ij} \alpha_i  \right) \beta_j = \sum_{i,j} a_{ij} ( \alpha_i \beta_j )\text{.}
+\end{equation*}
+</div>
+<p class="continuation">So the \(mn\) vectors \(\alpha_i \beta_j\) must span \(K\) over \(F\text{.}\)</p>
+<p id="miU">We must show that \(\{ \alpha_i \beta_j \}\) are linearly independent. Recall that a set of vectors \(v_1, v_2, \ldots,
+v_n\) in a vector space \(V\) are linearly independent if</p>
+<div class="displaymath">
+\begin{equation*}
+c_1 v_1 + c_2 v_2 + \cdots + c_n v_n = 0
+\end{equation*}
+</div>
+<p class="continuation">implies that</p>
+<div class="displaymath">
+\begin{equation*}
+c_1 = c_2 = \cdots = c_n = 0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Let</p>
+<div class="displaymath">
+\begin{equation*}
+u = \sum_{i,j} c_{ij} ( \alpha_i \beta_j ) = 0
+\end{equation*}
+</div>
+<p class="continuation">for \(c_{ij} \in F\text{.}\) We need to prove that all of the \(c_{ij}\)'s are zero. We can rewrite \(u\) as</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{j = 1}^{m} \left( \sum_{i = 1}^{n} c_{ij} \alpha_i \right) \beta_j = 0\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(\sum_i c_{ij} \alpha_i \in E\text{.}\) Since the \(\beta_j\)'s are linearly independent over \(E\text{,}\) it must be the case that</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i = 1}^n c_{ij} \alpha_i = 0
+\end{equation*}
+</div>
+<p class="continuation">for all \(j\text{.}\) However, the \(\alpha_j\) are also linearly independent  over \(F\text{.}\) Therefore, \(c_{ij} = 0\) for all \(i\) and \(j\text{,}\) which completes the proof.</p></article></div>
+<p id="ixq">The following corollary is easily proved using mathematical induction.</p>
+<article class="corollary theorem-like" id="FFZ"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.18</span><span class="period">.</span>
+</h6>
+<p id="DQZ">If \(F_i\) is a field for \(i = 1, \dots,
+k\) and \(F_{i+1}\) is a finite extension of \(F_i\text{,}\) then \(F_k\) is a finite extension of \(F_1\) and</p>
+<div class="displaymath">
+\begin{equation*}
+[F_k : F_1] = [F_k : F_{k-1} ] \cdots [F_2 : F_1 ]\text{.}
+\end{equation*}
+</div></article><article class="corollary theorem-like" id="lNi"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.19</span><span class="period">.</span>
+</h6>
+<p id="jYi">Let \(E\) be an extension field of \(F\text{.}\) If \(\alpha \in E\) is algebraic over \(F\) with minimal polynomial \(p(x)\) and \(\beta \in F( \alpha )\) with minimal polynomial \(q(x)\text{,}\) then \(\deg q(x)\) divides \(\deg p(x)\text{.}\)</p></article><article class="hiddenproof" id="FUu"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-FUu"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-FUu"><article class="hiddenproof"><p id="Sqd">We know that \(\deg p(x) = [F( \alpha ) : F ]\) and \(\deg q(x) = [F( \beta ) : F ]\text{.}\) Since \(F \subset F( \beta ) \subset F( \alpha )\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+[F( \alpha ) : F ]= [ F( \alpha ) : F( \beta ) ] [ F( \beta ) : F ]\text{.}
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="qxb"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.20</span><span class="period">.</span>
+</h6>
+<p id="FGm">Let us determine an extension field of \({\mathbb Q}\) containing \(\sqrt{3} + \sqrt{5}\text{.}\) It is easy to determine that the minimal  polynomial of \(\sqrt{3} + \sqrt{5}\) is \(x^4 - 16 x^2 + 4\text{.}\) It follows that</p>
+<div class="displaymath">
+\begin{equation*}
+[{\mathbb Q}( \sqrt{3} + \sqrt{5}\, ) : {\mathbb Q} ] = 4\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We know that \(\{ 1, \sqrt{3}\, \}\) is a basis for \({\mathbb Q}( \sqrt{3}\, )\) over \({\mathbb Q}\text{.}\) Hence, \(\sqrt{3} + \sqrt{5}\) cannot be in \({\mathbb Q}( \sqrt{3}\, )\text{.}\) It follows that \(\sqrt{5}\) cannot be in \({\mathbb Q}( \sqrt{3}\, )\) either. Therefore, \(\{ 1, \sqrt{5}\, \}\) is a basis for \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = ( {\mathbb Q}(\sqrt{3}\, ))( \sqrt{5}\, )\) over \({\mathbb Q}( \sqrt{3}\, )\) and \(\{ 1, \sqrt{3}, \sqrt{5}, \sqrt{3} \sqrt{5} = \sqrt{15}\, \}\) is a basis for \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = {\mathbb Q}( \sqrt{3} + \sqrt{5}\, )\) over \({\mathbb Q}\text{.}\) This example shows that it is possible that some extension \(F( \alpha_1, \ldots, \alpha_n )\) is actually a simple extension of \(F\) even though \(n \gt 1\text{.}\)</p></article><article class="example example-like" id="WEk"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.21</span><span class="period">.</span>
+</h6>
+<p id="lNv">Let us compute a basis for \({\mathbb Q}( \sqrt[3]{5}, \sqrt{5} \, i )\text{,}\) where \(\sqrt{5}\) is the positive square root of \(5\) and \(\sqrt[3]{5}\) is the real cube root of \(5\text{.}\) We know that \(\sqrt{5} \, i \notin {\mathbb Q}(\sqrt[3]{5}\, )\text{,}\) so</p>
+<div class="displaymath">
+\begin{equation*}
+[ {\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i) : {\mathbb Q}(\sqrt[3]{5}\, )] = 2\text{.}
+\end{equation*}
+</div>
+<p class="continuation">It is easy to determine that \(\{ 1, \sqrt{5}i\, \}\) is a basis for \({\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )\) over \({\mathbb Q}( \sqrt[3]{5}\, )\text{.}\) We also know that \(\{ 1, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2  \}\) is a basis for \({\mathbb Q}(\sqrt[3]{5}\, )\) over \({\mathbb Q}\text{.}\) Hence, a basis for \({\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i )\) over \({\mathbb Q}\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\{ 1, \sqrt{5}\, i, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2, (\sqrt[6]{5}\, )^5 i, (\sqrt[6]{5}\, )^7 i = 5 \sqrt[6]{5}\, i \text{ or } \sqrt[6]{5}\, i \}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Notice that \(\sqrt[6]{5}\, i\) is a zero of \(x^6 + 5\text{.}\) We can show that this polynomial is irreducible over \({\mathbb Q}\) using Eisenstein's Criterion, where we let \(p = 5\text{.}\) Consequently,</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathbb Q} \subset {\mathbb Q}( \sqrt[6]{5}\, i) \subset {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )\text{.}
+\end{equation*}
+</div>
+<p class="continuation">But it must be the case that \({\mathbb Q}( \sqrt[6]{5}\, i) = {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )\text{,}\) since the degree of both of these extensions is \(6\text{.}\)</p></article><article class="theorem theorem-like" id="trH"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.22</span><span class="period">.</span>
+</h6>
+<p id="VUD">Let \(E\) be a field extension of \(F\text{.}\) Then  the following statements are equivalent.</p>
+<ol class="decimal">
+<li id="KiO"><p id="xyX">\(E\) is a finite extension of \(F\text{.}\)</p></li>
+<li id="qpX"><p id="dGg">There exists a finite number of algebraic elements \(\alpha_1, \ldots, \alpha_n \in E\) such that \(E = F(\alpha_1, \ldots, \alpha_n)\text{.}\)</p></li>
+<li id="Wxg">
+<p id="JNp">There exists a sequence of fields</p>
+<div class="displaymath">
+\begin{equation*}
+E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n-1} ) \supset \cdots \supset F( \alpha_1 ) \supset F\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where each field \(F(\alpha_1, \ldots, \alpha_i)\) is algebraic over \(F(\alpha_1, \ldots, \alpha_{i-1})\text{.}\)</p>
+</li>
+</ol></article><article class="hiddenproof" id="Qtz"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-Qtz"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Qtz"><article class="hiddenproof"><p id="yxm">(1) \(\Rightarrow\) (2). Let \(E\) be a finite algebraic extension of \(F\text{.}\) Then \(E\) is a finite dimensional vector space over \(F\) and there exists a basis consisting of elements \(\alpha_1, \ldots, \alpha_n\) in \(E\) such that \(E = F(\alpha_1, \ldots, \alpha_n)\text{.}\) Each \(\alpha_i\) is algebraic over \(F\) by <a class="xref" data-knowl="./knowl/theorem-finite-extension.html" title="Theorem 21.15">Theorem 21.15</a>.</p>
+<p id="eEv">(2) \(\Rightarrow\) (3). Suppose that \(E = F(\alpha_1, \ldots, \alpha_n)\text{,}\) where every \(\alpha_i\) is algebraic over \(F\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n - 1} ) \supset \cdots \supset F( \alpha_1 ) \supset F\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where each field \(F(\alpha_1, \ldots, \alpha_i)\) is algebraic over \(F(\alpha_1, \ldots, \alpha_{i - 1})\text{.}\)</p>
+<p id="KLE">(3) \(\Rightarrow\) (1). Let</p>
+<div class="displaymath">
+\begin{equation*}
+E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n - 1} ) \supset \cdots \supset F( \alpha_1 ) \supset F\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where each field \(F(\alpha_1, \ldots, \alpha_i)\) is algebraic over \(F(\alpha_1, \ldots, \alpha_{i - 1})\text{.}\) Since</p>
+<div class="displaymath">
+\begin{equation*}
+F(\alpha_1, \ldots, \alpha_i) =  F(\alpha_1, \ldots, \alpha_{i - 1} )(\alpha_i)
+\end{equation*}
+</div>
+<p class="continuation">is simple extension and \(\alpha_i\) is algebraic over \(F(\alpha_1, \ldots, \alpha_{i - 1})\text{,}\) it follows that</p>
+<div class="displaymath">
+\begin{equation*}
+[ F(\alpha_1, \ldots, \alpha_i) : F(\alpha_1, \ldots, \alpha_{i - 1} )]
+\end{equation*}
+</div>
+<p class="continuation">is finite for each \(i\text{.}\) Therefore, \([E : F]\) is finite.</p></article></div></section><section class="subsection" id="Cbz"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Algebraic Closure</span>
+</h3>
+<p id="OEz">Given a field \(F\text{,}\) the question arises as to whether or not we can find a field \(E\) such that every polynomial \(p(x)\) has a root in \(E\text{.}\) This leads us to the following theorem.</p>
+<article class="theorem theorem-like" id="iSC"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.23</span><span class="period">.</span>
+</h6>
+<p id="CbM">Let \(E\) be an extension field of \(F\text{.}\) The set of elements in \(E\) that are algebraic over \(F\) form a field.</p></article><article class="hiddenproof" id="wAI"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-wAI"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-wAI"><article class="hiddenproof"><p id="qSN">Let \(\alpha, \beta \in E\) be algebraic over \(F\text{.}\) Then \(F( \alpha, \beta )\) is a finite extension of \(F\text{.}\) Since every element of \(F( \alpha, \beta )\) is algebraic over \(F\text{,}\) \(\alpha \pm \beta\text{,}\) \(\alpha \beta\text{,}\) and \(\alpha / \beta\) (\(\beta \neq 0\)) are all algebraic over \(F\text{.}\) Consequently, the set of elements in \(E\) that are algebraic over \(F\) form a field.</p></article></div>
+<article class="corollary theorem-like" id="Hvm"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.24</span><span class="period">.</span>
+</h6>
+<p id="Qfr">The set of all algebraic numbers forms a field; that is, the set of all complex numbers that are algebraic over \({\mathbb Q}\) makes up a field.</p></article><p id="uLI">Let \(E\) be a field extension of a field \(F\text{.}\) We define the <dfn class="terminology">algebraic closure</dfn>  of a field \(F\) in \(E\) to be the field consisting of all elements in \(E\) that are algebraic over \(F\text{.}\) A field \(F\) is <dfn class="terminology">algebraically closed</dfn> if every nonconstant polynomial in \(F[x]\) has a root in \(F\text{.}\)</p>
+<article class="theorem theorem-like" id="OZL"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.25</span><span class="period">.</span>
+</h6>
+<p id="iiV">A field \(F\) is algebraically closed if and only if every nonconstant polynomial in \(F[x]\) factors into linear factors over \(F[x]\text{.}\)</p></article><article class="hiddenproof" id="cHR"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-cHR"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-cHR"><article class="hiddenproof"><p id="WZW">Let \(F\) be an algebraically closed field. If \(p(x) \in F[x]\) is a nonconstant polynomial, then \(p(x)\) has a zero in \(F\text{,}\) say \(\alpha\text{.}\) Therefore, \(x-\alpha\) must be a factor of \(p(x)\) and so \(p(x) = (x - \alpha) q_1(x)\text{,}\) where \(\deg q_1(x) = \deg p(x) - 1\text{.}\) Continue this process with \(q_1(x)\) to find a factorization</p>
+<div class="displaymath">
+\begin{equation*}
+p(x) = (x - \alpha)(x - \beta)q_2(x)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(\deg q_2(x) = \deg p(x) -2\text{.}\) The process must eventually stop since the degree of \(p(x)\) is finite.</p>
+<p id="Dhf">Conversely, suppose that every nonconstant polynomial \(p(x)\) in \(F[x]\) factors into linear factors. Let \(ax - b\) be such a factor. Then \(p( b/a ) = 0\text{.}\) Consequently, \(F\) is algebraically closed.</p></article></div>
+<article class="corollary theorem-like" id="nCv"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.26</span><span class="period">.</span>
+</h6>
+<p id="wmA">An algebraically closed field \(F\) has no proper algebraic extension \(E\text{.}\)</p></article><article class="hiddenproof" id="mbD"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-mbD"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-mbD"><article class="hiddenproof"><p id="joo">Let \(E\) be an algebraic extension of \(F\text{;}\) then \(F \subset E\text{.}\) For \(\alpha \in E\text{,}\) the minimal polynomial of \(\alpha\) is \(x - \alpha\text{.}\) Therefore, \(\alpha \in F\) and \(F = E\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="vgU"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.27</span><span class="period">.</span>
+</h6>
+<p id="Oqe">Every field \(F\) has a unique algebraic closure.</p></article><p id="aSR">It is a nontrivial fact that every field has a unique algebraic closure. The proof is not extremely difficult, but requires some rather sophisticated set theory. We refer the reader to [3], [4], or [8] for a proof of this result.</p>
+<p id="Haa">We now state the Fundamental Theorem of Algebra, first proven by Gauss at the age of 22 in his doctoral thesis. This theorem states that every polynomial with coefficients in the complex numbers has a root in the complex numbers. The proof of this theorem will be given in <a href="galois.html" class="internal" title="Chapter 23: Galois Theory">Chapter 23</a>.</p>
+<article class="theorem theorem-like" id="bod"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.28</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Algebra.</span>
+</h6>
+<p id="uxn">The field of complex numbers is algebraically closed.</p></article></section></section></div></main>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=10568106;
+var sc_invisible=1;
+var sc_security="510ba080";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/10568106/0/510ba080/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

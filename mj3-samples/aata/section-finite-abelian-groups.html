@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:56:20+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Finite Abelian Groups</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: ['base', 'extpfeil', 'amscd']
+  },
+  options: {
+    ignoreHtmlClass: ".*",
+    processHtmlClass: "has_am"
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd']
+  }
+};
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=002637997310187229905:qj2oy0jlpyu"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="struct.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="struct.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-solvable-groups.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="struct.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="struct.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-solvable-groups.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="Cpq">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-equivalence-relations.html" data-scroll="eYQ">Sets and Equivalence Relations</a></li>
+<li><a href="reading-questions-1.html" data-scroll="ibN">Reading Questions</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+<li><a href="sets-sage.html" data-scroll="LfZ">Sage</a></li>
+<li><a href="sets-sage-exercises.html" data-scroll="SKy">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="integers.html" data-scroll="mtY"><span class="codenumber">2</span> <span class="title">The Integers</span></a><ul>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Division Algorithm</a></li>
+<li><a href="reading-questions-2.html" data-scroll="kWt">Reading Questions</a></li>
+<li><a href="exercises-integers.html" data-scroll="Dsj">Exercises</a></li>
+<li><a href="integers-exercises-programming.html" data-scroll="jzs">Programming Exercises</a></li>
+<li><a href="integers-references.html" data-scroll="Dta">References and Suggested Readings</a></li>
+<li><a href="integers-sage.html" data-scroll="ojl">Sage</a></li>
+<li><a href="integers-sage-exercises.html" data-scroll="PGB">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">3</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="reading-questions-3.html" data-scroll="VNv">Reading Questions</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+<li><a href="groups-sage.html" data-scroll="fAT">Sage</a></li>
+<li><a href="groups-sage-exercises.html" data-scroll="aRa">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cyclic.html" data-scroll="KKE"><span class="codenumber">4</span> <span class="title">Cyclic Groups</span></a><ul>
+<li><a href="section-cyclic-subgroups.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-mult-group-c.html" data-scroll="sHa">Multiplicative Group of Complex Numbers</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="reading-questions-4.html" data-scroll="CZX">Reading Questions</a></li>
+<li><a href="exercises-cyclic.html" data-scroll="nXh">Exercises</a></li>
+<li><a href="cyclic-exercises-programming.html" data-scroll="Ueq">Programming Exercises</a></li>
+<li><a href="cyclic-references.html" data-scroll="KnF">References and Suggested Readings</a></li>
+<li><a href="cyclic-sage.html" data-scroll="EVs">Sage</a></li>
+<li><a href="cyclic-sage-exercises.html" data-scroll="Alz">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="permute.html" data-scroll="AQc"><span class="codenumber">5</span> <span class="title">Permutation Groups</span></a><ul>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Definitions and Notation</a></li>
+<li><a href="section-dihedral-groups.html" data-scroll="CFp">Dihedral Groups</a></li>
+<li><a href="reading-questions-5.html" data-scroll="HJQ">Reading Questions</a></li>
+<li><a href="exercises-permute.html" data-scroll="ecF">Exercises</a></li>
+<li><a href="permute-sage.html" data-scroll="iMy">Sage</a></li>
+<li><a href="permute-sage-exercises.html" data-scroll="KjO">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">6</span> <span class="title">Cosets and Lagrange's Theorem</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-lagranges-theorem.html" data-scroll="dTk">Lagrange's Theorem</a></li>
+<li><a href="section-fermat-euler.html" data-scroll="Kat">Fermat's and Euler's Theorems</a></li>
+<li><a href="reading-questions-6.html" data-scroll="BUE">Reading Questions</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+<li><a href="cosets-sage.html" data-scroll="qhC">Sage</a></li>
+<li><a href="cosets-sage-exercises.html" data-scroll="lxJ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">7</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="reading-questions-7.html" data-scroll="Jzd">Reading Questions</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="hbc">References and Suggested Readings</a></li>
+<li><a href="crypt-sage.html" data-scroll="cyJ">Sage</a></li>
+<li><a href="crypt-sage-exercises.html" data-scroll="DVZ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">8</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-8.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+<li><a href="algcodes-sage.html" data-scroll="Klo">Sage</a></li>
+<li><a href="algcodes-sage-exercises.html" data-scroll="Zum">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">9</span> <span class="title">Isomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="reading-questions-9.html" data-scroll="TYi">Reading Questions</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="LZO">Exercises</a></li>
+<li><a href="isomorph-sage.html" data-scroll="QJH">Sage</a></li>
+<li><a href="isomorph-sage-exercises.html" data-scroll="sgX">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="normal.html" data-scroll="xiL"><span class="codenumber">10</span> <span class="title">Normal Subgroups and Factor Groups</span></a><ul>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="reading-questions-10.html" data-scroll="pGm">Reading Questions</a></li>
+<li><a href="exercises-normal.html" data-scroll="hZN">Exercises</a></li>
+<li><a href="normal-sage.html" data-scroll="mJG">Sage</a></li>
+<li><a href="normal-sage-exercises.html" data-scroll="OgW">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="homomorph.html" data-scroll="JXG"><span class="codenumber">11</span> <span class="title">Homomorphisms</span></a><ul>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="reading-questions-11.html" data-scroll="sAS">Reading Questions</a></li>
+<li><a href="exercises-homomorph.html" data-scroll="WlY">Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Cth">Additional Exercises: Automorphisms</a></li>
+<li><a href="homomorph-sage.html" data-scroll="Hda">Sage</a></li>
+<li><a href="homomorph-sage-exercises.html" data-scroll="iAq">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">12</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-12.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+<li><a href="matrix-sage.html" data-scroll="stf">Sage</a></li>
+<li><a href="matrix-sage-exercises.html" data-scroll="TQv">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct.html" data-scroll="YWA"><span class="codenumber">13</span> <span class="title">The Structure of  Groups</span></a><ul>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL" class="active">Finite Abelian Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="reading-questions-13.html" data-scroll="vvy">Reading Questions</a></li>
+<li><a href="exercises-struct.html" data-scroll="Rsb">Exercises</a></li>
+<li><a href="struct-exercises-programming.html" data-scroll="xzk">Programming Exercises</a></li>
+<li><a href="struct-references.html" data-scroll="tDP">References and Suggested Readings</a></li>
+<li><a href="struct-sage.html" data-scroll="Cjd">Sage</a></li>
+<li><a href="struct-sage-exercises.html" data-scroll="dGt">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">14</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="reading-questions-14.html" data-scroll="MtJ">Reading Questions</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="JDL">References and Suggested Reading</a></li>
+<li><a href="actions-sage.html" data-scroll="gaW">Sage</a></li>
+<li><a href="actions-sage-exercises.html" data-scroll="brd">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">15</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-15.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+<li><a href="sylow-sage.html" data-scroll="Vab">Sage</a></li>
+<li><a href="sylow-sage-exercises.html" data-scroll="wxr">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">16</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="reading-questions-16.html" data-scroll="bCH">Reading Questions</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+<li><a href="rings-sage.html" data-scroll="ple">Sage</a></li>
+<li><a href="rings-sage-exercises.html" data-scroll="YmT">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">17</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="reading-questions-17.html" data-scroll="Afr">Reading Questions</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Exercises</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+<li><a href="poly-sage.html" data-scroll="vEG">Sage</a></li>
+<li><a href="poly-sage-exercises.html" data-scroll="qUN">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">18</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-18.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+<li><a href="domains-sage.html" data-scroll="pin">Sage</a></li>
+<li><a href="domains-sage-exercises.html" data-scroll="QFD">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">19</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-19.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+<li><a href="boolean-sage.html" data-scroll="LwL">Sage</a></li>
+<li><a href="boolean-sage-exercises.html" data-scroll="GMS">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vect.html" data-scroll="kTG"><span class="codenumber">20</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section-vect-definitions-and-examples.html" data-scroll="Ogj">Definitions and Examples</a></li>
+<li><a href="section-subspaces.html" data-scroll="uns">Subspaces</a></li>
+<li><a href="section-linear-independence.html" data-scroll="auB">Linear Independence</a></li>
+<li><a href="reading-questions-20.html" data-scroll="xkL">Reading Questions</a></li>
+<li><a href="exercises-vect.html" data-scroll="VKI">Exercises</a></li>
+<li><a href="vect-references.html" data-scroll="jeK">References and Suggested Readings</a></li>
+<li><a href="vect-sage.html" data-scroll="GBK">Sage</a></li>
+<li><a href="vect-sage-exercises.html" data-scroll="BRR">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">21</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-extension-fields.html" data-scroll="Qfe">Extension Fields</a></li>
+<li><a href="section-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="reading-questions-21.html" data-scroll="Pop">Reading Questions</a></li>
+<li><a href="exercises-fields.html" data-scroll="Lvl">Exercises</a></li>
+<li><a href="fields-references.html" data-scroll="veH">References and Suggested Readings</a></li>
+<li><a href="fields-sage.html" data-scroll="IAF">Sage</a></li>
+<li><a href="fields-sage-exercises.html" data-scroll="rCu">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">22</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-22.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+<li><a href="finite-sage.html" data-scroll="vNX">Sage</a></li>
+<li><a href="finite-sage-exercises.html" data-scroll="Xln">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">23</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="YIb">Reading Questions</a></li>
+<li><a href="exercises-galois.html" data-scroll="qAB">Exercises</a></li>
+<li><a href="galois-references.html" data-scroll="ppv">References and Suggested Readings</a></li>
+<li><a href="galois-sage.html" data-scroll="brD">Sage</a></li>
+<li><a href="galois-sage-exercises.html" data-scroll="WHK">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="pUL"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">13.1</span> <span class="title">Finite Abelian Groups</span>
+</h2>
+<p id="IPA">In our investigation of cyclic groups we found that every group of prime order was isomorphic to \({\mathbb Z}_p\text{,}\) where \(p\) was a prime number. We also determined that \({\mathbb Z}_{mn} \cong {\mathbb Z}_m \times {\mathbb Z}_n\) when \(\gcd(m, n) =1\text{.}\) In fact, much more is true. Every finite abelian group is isomorphic to a direct product of cyclic groups of prime power order; that is, every finite abelian group is isomorphic to a group of the type</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathbb Z}_{p_1^{\alpha_1}} \times \cdots \times {\mathbb Z}_{p_n^{\alpha_n}}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where each \(p_k\) is prime (not necessarily distinct).</p>
+<p id="oWJ">First, let us examine a slight generalization of finite abelian groups. Suppose that \(G\) is a group and let \(\{ g_i\}\) be a set of elements in \(G\text{,}\) where \(i\) is in some index set \(I\) (not necessarily finite). The smallest subgroup of \(G\) containing all of the \(g_i\)'s is the subgroup of \(G\) <dfn class="terminology">generated</dfn> by the \(g_i\)'s. If this subgroup of \(G\) is in fact all of \(G\text{,}\) then \(G\) is generated by the set \(\{g_i : i \in I \}\text{.}\) In this case the \(g_i\)'s are said to be the <dfn class="terminology">generators</dfn>  of \(G\text{.}\) If there is a finite set \(\{ g_i : i \in I \}\) that generates \(G\text{,}\) then \(G\) is <dfn class="terminology">finitely generated</dfn>. </p>
+<article class="example example-like" id="jag"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.1</span><span class="period">.</span>
+</h6>
+<p id="ajk">Obviously, all finite groups are finitely generated. For example, the group \(S_3\) is generated by the permutations \((12)\) and \((123)\text{.}\) The group \({\mathbb Z} \times {\mathbb Z}_n\) is an infinite group but is finitely generated by \(\{ (1,0), (0,1) \}\text{.}\)</p></article><article class="example example-like" id="Php"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.2</span><span class="period">.</span>
+</h6>
+<p id="Gqt">Not all groups are finitely generated. Consider the rational numbers \({\mathbb Q}\) under the operation of addition. Suppose that \({\mathbb Q}\) is finitely generated with generators \(p_1/q_1, \ldots,
+p_n/q_n\text{,}\) where each \(p_i/q_i\) is a fraction expressed in its lowest terms. Let \(p\) be some prime that does not divide any of the denominators \(q_1, \ldots, q_n\text{.}\) We claim that \(1/p\) cannot be in the subgroup of \({\mathbb Q}\) that is generated by  \(p_1/q_1, \ldots,
+p_n/q_n\text{,}\) since \(p\) does not divide the denominator of any element in this subgroup. This fact is easy to see since the sum of any two generators is</p>
+<div class="displaymath">
+\begin{equation*}
+p_i / q_i + p_j / q_j = (p_i q_j + p_j q_i)/(q_i q_j)\text{.}
+\end{equation*}
+</div></article><article class="proposition theorem-like" id="eqn"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">13.3</span><span class="period">.</span>
+</h6>
+<p id="Vzr">Let \(H\) be the subgroup of a group \(G\) that is generated by \(\{ g_i \in G : i \in I \}\text{.}\) Then \(h \in H\) exactly when it is a product of the form</p>
+<div class="displaymath">
+\begin{equation*}
+h = g_{i_1}^{\alpha_1} \cdots g_{i_n}^{\alpha_n}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where the \(g_{i_k}\)s are not necessarily distinct.</p></article><article class="hiddenproof" id="QWC"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-QWC"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-QWC"><article class="hiddenproof"><p id="Pal">Let \(K\) be the set of all products of the form \(g_{i_1}^{\alpha_1} \cdots g_{i_n}^{\alpha_n}\text{,}\) where the \(g_{i_k}\)s are not necessarily distinct. Certainly \(K\) is a subset of \(H\text{.}\) We need only show that \(K\) is a subgroup of \(G\text{.}\) If this is the case, then \(K=H\text{,}\) since \(H\) is the smallest subgroup containing all the \(g_i\)s.</p>
+<p id="vhu">Clearly, the set \(K\) is closed under the group operation. Since \(g_i^0 = 1\text{,}\) the identity is in \(K\text{.}\) It remains to show that the inverse of an element \(g =g_{i_1}^{k_1} \cdots g_{i_n}^{k_n}\) in \(K\) must also be in \(K\text{.}\) However,</p>
+<div class="displaymath">
+\begin{equation*}
+g^{-1} = (g_{i_1}^{k_{1}} \cdots g_{i_n}^{k_n})^{-1} = (g_{i_n}^{-k_n} \cdots g_{i_{1}}^{-k_{1}})\text{.}
+\end{equation*}
+</div></article></div>
+<p id="VdS">The reason that powers of a fixed \(g_i\) may occur several times in the product is that we may have a nonabelian group. However, if the group is abelian, then the \(g_i\)s need occur only once. For example, a product such as \(a^{-3} b^5 a^7\) in an abelian group could always be simplified (in this case, to \(a^4 b^5\)).</p>
+<p id="Blb">Now let us restrict our attention to finite abelian groups. We can express any finite abelian group as a finite direct product of cyclic groups. More specifically, letting \(p\) be prime, we define a group \(G\) to be a <dfn class="terminology">\(p\)-group</dfn>  if every element in \(G\) has as its order a power of \(p\text{.}\) For example, both \({\mathbb Z}_2 \times {\mathbb Z}_2\) and \({\mathbb Z}_4\) are \(2\)-groups, whereas \({\mathbb Z}_{27}\) is a \(3\)-group. We shall prove the Fundamental Theorem of Finite Abelian Groups which tells us that every finite abelian group is isomorphic to a direct product of cyclic \(p\)-groups.</p>
+<article class="theorem theorem-like" id="lUM"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">13.4</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Finite Abelian Groups.</span>
+</h6>
+<p id="ddQ">Every finite abelian group \(G\) is isomorphic to a direct product of cyclic groups of the form</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathbb Z}_{p_1^{ \alpha_1 }} \times {\mathbb Z}_{p_2^{ \alpha_2 }} \times \cdots \times {\mathbb Z}_{p_n^{ \alpha_n }}
+\end{equation*}
+</div>
+<p class="continuation">here the \(p_i\)'s are primes (not necessarily distinct).</p></article><article class="example example-like" id="voy"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.5</span><span class="period">.</span>
+</h6>
+<p id="mxC">Suppose that we wish to classify all abelian groups of order \(540=2^2 \cdot 3^3 \cdot 5\text{.}\) The Fundamental Theorem of Finite Abelian Groups tells us that we have the following six possibilities.</p>
+<ul class="disc">
+<li id="iEH"><p id="eEI">\({\mathbb Z}_2 \times {\mathbb Z}_2 \times {\mathbb Z}_3 \times {\mathbb Z}_3 \times {\mathbb Z}_3 \times {\mathbb Z}_5\text{;}\)</p></li>
+<li id="OLQ"><p id="KLR">\({\mathbb Z}_2 \times {\mathbb Z}_2 \times {\mathbb Z}_3 \times {\mathbb Z}_9 \times {\mathbb Z}_5\text{;}\)</p></li>
+<li id="uSZ"><p id="qTa">\({\mathbb Z}_2 \times {\mathbb Z}_2 \times {\mathbb Z}_{27} \times {\mathbb Z}_5\text{;}\)</p></li>
+<li id="bai"><p id="Xaj">\({\mathbb Z}_4 \times {\mathbb Z}_3 \times {\mathbb Z}_3 \times {\mathbb Z}_3 \times {\mathbb Z}_5\text{;}\)</p></li>
+<li id="Hhr"><p id="Dhs">\({\mathbb Z}_4 \times {\mathbb Z}_3 \times {\mathbb Z}_9 \times {\mathbb Z}_5\text{;}\)</p></li>
+<li id="noA"><p id="joB">\({\mathbb Z}_4 \times {\mathbb Z}_{27} \times {\mathbb Z}_5\text{.}\)</p></li>
+</ul></article><p id="hsk">The proof of the Fundamental Theorem of Finite Abelian Groups depends on several lemmas.</p>
+<article class="lemma theorem-like" id="Kxw"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">13.6</span><span class="period">.</span>
+</h6>
+<p id="BGA">Let \(G\) be a finite abelian group of order \(n\text{.}\) If \(p\) is a prime that divides \(n\text{,}\) then \(G\) contains an element of order \(p\text{.}\)</p></article><article class="hiddenproof" id="xdL"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-xdL"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-xdL"><article class="hiddenproof"><p id="boD">We will prove this lemma by induction. If \(n = 1\text{,}\) then there is nothing to show. Now suppose that the lemma is true for all groups of order \(k\text{,}\) where \(k \lt n\text{.}\) Furthermore, let \(p\) be a prime that divides \(n\text{.}\)</p>
+<p id="HvM">If \(G\) has no proper nontrivial subgroups, then \(G = \langle a \rangle\text{,}\) where \(a\) is any element other than the identity. By <a class="xref" data-knowl="./knowl/cyclic-exercise-subgroups-exist.html" title="Exercise 4.5.39">Exercise 4.5.39</a>, the order of \(G\) must be prime. Since \(p\) divides \(n\text{,}\) we know that \(p = n\text{,}\) and \(G\) contains \(p - 1\) elements of order \(p\text{.}\)</p>
+<p id="nCV">Now suppose that \(G\) contains a nontrivial proper subgroup \(H\text{.}\) Then \(1 \lt |H| \lt n\text{.}\) If \(p \mid |H|\text{,}\) then \(H\) contains an element of order \(p\) by induction and the lemma is true. Suppose that \(p\) does not divide the order of \(H\text{.}\) Since \(G\) is abelian, it must be the case that \(H\) is a normal subgroup of \(G\text{,}\) and \(|G| = |H| \cdot |G/H|\text{.}\) Consequently, \(p\) must divide \(|G/H|\text{.}\) Since \(|G/H| \lt |G| = n\text{,}\) we know that \(G/H\) contains an element \(aH\) of order \(p\) by the induction hypothesis. Thus,</p>
+<div class="displaymath">
+\begin{equation*}
+H = (aH)^p = a^pH\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and \(a^p \in H\) but \(a \notin H\text{.}\) If \(|H| = r\text{,}\) then \(p\) and \(r\) are relatively prime, and there exist integers \(s\) and \(t\) such that \(sp + tr = 1\text{.}\) Furthermore, the order of \(a^p\) must divide \(r\text{,}\) and \((a^p)^r = (a^r)^p = 1\text{.}\)</p>
+<p id="TKe">We claim that \(a^r\) has order \(p\text{.}\) We must show that \(a^r \neq 1\text{.}\) Suppose \(a^r = 1\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+a &amp; = a^{sp + tr}\\
+&amp; = a^{sp} a^{tr}\\
+&amp; = (a^p)^s (a^r)^t\\
+&amp; = (a^p)^s 1\\
+&amp; = (a^p)^s\text{.}
+\end{align*}
+</div>
+<p class="continuation">Since \(a^p \in H\text{,}\) it must be the case that \(a= (a^p)^s \in H\text{,}\) which is a contradiction. Therefore, \(a^r \neq 1\) is an element of order \(p\) in \(G\text{.}\)</p></article></div>
+<p id="Nzt"><a class="xref" data-knowl="./knowl/lemma-cauchy-finite-abelian.html" title="Lemma 13.6">Lemma 13.6</a> is a special case of Cauchy's Theorem (<a class="xref" data-knowl="./knowl/theorem-cauchy.html" title="Theorem 15.1: Cauchy">Theorem 15.1</a>), which states that if \(G\) is a finite group and \(p\) a prime such that \(p\) divides the order of \(G\text{,}\) then \(G\) contains a subgroup of order \(p\text{.}\) We will prove Cauchy's Theorem in <a href="sylow.html" class="internal" title="Chapter 15: The Sylow Theorems">Chapter 15</a>.</p>
+<article class="lemma theorem-like" id="qEF"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">13.7</span><span class="period">.</span>
+</h6>
+<p id="hNJ">A finite abelian group is a \(p\)-group if and only if its order is a power of \(p\text{.}\)</p></article><article class="hiddenproof" id="dkU"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-dkU"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-dkU"><article class="hiddenproof"><p id="zRn">If \(|G| = p^n\) then by Lagrange’s theorem, then the order of any \(g \in G\) must divide \(p^n\text{,}\) and therefore must be a power of \(p\text{.}\) Conversely, if \(|G|\) is not a power of \(p\text{,}\) then it has some other prime divisor \(q\text{,}\) so by <a class="xref" data-knowl="./knowl/lemma-cauchy-finite-abelian.html" title="Lemma 13.6">Lemma 13.6</a>, \(G\) has an element of order \(q\) and thus is not a \(p\)-group.</p></article></div>
+<article class="lemma theorem-like" id="WLO"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">13.8</span><span class="period">.</span>
+</h6>
+<p id="NUS">Let \(G\) be a finite abelian group of order \(n = p_1^{\alpha_1} \cdots p_k^{\alpha_k}\text{,}\) where where \(p_1, \ldots, p_k\) are distinct primes and \(\alpha_1, \alpha_2, \ldots, \alpha_k\) are positive integers. Then \(G\) is the internal direct product of subgroups \(G_1, G_2, \ldots, G_k\text{,}\) where \(G_i\) is the subgroup of \(G\) consisting of all elements of order \(p_i^r\) for some integer \(r\text{.}\)</p></article><article class="hiddenproof" id="Jsd"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-Jsd"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Jsd"><article class="hiddenproof"><p id="fYw">Since \(G\) is an abelian group, we are guaranteed that \(G_i\) is a subgroup of \(G\) for \(i = 1, \ldots, k\text{.}\) Since the identity has order \(p_i^0 = 1\text{,}\) we know that \(1 \in G_i\text{.}\) If \(g \in G_i\) has order \(p_i^r\text{,}\) then \(g^{-1}\) must also have order \(p_i^r\text{.}\) Finally, if \(h \in G_i\) has order \(p_i^s\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+(gh)^{p_i^t} = g^{p_i^t} h^{p_i^t} = 1 \cdot 1 = 1\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(t\) is the maximum of \(r\) and \(s\text{.}\)</p>
+<p id="MfF">We must show that</p>
+<div class="displaymath">
+\begin{equation*}
+G = G_1 G_2 \cdots  G_k
+\end{equation*}
+</div>
+<p class="continuation">and \(G_i \cap G_j = \{1 \}\) for \(i \neq j\text{.}\) Suppose that \(g_1 \in G_1\) is in the subgroup generated by \(G_2, G_3, \ldots, G_k\text{.}\) Then \(g_1 = g_2 g_3 \cdots g_k\) for \(g_i \in G_i\text{.}\) Since \(g_i\) has order \(p^{\alpha_i}\text{,}\) we know that \(g_i^{p^{\alpha_i}} = 1\) for \(i = 2, 3, \ldots, k\text{,}\) and \(g_1^{p_2^{\alpha_2} \cdots p_k^{\alpha_k}} = 1\text{.}\) Since the order of \(g_1\) is a power of \(p_1\) and \(\gcd(p_1, p_2^{\alpha_2} \cdots p_k^{\alpha_k}) = 1\text{,}\) it must be the case that \(g_1 = 1\) and the intersection of \(G_1\) with any of the subgroups \(G_2, G_3, \ldots, G_k\) is the identity. A similar argument shows that \(G_i \cap G_j = \{1 \}\) for \(i \neq j\text{.}\)</p>
+<p id="smO">Next, we must show that it possible to write every \(g \in G\) as a product \(g_1 \cdots g_k\text{,}\) where \(g_i \in G_i\text{.}\) Since the order of \(g\) divides the order of \(G\text{,}\) we know that</p>
+<div class="displaymath">
+\begin{equation*}
+|g| = p_1^{\beta_1}  p_2^{\beta_2} \cdots p_k^{\beta_k}
+\end{equation*}
+</div>
+<p class="continuation">for some integers \(\beta_1, \ldots, \beta_k\text{.}\) Letting \(a_i = |g| / p_i^{\beta_i}\text{,}\) the \(a_i\)'s are relatively prime; hence, there exist integers \(b_1, \ldots,
+b_k\) such that \(a_1 b_1 + \cdots + a_k b_k = 1\text{.}\) Consequently,</p>
+<div class="displaymath">
+\begin{equation*}
+g = g^{a_1 b_1 + \cdots + a_k b_k} = g^{a_1 b_1} \cdots  g^{a_k b_k}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since</p>
+<div class="displaymath">
+\begin{equation*}
+g^{(a_i b_i ) p_i^{\beta_i}} = g^{b_i |g|} = e\text{,}
+\end{equation*}
+</div>
+<p class="continuation">it follows that \(g^{a_i b_i}\) must be in \(G_{i}\text{.}\) Let \(g_i = g^{a_i b_i}\text{.}\) Then \(g = g_1 \cdots g_k \in G_1 G_2 \cdots G_k\text{.}\) Therefore, \(G = G_1 G_2 \cdots G_k\) is an internal direct product of subgroups.</p></article></div>
+<p id="tGC">If remains for us to determine the possible structure of each \(p_i\)-group \(G_i\) in <a class="xref" data-knowl="./knowl/lemma-direct-product-p-groups.html" title="Lemma 13.8">Lemma 13.8</a>.</p>
+<article class="lemma theorem-like" id="CSX"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">13.9</span><span class="period">.</span>
+</h6>
+<p id="ucb">Let \(G\) be a finite abelian \(p\)-group and suppose that \(g \in G\) has maximal order. Then \(G\) is isomorphic to \(\langle g \rangle \times H\) for some subgroup \(H\) of \(G\text{.}\)</p></article><article class="hiddenproof" id="pzm"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-pzm"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-pzm"><article class="hiddenproof"><p id="YtX">By <a class="xref" data-knowl="./knowl/lemma-p-group-order.html" title="Lemma 13.7">Lemma 13.7</a>, we may assume that the order of \(G\) is \(p^n\text{.}\) We shall induct on \(n\text{.}\) If \(n= 1\text{,}\) then \(G\) is cyclic of order \(p\) and must be generated by \(g\text{.}\) Suppose now that the statement of the lemma holds for all integers \(k\) with \(1 \leq k \lt n\) and let \(g\) be of maximal order in \(G\text{,}\) say \(|g| = p^{m}\text{.}\) Then \(a^{p^m} = e\) for all \(a \in G\text{.}\) Now choose \(h\) in \(G\) such that \(h \notin \langle g \rangle\text{,}\) where \(h\) has the smallest possible order. Certainly such an \(h\) exists; otherwise, \(G = \langle g \rangle\) and we are done. Let \(H = \langle h \rangle\text{.}\)</p>
+<p id="EBg">We claim that \(\langle g \rangle \cap H = \{ e \}\text{.}\) It suffices to show that \(|H|=p\text{.}\) Since \(|h^p| = |h| / p\text{,}\) the order of \(h^p\) is smaller than the order of \(h\) and must be in \(\langle g \rangle\) by the minimality of \(h\text{;}\) that is, \(h^p = g^r\) for some number \(r\text{.}\) Hence,</p>
+<div class="displaymath">
+\begin{equation*}
+(g^r)^{p^{m - 1}} = (h^p)^{p^{m - 1}} = h^{p^{m}} = e\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and the order of \(g^r\) must be less than or equal to \(p^{m-1}\text{.}\) Therefore, \(g^r\) cannot generate \(\langle g \rangle\text{.}\) Notice that \(p\) must occur as a factor of \(r\text{,}\) say \(r = ps\text{,}\) and \(h^p = g^r = g^{ps}\text{.}\) Define \(a\) to be \(g^{-s}h\text{.}\) Then \(a\) cannot be in \(\langle g \rangle\text{;}\) otherwise, \(h\) would also have to be in \(\langle g \rangle\text{.}\) Also,</p>
+<div class="displaymath">
+\begin{equation*}
+a^p = g^{-sp} h^p = g^{-r} h^p = h^{-p} h^p = e\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We have now formed an element \(a\) with order \(p\) such that \(a \notin \langle g \rangle\text{.}\) Since \(h\) was chosen to have the smallest order of all of the elements that are not in \(\langle g\rangle\text{,}\) \(|H|  = p\text{.}\)</p>
+<p id="kIp">Now we will show that the order of \(gH\) in the factor group \(G/H\) must be the same as the order of \(g\) in \(G\text{.}\) If \(|gH| \lt |g| =  p^m\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+H = (gH)^{p^{m-1}} =  g^{p^{m-1}} H;
+\end{equation*}
+</div>
+<p class="continuation">hence, \(g^{p^{m-1}}\) must be in \(\langle g \rangle \cap H = \{ e \}\text{,}\) which contradicts the fact that the order of \(g\) is \(p^m\text{.}\) Therefore, \(gH\) must have maximal order in \(G/H\text{.}\) By the Correspondence Theorem and our induction hypothesis,</p>
+<div class="displaymath">
+\begin{equation*}
+G/H \cong \langle gH \rangle \times K/H
+\end{equation*}
+</div>
+<p class="continuation">for some subgroup \(K\) of \(G\) containing \(H\text{.}\) We claim that \(\langle g \rangle \cap K = \{ e \}\text{.}\) If \(b \in \langle g \rangle \cap K\text{,}\) then \(bH \in \langle gH \rangle \cap K/H = \{ H \}\) and \(b \in \langle g \rangle \cap H = \{ e \}\text{.}\) It follows that \(G = \langle g \rangle K\) implies that \(G \cong \langle g \rangle \times K\text{.}\)</p></article></div>
+<p id="ZNL">The proof of the Fundamental Theorem of Finite Abelian Groups follows very quickly from <a class="xref" data-knowl="./knowl/lemma-struct-finite-abelian.html" title="Lemma 13.9">Lemma 13.9</a>. Suppose that \(G\) is a finite abelian group and let \(g\) be an element of maximal order in \(G\text{.}\) If \(\langle g \rangle = G\text{,}\) then we are done; otherwise, \(G \cong {\mathbb Z}_{|g|} \times H\) for some subgroup \(H\) contained in \(G\) by the lemma. Since \(|H| \lt |G|\text{,}\) we can apply mathematical induction.</p>
+<p id="FUU">We now state the more general theorem for all finitely generated abelian groups. The proof of this theorem can be found in any of the references at the end of this chapter.</p>
+<article class="theorem theorem-like" id="SbV"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">13.10</span><span class="period">.</span><span class="space"> </span><span class="title">The Fundamental Theorem of Finitely Generated Abelian Groups.</span>
+</h6>
+<p id="JkZ">Every finitely generated abelian group \(G\) is isomorphic to a direct product of cyclic groups of the form</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathbb Z}_{p_1^{ \alpha_1 }} \times {\mathbb Z}_{p_2^{ \alpha_2 }} \times \cdots \times {\mathbb Z}_{p_n^{ \alpha_n }} \times {\mathbb Z} \times \cdots \times {\mathbb Z}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where the \(p_i\)'s are primes (not necessarily distinct).</p></article></section></div></main>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=10568106;
+var sc_invisible=1;
+var sc_security="510ba080";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/10568106/0/510ba080/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

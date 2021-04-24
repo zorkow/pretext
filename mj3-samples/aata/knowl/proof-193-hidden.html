@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:59:42+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p xmlns:svg="http://www.w3.org/2000/svg">We will use mathematical induction on \([E:F]\text{.}\) If \([E:F] = 1\text{,}\) then \(E = F\) and there is nothing to show. If \([E:F] \gt 1\text{,}\) let \(f(x) = p(x)q(x)\text{,}\) where \(p(x)\) is irreducible of degree \(d\text{.}\) We may assume that \(d \gt 1\text{;}\) otherwise, \(f(x)\) splits over \(F\) and  \([E:F] = 1\text{.}\) Let \(\alpha\) be a root of \(p(x)\text{.}\) If \(\phi: F(\alpha) \to  E\) is any injective homomorphism, then \(\phi( \alpha) = \beta\) is a root of \(p(x)\text{,}\) and \(\phi: F(\alpha) \to F(\beta)\) is a field automorphism. Since \(f(x)\) has no repeated roots, \(p(x)\) has exactly \(d\) roots \(\beta \in E\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-roots-permute.html" title="Proposition 23.5">Proposition 23.5</a>, there are exactly \(d\) isomorphisms \(\phi: F(\alpha) \to F(\beta_i)\) that fix \(F\text{,}\) one for each root \(\beta_1, \ldots, \beta_d\) of \(p(x)\) (see <a class="xref" data-knowl="./knowl/figure-galois-group-order.html" title="Figure 23.8">Figure 23.8</a>).</p>
+<figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{CD}
+E  @&gt;\psi&gt;&gt;  E  \\
+@VVV        @VVV\\
+F(\alpha)     @&gt;\phi&gt;&gt;  F(\beta) \\
+@VVV        @VVV\\
+F     @&gt;\text{identity}&gt;&gt;  F
+\end{CD}
+\end{equation*}
+</div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">23.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p xmlns:svg="http://www.w3.org/2000/svg">Since \(E\) is a splitting field of \(f(x)\) over \(F\text{,}\) it is also a splitting field over \(F(\alpha)\text{.}\) Similarly, \(E\) is a splitting field of \(f(x)\) over \(F(\beta)\text{.}\)  Since \([E: F(\alpha)] = [E:F]/d\text{,}\) induction shows that each of the \(d\) isomorphisms \(\phi\) has exactly \([E:F]/d\) extensions, \(\psi : E \to E\text{,}\) and we have constructed \([E:F]\) isomorphisms that fix \(F\text{.}\) Finally, suppose that \(\sigma\) is any automorphism fixing \(F\text{.}\)  Then \(\sigma\) restricted to \(F(\alpha)\) is \(\phi\) for some \(\phi: F(\alpha) \to F(\beta)\text{.}\)</p></article></body>
+</html>

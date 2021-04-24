@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-04-23T20:56:31+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA The Sylow Theorems</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: ['base', 'extpfeil', 'amscd']
+  },
+  options: {
+    ignoreHtmlClass: ".*",
+    processHtmlClass: "has_am"
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd']
+  }
+};
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script async="" src="https://cse.google.com/cse.js?cx=002637997310187229905:qj2oy0jlpyu"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sylow.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sylow.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-sylow-applications.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sylow.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sylow.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-sylow-applications.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="Cpq">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-equivalence-relations.html" data-scroll="eYQ">Sets and Equivalence Relations</a></li>
+<li><a href="reading-questions-1.html" data-scroll="ibN">Reading Questions</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+<li><a href="sets-sage.html" data-scroll="LfZ">Sage</a></li>
+<li><a href="sets-sage-exercises.html" data-scroll="SKy">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="integers.html" data-scroll="mtY"><span class="codenumber">2</span> <span class="title">The Integers</span></a><ul>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Division Algorithm</a></li>
+<li><a href="reading-questions-2.html" data-scroll="kWt">Reading Questions</a></li>
+<li><a href="exercises-integers.html" data-scroll="Dsj">Exercises</a></li>
+<li><a href="integers-exercises-programming.html" data-scroll="jzs">Programming Exercises</a></li>
+<li><a href="integers-references.html" data-scroll="Dta">References and Suggested Readings</a></li>
+<li><a href="integers-sage.html" data-scroll="ojl">Sage</a></li>
+<li><a href="integers-sage-exercises.html" data-scroll="PGB">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">3</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="reading-questions-3.html" data-scroll="VNv">Reading Questions</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+<li><a href="groups-sage.html" data-scroll="fAT">Sage</a></li>
+<li><a href="groups-sage-exercises.html" data-scroll="aRa">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cyclic.html" data-scroll="KKE"><span class="codenumber">4</span> <span class="title">Cyclic Groups</span></a><ul>
+<li><a href="section-cyclic-subgroups.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-mult-group-c.html" data-scroll="sHa">Multiplicative Group of Complex Numbers</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="reading-questions-4.html" data-scroll="CZX">Reading Questions</a></li>
+<li><a href="exercises-cyclic.html" data-scroll="nXh">Exercises</a></li>
+<li><a href="cyclic-exercises-programming.html" data-scroll="Ueq">Programming Exercises</a></li>
+<li><a href="cyclic-references.html" data-scroll="KnF">References and Suggested Readings</a></li>
+<li><a href="cyclic-sage.html" data-scroll="EVs">Sage</a></li>
+<li><a href="cyclic-sage-exercises.html" data-scroll="Alz">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="permute.html" data-scroll="AQc"><span class="codenumber">5</span> <span class="title">Permutation Groups</span></a><ul>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Definitions and Notation</a></li>
+<li><a href="section-dihedral-groups.html" data-scroll="CFp">Dihedral Groups</a></li>
+<li><a href="reading-questions-5.html" data-scroll="HJQ">Reading Questions</a></li>
+<li><a href="exercises-permute.html" data-scroll="ecF">Exercises</a></li>
+<li><a href="permute-sage.html" data-scroll="iMy">Sage</a></li>
+<li><a href="permute-sage-exercises.html" data-scroll="KjO">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">6</span> <span class="title">Cosets and Lagrange's Theorem</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-lagranges-theorem.html" data-scroll="dTk">Lagrange's Theorem</a></li>
+<li><a href="section-fermat-euler.html" data-scroll="Kat">Fermat's and Euler's Theorems</a></li>
+<li><a href="reading-questions-6.html" data-scroll="BUE">Reading Questions</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+<li><a href="cosets-sage.html" data-scroll="qhC">Sage</a></li>
+<li><a href="cosets-sage-exercises.html" data-scroll="lxJ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">7</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="reading-questions-7.html" data-scroll="Jzd">Reading Questions</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="hbc">References and Suggested Readings</a></li>
+<li><a href="crypt-sage.html" data-scroll="cyJ">Sage</a></li>
+<li><a href="crypt-sage-exercises.html" data-scroll="DVZ">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">8</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-8.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+<li><a href="algcodes-sage.html" data-scroll="Klo">Sage</a></li>
+<li><a href="algcodes-sage-exercises.html" data-scroll="Zum">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">9</span> <span class="title">Isomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="reading-questions-9.html" data-scroll="TYi">Reading Questions</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="LZO">Exercises</a></li>
+<li><a href="isomorph-sage.html" data-scroll="QJH">Sage</a></li>
+<li><a href="isomorph-sage-exercises.html" data-scroll="sgX">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="normal.html" data-scroll="xiL"><span class="codenumber">10</span> <span class="title">Normal Subgroups and Factor Groups</span></a><ul>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="reading-questions-10.html" data-scroll="pGm">Reading Questions</a></li>
+<li><a href="exercises-normal.html" data-scroll="hZN">Exercises</a></li>
+<li><a href="normal-sage.html" data-scroll="mJG">Sage</a></li>
+<li><a href="normal-sage-exercises.html" data-scroll="OgW">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="homomorph.html" data-scroll="JXG"><span class="codenumber">11</span> <span class="title">Homomorphisms</span></a><ul>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="reading-questions-11.html" data-scroll="sAS">Reading Questions</a></li>
+<li><a href="exercises-homomorph.html" data-scroll="WlY">Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Cth">Additional Exercises: Automorphisms</a></li>
+<li><a href="homomorph-sage.html" data-scroll="Hda">Sage</a></li>
+<li><a href="homomorph-sage-exercises.html" data-scroll="iAq">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">12</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-12.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+<li><a href="matrix-sage.html" data-scroll="stf">Sage</a></li>
+<li><a href="matrix-sage-exercises.html" data-scroll="TQv">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct.html" data-scroll="YWA"><span class="codenumber">13</span> <span class="title">The Structure of  Groups</span></a><ul>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="reading-questions-13.html" data-scroll="vvy">Reading Questions</a></li>
+<li><a href="exercises-struct.html" data-scroll="Rsb">Exercises</a></li>
+<li><a href="struct-exercises-programming.html" data-scroll="xzk">Programming Exercises</a></li>
+<li><a href="struct-references.html" data-scroll="tDP">References and Suggested Readings</a></li>
+<li><a href="struct-sage.html" data-scroll="Cjd">Sage</a></li>
+<li><a href="struct-sage-exercises.html" data-scroll="dGt">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">14</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="reading-questions-14.html" data-scroll="MtJ">Reading Questions</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="JDL">References and Suggested Reading</a></li>
+<li><a href="actions-sage.html" data-scroll="gaW">Sage</a></li>
+<li><a href="actions-sage-exercises.html" data-scroll="brd">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">15</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ" class="active">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-15.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+<li><a href="sylow-sage.html" data-scroll="Vab">Sage</a></li>
+<li><a href="sylow-sage-exercises.html" data-scroll="wxr">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">16</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="reading-questions-16.html" data-scroll="bCH">Reading Questions</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+<li><a href="rings-sage.html" data-scroll="ple">Sage</a></li>
+<li><a href="rings-sage-exercises.html" data-scroll="YmT">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">17</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="reading-questions-17.html" data-scroll="Afr">Reading Questions</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Exercises</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+<li><a href="poly-sage.html" data-scroll="vEG">Sage</a></li>
+<li><a href="poly-sage-exercises.html" data-scroll="qUN">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">18</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-18.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+<li><a href="domains-sage.html" data-scroll="pin">Sage</a></li>
+<li><a href="domains-sage-exercises.html" data-scroll="QFD">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">19</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-19.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+<li><a href="boolean-sage.html" data-scroll="LwL">Sage</a></li>
+<li><a href="boolean-sage-exercises.html" data-scroll="GMS">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="vect.html" data-scroll="kTG"><span class="codenumber">20</span> <span class="title">Vector Spaces</span></a><ul>
+<li><a href="section-vect-definitions-and-examples.html" data-scroll="Ogj">Definitions and Examples</a></li>
+<li><a href="section-subspaces.html" data-scroll="uns">Subspaces</a></li>
+<li><a href="section-linear-independence.html" data-scroll="auB">Linear Independence</a></li>
+<li><a href="reading-questions-20.html" data-scroll="xkL">Reading Questions</a></li>
+<li><a href="exercises-vect.html" data-scroll="VKI">Exercises</a></li>
+<li><a href="vect-references.html" data-scroll="jeK">References and Suggested Readings</a></li>
+<li><a href="vect-sage.html" data-scroll="GBK">Sage</a></li>
+<li><a href="vect-sage-exercises.html" data-scroll="BRR">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">21</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-extension-fields.html" data-scroll="Qfe">Extension Fields</a></li>
+<li><a href="section-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="reading-questions-21.html" data-scroll="Pop">Reading Questions</a></li>
+<li><a href="exercises-fields.html" data-scroll="Lvl">Exercises</a></li>
+<li><a href="fields-references.html" data-scroll="veH">References and Suggested Readings</a></li>
+<li><a href="fields-sage.html" data-scroll="IAF">Sage</a></li>
+<li><a href="fields-sage-exercises.html" data-scroll="rCu">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">22</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-22.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+<li><a href="finite-sage.html" data-scroll="vNX">Sage</a></li>
+<li><a href="finite-sage-exercises.html" data-scroll="Xln">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">23</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="YIb">Reading Questions</a></li>
+<li><a href="exercises-galois.html" data-scroll="qAB">Exercises</a></li>
+<li><a href="galois-references.html" data-scroll="ppv">References and Suggested Readings</a></li>
+<li><a href="galois-sage.html" data-scroll="brD">Sage</a></li>
+<li><a href="galois-sage-exercises.html" data-scroll="WHK">Sage Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="ILJ"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">15.1</span> <span class="title">The Sylow Theorems</span>
+</h2>
+<section class="introduction" id="Nad"><p id="kqq">We will use what we have learned about group actions to prove the Sylow Theorems. Recall for a moment what it means for \(G\) to act on itself by conjugation and how conjugacy classes are distributed in the group according to the class equation, discussed in <a href="actions.html" class="internal" title="Chapter 14: Group Actions">Chapter 14</a>. A group  \(G\) acts on itself by conjugation via the map \((g,x) \mapsto gxg^{-1}\text{.}\) Let \(x_1, \ldots,
+x_k\) be representatives from each  of the distinct conjugacy classes of \(G\) that consist of more than one element. Then the class equation can be written as</p>
+<div class="displaymath">
+\begin{equation*}
+|G| = |Z(G)| + [G: C(x_1) ] + \cdots + [ G: C(x_k)]\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(Z(G) = \{g \in G : gx = xg \text{ for all } x \in G\}\) is the center of \(G\) and \(C(x_i) = \{ g \in G : g x_i = x_i g \}\) is the centralizer subgroup of \(x_i\text{.}\)</p>
+<p id="Qxz">We begin our investigation of the Sylow Theorems by examining subgroups of order \(p\text{,}\) where \(p\) is prime. A group \(G\) is a <dfn class="terminology">\(p\)-group</dfn>  if every element in \(G\) has as its order a power of \(p\text{,}\) where \(p\) is a prime number. A subgroup of a group \(G\) is a <dfn class="terminology">\(p\)-subgroup</dfn> if it is a \(p\)-group.</p>
+<article class="theorem theorem-like" id="yWy"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.1</span><span class="period">.</span><span class="space"> </span><span class="title">Cauchy.</span>
+</h6>
+<p id="Zhr"> Let \(G\) be a finite group and \(p\) a prime such that \(p\) divides the order of \(G\text{.}\) Then \(G\) contains a subgroup of order \(p\text{.}\)</p></article><article class="hiddenproof" id="Zov"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-Zov"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Zov"><article class="hiddenproof"><p id="LdM">We will use induction on the order of \(G\text{.}\) If \(|G|=p\text{,}\) then clearly \(G\) itself is the required subgroup. We now assume that every group of order \(k\text{,}\) where \(p \leq k \lt n\) and \(p\) divides \(k\text{,}\) has an element of order \(p\text{.}\) Assume that \(|G|= n\) and \(p \mid n\) and consider the class equation of \(G\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+|G| = |Z(G)| + [G: C(x_1) ] + \cdots + [ G: C(x_k)]\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We have two cases.</p>
+<article class="case" id="case-3"><h6 class="heading">Case 1.</h6>
+<p id="rkV">Suppose the order of one of the centralizer subgroups, \(C(x_i)\text{,}\) is divisible by \(p\) for some \(i\text{,}\) \(i = 1, \ldots, k\text{.}\) In this case, by our induction hypothesis, we are done. Since \(C(x_i)\) is a proper subgroup of \(G\) and \(p\) divides \(|C(x_i)|\text{,}\) \(C(x_i)\) must contain an element of order \(p\text{.}\) Hence, \(G\) must contain an element of order \(p\text{.}\)</p></article><article class="case" id="case-4"><h6 class="heading">Case 2.</h6>
+<p id="Xse">Suppose the order of no centralizer subgroup is divisible by \(p\text{.}\) Then \(p\) divides \([G:C(x_i)]\text{,}\) the order of each conjugacy class in the class equation; hence, \(p\) must divide the center of \(G\text{,}\) \(Z(G)\text{.}\) Since \(Z(G)\) is abelian, it must have a subgroup of order \(p\) by the Fundamental Theorem of Finite Abelian Groups. Therefore, the center of \(G\) contains an element of order \(p\text{.}\)</p></article></article></div>
+<article class="corollary theorem-like" id="wbS"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">15.2</span><span class="period">.</span>
+</h6>
+<p id="iBd">Let \(G\) be a finite group. Then \(G\) is a \(p\)-group if and only if \(|G| = p^n\text{.}\)</p></article><article class="example example-like" id="cjb"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">15.3</span><span class="period">.</span>
+</h6>
+<p id="OIm">Let us consider the group \(A_5\text{.}\) We know that \(|A_5| = 60 = 2^2 \cdot 3 \cdot 5\text{.}\) By Cauchy's Theorem, we are guaranteed that \(A_5\) has subgroups of orders \(2\text{,}\) \(3\) and \(5\text{.}\) The Sylow Theorems will give us even more information about the possible subgroups of \(A_5\text{.}\)</p></article><p id="wEI">We are now ready to state and prove the first of the Sylow Theorems. The proof is very similar to the proof of Cauchy's Theorem.</p>
+<article class="theorem theorem-like" id="fdH"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.4</span><span class="period">.</span><span class="space"> </span><span class="title">First Sylow Theorem.</span>
+</h6>
+<p id="FoA">Let \(G\) be a finite group and \(p\) a prime such that \(p^r\) divides \(|G|\text{.}\) Then \(G\) contains a subgroup of order \(p^r\text{.}\)</p></article><article class="hiddenproof" id="FvE"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-FvE"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-FvE"><article class="hiddenproof"><p id="Dzn">We induct on the order of \(G\) once again. If \(|G| = p\text{,}\) then we are done. Now suppose that the order of \(G\) is \(n\) with \(n \gt p\) and that the theorem is true for all groups of order less than \(n\text{,}\) where \(p\) divides \(n\text{.}\) We shall apply the class equation once again:</p>
+<div class="displaymath">
+\begin{equation*}
+|G| = |Z(G)| + [G: C(x_1) ] + \cdots + [ G: C(x_k)]\text{.}
+\end{equation*}
+</div>
+<p class="continuation">First suppose that \(p\) does not divide \([G:C(x_i)]\) for some \(i\text{.}\) Then \(p^r \mid |C(x_i)|\text{,}\) since \(p^r\) divides \(|G| = |C(x_i)| \cdot [G:C(x_i)]\text{.}\) Now we can apply the induction hypothesis to \(C(x_i)\text{.}\)</p>
+<p id="jGw">Hence, we may assume that \(p\) divides \([G:C(x_i)]\) for all \(i\text{.}\) Since \(p\) divides \(|G|\text{,}\) the class equation says that \(p\) must divide \(|Z(G)|\text{;}\) hence, by Cauchy's Theorem, \(Z(G)\) has an element of order \(p\text{,}\) say \(g\text{.}\) Let \(N\) be the group generated by \(g\text{.}\) Clearly, \(N\) is a normal subgroup of \(Z(G)\) since \(Z(G)\) is abelian; therefore, \(N\) is normal in \(G\) since every element in \(Z(G)\) commutes with every element in \(G\text{.}\) Now consider the factor group \(G/N\) of order \(|G|/p\text{.}\) By the induction hypothesis, \(G/N\) contains a subgroup \(H\) of order \(p^{r- 1}\text{.}\) The inverse image of \(H\) under the canonical homomorphism \(\phi : G \rightarrow G/N\) is a subgroup of order \(p^r\) in \(G\text{.}\)</p></article></div>
+<p id="cLR">A <dfn class="terminology">Sylow \(p\)-subgroup</dfn> \(P\) of a group \(G\) is a maximal \(p\)-subgroup of \(G\text{.}\) To prove the other two Sylow Theorems, we need to consider conjugate subgroups as opposed to conjugate elements in a group. For a group \(G\text{,}\) let \({\mathcal S}\) be the collection of all subgroups of \(G\text{.}\) For any subgroup \(H\text{,}\) \({\mathcal S}\) is a \(H\)-set, where  \(H\) acts on \({\mathcal S}\) by conjugation. That is, we have an action</p>
+<div class="displaymath">
+\begin{equation*}
+H \times {\mathcal S} \rightarrow {\mathcal S}
+\end{equation*}
+</div>
+<p class="continuation">defined by</p>
+<div class="displaymath">
+\begin{equation*}
+h \cdot K \mapsto hKh^{-1}
+\end{equation*}
+</div>
+<p class="continuation">for \(K\) in \({\mathcal S}\text{.}\)</p>
+<p id="ITa">The set </p>
+<div class="displaymath">
+\begin{equation*}
+N(H) = \{  g \in G : g H g^{-1} = H\}
+\end{equation*}
+</div>
+<p class="continuation">is a subgroup of \(G\) called the the <dfn class="terminology">normalizer</dfn> of \(H\) in \(G\text{.}\) Notice that \(H\) is a normal subgroup of \(N(H)\text{.}\) In fact, \(N(H)\) is the largest subgroup of \(G\) in which \(H\) is normal.</p>
+<article class="lemma theorem-like" id="jNA"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">15.5</span><span class="period">.</span>
+</h6>
+<p id="qfC">Let \(P\) be a Sylow \(p\)-subgroup of a finite group \(G\) and let \(x\) have as its order a power of \(p\text{.}\) If \(x^{-1} P x = P\text{,}\) then \(x \in P\text{.}\)</p></article><article class="hiddenproof" id="dYo"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-dYo"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-dYo"><article class="hiddenproof"><p id="PNF">Certainly \(x \in N(P)\text{,}\) and the cyclic subgroup, \(\langle xP \rangle \subset N(P)/P\text{,}\) has as its order a power of \(p\text{.}\) By the Correspondence Theorem there exists a subgroup \(H\) of \(N(P)\) containing \(P\) such that \(H/P = \langle xP \rangle\text{.}\) Since \(|H| = |P| \cdot |\langle xP \rangle|\text{,}\) the order of \(H\) must be a power of \(p\text{.}\) However, \(P\) is a Sylow \(p\)-subgroup contained in \(H\text{.}\) Since the order of \(P\) is the largest power of \(p\) dividing \(|G|\text{,}\) \(H=P\text{.}\) Therefore, \(H/P\) is the trivial subgroup and \(xP = P\text{,}\) or \(x \in P\text{.}\)</p></article></div>
+<article class="lemma theorem-like" id="PUJ"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">15.6</span><span class="period">.</span>
+</h6>
+<p id="WmL">Let \(H\) and \(K\) be subgroups of \(G\text{.}\) The number of distinct \(H\)-conjugates of \(K\) is \([H:N(K) \cap H]\text{.}\)</p></article><article class="hiddenproof" id="Kfx"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-Kfx"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Kfx"><article class="hiddenproof"><p id="vUO">We define a bijection between the conjugacy classes of \(K\) and the right cosets of \(N(K) \cap H\) by \(h^{-1}Kh \mapsto (N(K) \cap H)h\text{.}\) To show that this map is a bijection, let \(h_1, h_2 \in H\) and suppose that \((N(K) \cap H)h_1 = (N(K) \cap H)h_2\text{.}\) Then \(h_2 h_1^{-1} \in N(K)\text{.}\) Therefore, \(K = h_2 h_1^{-1} K h_1 h_2^{-1}\) or \(h_1^{-1} K h_1 = h_2^{-1} K h_2\text{,}\) and the map is an injection. It is easy to see that this map is surjective; hence, we have a one-to-one and onto map between the \(H\)-conjugates of \(K\) and the right cosets of \(N(K) \cap H\) in \(H\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="LkQ"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.7</span><span class="period">.</span><span class="space"> </span><span class="title">Second Sylow Theorem.</span>
+</h6>
+<p id="lvJ">Let \(G\) be a finite group and \(p\) a prime dividing \(|G|\text{.}\) Then all Sylow \(p\)-subgroups of \(G\) are conjugate. That is, if \(P_1\) and \(P_2\) are two Sylow \(p\)-subgroups, there exists a \(g \in G\) such that \(g P_1 g^{-1} = P_2\text{.}\)</p></article><article class="hiddenproof" id="lCN"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-lCN"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-lCN"><article class="hiddenproof"><p id="cbX">Let \(P\) be a Sylow \(p\)-subgroup of \(G\) and suppose that \(|G|=p^r m\) with \(|P|=p^r\text{.}\) Let</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathcal S} = \{ P = P_1, P_2, \ldots, P_k \}
+\end{equation*}
+</div>
+<p class="continuation">consist of the distinct conjugates of \(P\) in \(G\text{.}\) By <a class="xref" data-knowl="./knowl/lemma-distinct-conjugates.html" title="Lemma 15.6">Lemma 15.6</a>, \(k = [G: N(P)]\text{.}\) Notice that</p>
+<div class="displaymath">
+\begin{equation*}
+|G|= p^r m = |N(P)| \cdot [G: N(P)]= |N(P)| \cdot k\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since \(p^r\) divides \(|N(P)|\text{,}\) \(p\) cannot divide \(k\text{.}\)</p>
+<p id="Ijg">Given any other Sylow \(p\)-subgroup \(Q\text{,}\) we must show that \(Q \in {\mathcal S}\text{.}\) Consider the \(Q\)-conjugacy classes of each \(P_i\text{.}\) Clearly, these conjugacy classes partition \({\mathcal S}\text{.}\) The size of the partition containing \(P_i\) is \([Q :N(P_i) \cap Q]\) by <a class="xref" data-knowl="./knowl/lemma-distinct-conjugates.html" title="Lemma 15.6">Lemma 15.6</a>, and Lagrange's Theorem tells us that \(|Q| = [Q :N(P_i) \cap Q] |N(P_i) \cap Q|\text{.}\) Thus, \([Q :N(P_i) \cap Q]\) must be a divisor of \(|Q|= p^r\text{.}\) Hence, the number of conjugates in every equivalence class of the partition is a power of \(p\text{.}\) However, since \(p\) does not divide \(k\text{,}\) one of these equivalence classes must contain only a single Sylow \(p\)-subgroup, say \(P_j\text{.}\) In this case, \(x^{-1} P_j x = P_j\) for all \(x \in Q\text{.}\) By <a class="xref" data-knowl="./knowl/lemma-p-order.html" title="Lemma 15.5">Lemma 15.5</a>, \(P_j = Q\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="rrZ"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.8</span><span class="period">.</span><span class="space"> </span><span class="title">Third Sylow Theorem.</span>
+</h6>
+<p id="RCS">Let \(G\) be a finite group and let \(p\) be a prime dividing the order of \(G\text{.}\) Then the number of Sylow \(p\)-subgroups is congruent to \(1 \pmod{p}\) and divides \(|G|\text{.}\)</p></article><article class="hiddenproof" id="RJW"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-RJW"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-RJW"><article class="hiddenproof"><p id="oqp">Let \(P\) be a Sylow \(p\)-subgroup acting on the set of Sylow \(p\)-subgroups,</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathcal S} = \{ P = P_1, P_2, \ldots, P_k \}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">by conjugation. From the proof of the Second Sylow Theorem, the only \(P\)-conjugate of \(P\) is itself and the order of the other \(P\)-conjugacy classes is a power of \(p\text{.}\) Each \(P\)-conjugacy class contributes a positive power of \(p\) toward \(|{\mathcal S}|\) except the equivalence class  \(\{ P \}\text{.}\) Since \(|{\mathcal S}|\) is the sum of positive powers of \(p\) and \(1\text{,}\) \(|{\mathcal S}| \equiv 1 \pmod{p}\text{.}\)</p>
+<p id="Uxy">Now suppose that \(G\) acts on \({\mathcal S}\) by conjugation. Since all Sylow \(p\)-subgroups are conjugate, there can be only one orbit under this action. For \(P \in {\mathcal S}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+|{\mathcal S}| = |\text{orbit of }P| = [G : N(P)]
+\end{equation*}
+</div>
+<p class="continuation">by <a class="xref" data-knowl="./knowl/lemma-distinct-conjugates.html" title="Lemma 15.6">Lemma 15.6</a>. But \([G : N(P)]\) is a divisor of \(|G|\text{;}\) consequently, the number of Sylow \(p\)-subgroups of a finite group must divide the order of the group.</p></article></div></section><section class="subsection" id="zrX"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Historical Note</span>
+</h3>
+<p id="zdP">Peter Ludvig Mejdell Sylow  was born in 1832 in Christiania, Norway (now Oslo). After attending Christiania University, Sylow taught high school. In 1862 he obtained a temporary appointment at Christiania University. Even though his appointment was relatively brief, he influenced students such as Sophus Lie  (1842–1899). Sylow had a chance at a permanent chair in 1869, but failed to obtain the appointment. In 1872, he published a 10-page paper presenting the theorems that now bear his name. Later Lie and Sylow collaborated on a new edition of Abel's works. In 1898, a chair at Christiania University was finally created for Sylow through the efforts of his student and colleague Lie. Sylow died in 1918.</p></section></section></div></main>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=10568106;
+var sc_invisible=1;
+var sc_security="510ba080";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/10568106/0/510ba080/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
